@@ -1,0 +1,15 @@
+.btn {
+  display: flex;
+  padding: calc(var(--padding) / 2);
+  background: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  gap: calc(var(--padding) / 2);
+  cursor: pointer;
+  color: var(--color-nav);
+}
+
+.btn:hover {
+  background: var(--foreground-hover);
+}
+
