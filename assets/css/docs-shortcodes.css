@@ -9,7 +9,7 @@
   gap: calc(var(--padding)/2);
 }
 
-#article-body blockquote.info > p > strong:first-child {
+#article-body blockquote.info > p:first-child > strong:first-child {
   font-size: 2.5em;
 }
 

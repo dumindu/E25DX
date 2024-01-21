@@ -194,8 +194,27 @@
 
 #article-body table {
   max-width: 100%;
-  border-radius: calc(var(--radius)*2);
+  border-radius: var(--radius);
   box-shadow: 0 0 0 1px var(--border);
+}
+
+#article-body table thead th:first-child{
+  border-top-left-radius: var(--radius);
+}
+#article-body table thead th:last-child{
+  border-top-right-radius: var(--radius);
+}
+
+#article-body table tbody tr:last-child{
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+#article-body table tbody tr:last-child td:first-child{
+  border-bottom-left-radius: var(--radius);
+}
+#article-body table tbody tr:last-child td:last-child{
+  border-bottom-right-radius: var(--radius);
 }
 
 #article-body table td,
