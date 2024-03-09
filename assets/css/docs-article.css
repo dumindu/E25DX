@@ -26,6 +26,10 @@
   font-size: 1.1em
 }
 
+#article-body h2:first-child {
+  margin-top: .6em
+}
+
 #article-body .highlight,
 #article-body blockquote,
 #article-body dl,
