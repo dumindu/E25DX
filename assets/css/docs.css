@@ -163,7 +163,7 @@ main > article > footer > a {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   cursor: pointer;
-  width: 50%
+  width: 75%;
 }
 
 main > article > footer > a:hover {
@@ -177,7 +177,7 @@ main > article > footer > a.hidden {
 main > article > footer > a:last-child {
   display: flex;
   justify-content: end;
-  margin-left: 50%;
+  margin-left: 25%;
 }
 
 main > aside {
@@ -375,6 +375,17 @@ body.model-open {
 #aside-wrapper > aside > div .btn, main > aside > div > .btn {
   font-size: .75em;
   font-weight: 800;
+}
+
+/* From Small Tablet */
+@media (min-width: 768px) {
+  main > article > footer > a {
+    width: 50%;
+  }
+
+  main > article > footer > a:last-child {
+    margin-left: 50%;
+  }
 }
 
 /* Small Tablet */
