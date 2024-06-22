@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ .Site.Params.description | markdownify }}">
+  <meta name="description" content="{{ .Site.Params.description | .RenderString }}">
   <meta name="author" content="{{ .Site.Params.author.name }}">
   <meta name="theme-color" content="{{ .Site.Params.project.themeColor.light }}" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="{{ .Site.Params.project.themeColor.dark }}" media="(prefers-color-scheme: dark)">
@@ -12,7 +12,7 @@
   <meta name="robots" content="{{ . }}">
   {{- end }}
 
-  <title>{{ .Site.Title | markdownify }} · {{ .Site.Params.description | markdownify }}</title>
+  <title>{{ .Site.Title | .RenderString }} · {{ .Site.Params.description | .RenderString }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
 
   {{- $css := slice (resources.Get "css/reset.css") (resources.Get "css/theme.css") (resources.Get "css/_btn.css") (resources.Get "css/home.css") | resources.Concat "assets/css/home.css" | minify | fingerprint }}
