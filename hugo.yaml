@@ -6,12 +6,13 @@ defaultContentLanguage: en
 
 languages:
   en:
+    weight: 1
     languageName: English
     languageCode: en-US
     contentDir: content/en
     title: Site Name
-    description: Site Description
-    weight: 1
+    params:
+      description: Site Description
 
 services:
   googleAnalytics:
