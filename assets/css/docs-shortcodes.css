@@ -6,7 +6,7 @@
 
 #article-body blockquote.info > p {
   display: flex;
-  gap: calc(var(--padding)/2);
+  gap: var(--padding_d2);
 }
 
 #article-body blockquote.info > p:first-child > strong:first-child {
@@ -14,7 +14,7 @@
 }
 
 #article-body blockquote.info li {
-  margin: 0 calc(var(--padding)/2);
+  margin: 0 var(--padding_d2);
 }
 
 #article-body blockquote.info code {

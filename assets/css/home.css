@@ -40,7 +40,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: var(--padding);
-  gap: calc(var(--padding) / 2);
+  gap: var(--padding_d2);
   text-align: center;
   flex-wrap: wrap;
 }
@@ -54,7 +54,7 @@ body {
   color: var(--color-highlight);
   border-radius: var(--radius);
   cursor: pointer;
-  padding: 0 calc(var(--padding)/2);
+  padding: 0 var(--padding_d2);
 }
 
 #content-wrapper > footer > div:nth-child(2) {
@@ -82,7 +82,7 @@ main > section > div > header {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: calc(var(--padding)*2) var(--padding);
+  padding: var(--padding_x2) var(--padding);
   cursor: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 24px'><text y='20'>🦄</text></svg>"), auto;
 }
 
@@ -108,7 +108,7 @@ main > section > div > header > p {
 main > section > div > div {
   display: flex;
   justify-content: center;
-  gap: calc(var(--padding)*2);
+  gap: var(--padding_x2);
 }
 
 main > section > div > div > .btn {
@@ -127,7 +127,7 @@ main > section > div > div > .btn:last-child, main > section > div > div > .btn:
 
 @media (min-width: 1024px) {
   main > section > div > header{
-    padding: calc(var(--padding)*2) calc(var(--padding)*2) calc(var(--padding)*3);
+    padding: var(--padding_x2) var(--padding_x2) calc(var(--padding)*3);
   }
 
   main > section > div > header > h1 {
@@ -149,7 +149,7 @@ main > section > div > div > .btn:last-child, main > section > div > div > .btn:
 
 @media (min-width: 1280px) {
   main > section > div > header{
-    padding: calc(var(--padding)*2) calc(var(--padding)*3) calc(var(--padding)*6);
+    padding: var(--padding_x2) calc(var(--padding)*3) calc(var(--padding)*6);
   }
 
   main > section > div > header > h1 {

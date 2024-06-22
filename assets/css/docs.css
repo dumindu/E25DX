@@ -91,7 +91,7 @@ main {
   align-items: center;
   justify-content: center;
   padding: var(--padding);
-  gap: calc(var(--padding) / 2);
+  gap: var(--padding_d2);
   text-align: center;
   flex-wrap: wrap;
 }
@@ -105,7 +105,7 @@ main {
   color: var(--color-highlight);
   border-radius: var(--radius);
   cursor: pointer;
-  padding: 0 calc(var(--padding) / 2);
+  padding: 0 var(--padding_d2);
 }
 
 #content-wrapper > footer > div:nth-child(2) {
@@ -122,27 +122,27 @@ main > article {
 
 main > article > nav {
   display: flex;
-  padding: calc(var(--padding) * 2) var(--padding) var(--padding);
+  padding: var(--padding_x2) var(--padding) var(--padding);
   gap: 12px;
   justify-content: space-between;
 }
 
 main > article > header {
-  padding: var(--padding) calc(var(--padding) * 2);
+  padding: var(--padding) var(--padding_x2);
 }
 
 #article-body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: var(--padding) calc(var(--padding) * 2);
+  padding: var(--padding) var(--padding_x2);
   overflow-x: auto;
 }
 
 main > article > footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 0 calc(var(--padding) * 2);
+  padding: 0 var(--padding_x2);
 }
 
 main > article > footer > time {
@@ -151,7 +151,7 @@ main > article > footer > time {
   color: var(--color-fade);
   justify-content: center;
   padding: var(--padding) 0;
-  gap: calc(var(--padding) / 2);
+  gap: var(--padding_d2);
 }
 
 main > article > footer > a {
@@ -231,7 +231,7 @@ main > aside.open {
 }
 
 #aside-wrapper > aside > nav > details > ul > li {
-  margin: 0 calc(var(--padding) / 2);
+  margin: 0 var(--padding_d2);
   border-left: 1px solid var(--border-nav);
 }
 
@@ -239,15 +239,15 @@ main > aside.open {
   color: var(--color-nav);
   display: flex;
   cursor: pointer;
-  padding: calc(var(--padding) / 2);
+  padding: var(--padding_d2);
 }
 
 #aside-wrapper > aside > nav > details > ul > li > a::before {
   content: '';
   display: inline-block;
   background: var(--background);
-  width: calc(var(--padding) / 2);
-  height: calc(var(--padding) / 2);
+  width: var(--padding_d2);
+  height: var(--padding_d2);
   transform: rotate(45deg);
   border: 1px solid var(--border-nav);
   position: relative;
@@ -299,7 +299,7 @@ main > aside > nav {
   color: var(--color-nav);
   display: inline-block;
   cursor: pointer;
-  padding: calc(var(--padding) / 2);
+  padding: var(--padding_d2);
 }
 
 #TableOfContents a code {
@@ -483,12 +483,12 @@ body.model-open {
 
   #aside-wrapper > aside > a {
     display: flex;
-    padding: calc(var(--padding) * 2) var(--padding);
+    padding: var(--padding_x2) var(--padding);
   }
 
   main {
     width: 80svw;
-    padding: 0 calc(var(--padding) * 2);
+    padding: 0 var(--padding_x2);
   }
 
   main > article {
@@ -505,7 +505,7 @@ body.model-open {
   }
 
   main > article > header {
-    padding: calc(var(--padding) * 2) calc(var(--padding) * 2) var(--padding);
+    padding: var(--padding_x2) var(--padding_x2) var(--padding);
   }
 
   #content-wrapper > footer > div:first-child {
