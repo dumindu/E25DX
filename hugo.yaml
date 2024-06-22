@@ -1,0 +1,49 @@
+theme: E25DX
+
+enableGitInfo: true
+
+defaultContentLanguage: en
+
+languages:
+  en:
+    languageName: English
+    languageCode: en-US
+    contentDir: content/en
+    title: Site Name
+    description: Site Description
+    weight: 1
+
+services:
+  googleAnalytics:
+    ID: G-XXXXXXXXXX
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+    parser:
+      attribute:
+        block: true
+        title: true
+
+params:
+  project:
+    startYear: 2022
+    presentYear: 2024
+    github:
+      repo: repo
+    themeColor:
+      light: '#ffffff'
+      dark: '#101010'
+
+  author:
+    name: Name
+    url: https://github.com/repo
+
+  home:
+    heading: Your next
+    headingSegment2: Theme
+    description: Description
+    getStartedPath: /docs
