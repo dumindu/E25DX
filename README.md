@@ -2,7 +2,9 @@
 
 # 🦄 E25DX
 
-Your next documentation theme...
+A modern Hugo theme for tech documentations...
+
+https://github.com/dumindu/E25DX/assets/1280428/00935567-6d50-4e1b-bb0c-cbd159ad37f0
 
 ## 🌱 Inspiration
 
