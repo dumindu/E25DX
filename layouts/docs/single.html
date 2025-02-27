@@ -31,7 +31,7 @@
       <div>
         <button class="btn"><i>❌</i>{{ i18n "close" }}</button>
       </div>
-      <a href="/" class="site-logo">{{ .Site.Title }}</a>
+      <a href="{{ .Site.Home.Permalink }}" class="site-logo">{{ .Site.Title }}</a>
 
       <nav role="navigation">
         {{ $data := index .Site.Data .Site.Language.Lang .Section "sidebar" }}
@@ -49,25 +49,14 @@
               {{- $isActivePage := eq $urlPageSlug $pageSlug -}}
 
             <li>
-              {{ if eq .Site.Language.Lang .Site.DefaultContentLanguage }}
-                {{ $href := printf "/%s/%s/" $.Section $pageSlug }}
-                <a class="{{ if $isActivePage }}active{{ end }}" href="{{ $href }}">
-                  {{ if and (eq $index 0) $group.replaceFirstPageTitle }}
+              {{ $href := printf "%s%s/%s/" $.Site.Home.Permalink $.Section $pageSlug }}
+              <a class="{{ if $isActivePage }}active{{ end }}" href="{{ $href }}">
+                {{ if and (eq $index 0) $group.replaceFirstPageTitle }}
                   {{ $group.replaceFirstPageTitle }}
-                  {{ else }}
+                {{ else }}
                   {{ $page.title }}
-                  {{ end }}
-                </a>
-              {{ else }}
-                {{ $href := printf "/%s/%s/%s/" $.Site.Language.Lang $.Section $pageSlug }}
-                <a class="{{ if $isActivePage }}active{{ end }}" href="{{ $href }}">
-                  {{ if and (eq $index 0) $group.replaceFirstPageTitle }}
-                  {{ $group.replaceFirstPageTitle }}
-                  {{ else }}
-                  {{ $page.title }}
-                  {{ end }}
-                </a>
-              {{ end}}
+                {{ end }}
+              </a>
             </li>
 
             {{- end }}
@@ -81,7 +70,7 @@
 
   <div id="content-wrapper">
     <header>
-      <a href="/" class="site-logo">{{ .Site.Title }}</a>
+      <a href="{{ .Site.Home.Permalink }}" class="site-logo">{{ .Site.Title }}</a>
     </header>
 
     <main>
@@ -128,11 +117,7 @@
           {{ if $isActivePagePassed }}
           {{ $nextPageTitle = $page.title }}
 
-          {{ if eq .Site.Language.Lang .Site.DefaultContentLanguage }}
-          {{ $nextPageHref = printf "/%s/%s/" $.Section $pageSlug }}
-          {{ else }}
-          {{ $nextPageHref = printf "/%s/%s/%s/" $.Site.Language.Lang $.Section $pageSlug }}
-          {{ end}}
+          {{ $nextPageHref = printf "%s%s/%s/" $.Site.Home.Permalink $.Section $pageSlug }}
 
           {{ $isNextPagePassed = true }}
           {{break}}
@@ -143,11 +128,7 @@
           {{ else }}
           {{ $prevPageTitle = $page.title }}
 
-          {{ if eq .Site.Language.Lang .Site.DefaultContentLanguage }}
-          {{ $prevPageHref = printf "/%s/%s/" $.Section $pageSlug }}
-          {{ else }}
-          {{ $prevPageHref = printf "/%s/%s/%s/" $.Site.Language.Lang $.Section $pageSlug }}
-          {{ end}}
+          {{ $prevPageHref = printf "%s%s/%s/" $.Site.Home.Permalink $.Section $pageSlug }}
 
           {{ end }}
           {{ end}}
