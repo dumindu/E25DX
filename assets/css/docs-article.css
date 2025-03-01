@@ -127,6 +127,16 @@
   border-radius: 4px
 }
 
+#article-body hr:before {
+  display: block;
+  text-align: center;
+  content: "∙ ∙ ∙";
+  color: var(--color-fade);
+  letter-spacing: .6em;
+  top: calc(var(--padding)/3.7);
+  margin: 2.6em 0 1em;
+}
+
 #article-body blockquote {
   padding: 8px 12px;
   position: relative;
