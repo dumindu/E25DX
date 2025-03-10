@@ -10,7 +10,7 @@
   <meta name="theme-color" content="{{ .Site.Params.project.themeColor.dark }}" media="(prefers-color-scheme: dark)">
   {{ with .Params.robots -}}
   <meta name="robots" content="{{ . }}">
-  {{- end }}
+  {{ end -}}
 
   <title>{{ .Title | .RenderString }} · {{ .Site.Title | .RenderString }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.integrity }}">
 
   {{ partial "favicons.html" . }}
-  {{ partial "analytics" . }}
+  {{ partial "analytics.html" . }}
 </head>
 
 <body>
@@ -31,6 +31,7 @@
       <div>
         <button class="btn"><i>❌</i>{{ i18n "close" }}</button>
       </div>
+
       <a href="{{ .Site.Home.Permalink }}" class="site-logo">{{ .Site.Title }}</a>
 
       <nav role="navigation">
@@ -39,31 +40,25 @@
         {{- $url := split .Permalink "/" -}}
         {{- $urlPageSlug := index $url (sub (len $url) 2) -}}
 
-        {{- range $group := $data -}}
+        {{ range $group := $data -}}
         <details open>
           <summary>{{ $group.title }}</summary>
           <ul>
-
-            {{- range $index, $page := $group.pages -}}
-              {{- $pageSlug := $page.title | urlize -}}
-              {{- $isActivePage := eq $urlPageSlug $pageSlug -}}
-
+            {{ range $index, $page := $group.pages -}}
+              {{ $pageSlug := $page.title | urlize -}}
+              {{ $isActivePage := eq $urlPageSlug $pageSlug -}}
+              {{ $href := printf "%s%s/%s/" $.Site.Home.Permalink $.Section $pageSlug -}}
+              {{ $hrefPageTitle := $page.title -}}
+              {{ if and (eq $index 0) $group.replaceFirstPageTitle -}}
+                {{ $hrefPageTitle := $group.replaceFirstPageTitle -}}
+              {{ end -}}
             <li>
-              {{ $href := printf "%s%s/%s/" $.Site.Home.Permalink $.Section $pageSlug }}
-              <a class="{{ if $isActivePage }}active{{ end }}" href="{{ $href }}">
-                {{ if and (eq $index 0) $group.replaceFirstPageTitle }}
-                  {{ $group.replaceFirstPageTitle }}
-                {{ else }}
-                  {{ $page.title }}
-                {{ end }}
-              </a>
+              <a class="{{ if $isActivePage }}active{{ end }}" href="{{ $href }}">{{ $hrefPageTitle }}</a>
             </li>
-
-            {{- end }}
-
+            {{ end -}}
           </ul>
         </details>
-        {{- end }}
+        {{ end }}
       </nav>
     </aside>
   </div>
@@ -88,65 +83,53 @@
         </div>
 
         <footer>
-          {{ $lastMod := .Lastmod.Format "2006-01-02" }}
-
-          {{ $prevPageTitle := "" }}
-          {{ $nextPageTitle := "" }}
-          {{ $prevPageHref := "" }}
-          {{ $nextPageHref := "" }}
-
-          {{ $dataLocale := index .Site.Data .Site.Language.Lang }}
-          {{ if isset $dataLocale .Section }}
-          {{ $data := index .Site.Data .Site.Language.Lang .Section "sidebar"}}
-          {{- $url := split .Permalink "/" -}}
-          {{- $urlPageSlug := index $url (sub (len $url) 2) -}}
-
-          {{ $isSectionIndex := eq $urlPageSlug .Section }}
-          {{ $isActivePagePassed := false }}
-          {{ $isNextPagePassed := false }}
-
-          {{- range $group := $data -}}
-          {{ if $isNextPagePassed }}
-          {{break}}
-          {{ end }}
-
-          {{- range $page := $group.pages -}}
-          {{- $pageSlug := $page.title | urlize -}}
-          {{- $isActivePage := or $isSectionIndex (eq $urlPageSlug $pageSlug) -}}
-
-          {{ if $isActivePagePassed }}
-          {{ $nextPageTitle = $page.title }}
-
-          {{ $nextPageHref = printf "%s%s/%s/" $.Site.Home.Permalink $.Section $pageSlug }}
-
-          {{ $isNextPagePassed = true }}
-          {{break}}
-
-          {{ else if $isActivePage }}
-          {{ $isActivePagePassed = true }}
-
-          {{ else }}
-          {{ $prevPageTitle = $page.title }}
-
-          {{ $prevPageHref = printf "%s%s/%s/" $.Site.Home.Permalink $.Section $pageSlug }}
-
-          {{ end }}
-          {{ end}}
-          {{- end }}
-          {{ end }}
+          {{ $lastMod := .Lastmod.Format "2006-01-02" -}}
+          {{ $prevPageTitle := "" -}}
+          {{ $nextPageTitle := "" -}}
+          {{ $prevPageHref := "" -}}
+          {{ $nextPageHref := "" -}}
+          {{ $dataLocale := index .Site.Data .Site.Language.Lang -}}
+          {{ if isset $dataLocale .Section -}}
+            {{ $data := index .Site.Data .Site.Language.Lang .Section "sidebar" -}}
+            {{ $url := split .Permalink "/" -}}
+            {{ $urlPageSlug := index $url (sub (len $url) 2) -}}
+            {{ $isSectionIndex := eq $urlPageSlug .Section -}}
+            {{ $isActivePagePassed := false -}}
+            {{ $isNextPagePassed := false -}}
+            {{ range $group := $data -}}
+                {{ if $isNextPagePassed -}}
+                    {{ break -}}
+                {{ end -}}
+                {{ range $page := $group.pages -}}
+                    {{ $pageSlug := $page.title | urlize -}}
+                    {{ $isActivePage := or $isSectionIndex (eq $urlPageSlug $pageSlug) -}}
+                    {{ if $isActivePagePassed -}}
+                        {{ $nextPageTitle = $page.title -}}
+                        {{ $nextPageHref = printf "%s%s/%s/" $.Site.Home.Permalink $.Section $pageSlug -}}
+                        {{ $isNextPagePassed = true -}}
+                        {{ break -}}
+                    {{ else if $isActivePage -}}
+                        {{ $isActivePagePassed = true -}}
+                    {{ else -}}
+                        {{ $prevPageTitle = $page.title -}}
+                        {{ $prevPageHref = printf "%s%s/%s/" $.Site.Home.Permalink $.Section $pageSlug -}}
+                    {{ end -}}
+                {{ end -}}
+            {{ end -}}
+          {{ end -}}
 
           <time datetime="{{ $lastMod }}"><i>🕒</i> {{ i18n "updated" }}: {{ $lastMod }}</time>
-          {{ if ne $prevPageHref "" }}
+          {{ if ne $prevPageHref "" -}}
           <a href="{{ $prevPageHref }}"><i>﹤</i> {{ i18n "previous" }}</a>
-          {{ else }}
+          {{ else -}}
           <a class="hidden"><i>﹤</i> {{ i18n "previous" }}</a>
-          {{ end }}
+          {{ end -}}
 
-          {{ if ne $nextPageHref "" }}
+          {{ if ne $nextPageHref "" -}}
           <a href="{{ $nextPageHref }}">{{ i18n "next" }} <i>﹥</i></a>
-          {{ else }}
+          {{ else -}}
           <a class="hidden">{{ i18n "next" }} <i>﹥</i></a>
-          {{ end }}
+          {{ end -}}
 
         </footer>
       </article>
