@@ -83,7 +83,7 @@ main {
 #content-wrapper > footer {
   display: flex;
   flex-direction: column;
-  padding: var(--padding);
+  padding: var(--padding_x2) var(--padding) 0;
 }
 
 #content-wrapper > footer > div {
@@ -143,6 +143,7 @@ main > article > footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 0 var(--padding_x2);
+  row-gap: var(--padding);
 }
 
 main > article > footer > time {
@@ -437,7 +438,7 @@ body.model-open {
   }
 
   #content-wrapper > footer {
-    padding: 0 var(--padding);
+    padding: var(--padding) var(--padding) 0;
     flex-direction: row;
   }
 

@@ -76,7 +76,9 @@
         </nav>
         <header>
           <h1>{{ .Title | .RenderString }}</h1>
-          <p>{{ .Params.summary | .RenderString }}</p>
+          {{ with .Params.summary }}
+          <p>{{ . | $.RenderString }}</p>
+          {{ end }}
         </header>
         <div id="article-body">
           {{ .Content | safeHTML }}
@@ -120,15 +122,15 @@
 
           <time datetime="{{ $lastMod }}"><i>🕒</i> {{ i18n "updated" }}: {{ $lastMod }}</time>
           {{ if ne $prevPageHref "" -}}
-          <a href="{{ $prevPageHref }}"><i>﹤</i> {{ i18n "previous" }}</a>
+          <a href="{{ $prevPageHref }}"><i>&lsaquo;</i> {{ i18n "previous" }}</a>
           {{ else -}}
-          <a class="hidden"><i>﹤</i> {{ i18n "previous" }}</a>
+          <a class="hidden"><i>&lsaquo;</i> {{ i18n "previous" }}</a>
           {{ end -}}
 
           {{ if ne $nextPageHref "" -}}
-          <a href="{{ $nextPageHref }}">{{ i18n "next" }} <i>﹥</i></a>
+          <a href="{{ $nextPageHref }}">{{ i18n "next" }} <i>&rsaquo;</i></a>
           {{ else -}}
-          <a class="hidden">{{ i18n "next" }} <i>﹥</i></a>
+          <a class="hidden">{{ i18n "next" }} <i>&rsaquo;</i></a>
           {{ end -}}
 
         </footer>
