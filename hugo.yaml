@@ -50,3 +50,5 @@ params:
     headingSegment2: Theme
     description: Description
     getStartedPath: docs/
+
+  enableOGXSEO: false # No automated OG image generation
