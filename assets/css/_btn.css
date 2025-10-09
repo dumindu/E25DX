@@ -9,7 +9,6 @@
   color: var(--color-nav);
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
   background: var(--foreground-hover);
 }
-

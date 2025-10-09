@@ -15,7 +15,7 @@
   <title>{{ .Site.Title | .RenderString }} · {{ .Site.Params.description | .RenderString }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
 
-  {{- $css := slice (resources.Get "css/reset.css") (resources.Get "css/theme.css") (resources.Get "css/_btn.css") (resources.Get "css/home.css") | resources.Concat "assets/css/home.css" | minify | fingerprint }}
+  {{- $css := slice (resources.Get "css/reset.css") (resources.Get "css/theme.css") (resources.Get "css/_btn.css") (resources.Get "css/_select.css") (resources.Get "css/home.css") | resources.Concat "assets/css/home.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.integrity }}">
 
   {{ partial "favicons.html" . }}
@@ -29,6 +29,8 @@
   <header>
     <a href="{{ .Site.Home.Permalink }}" class="site-logo">{{ .Site.Title }}</a>
   </header>
+
+	{{ partial "menu-main.html" . }}
 
   <main>
     <section>

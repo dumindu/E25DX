@@ -112,6 +112,36 @@ main {
   justify-content: flex-end;
 }
 
+/* --- menu --- */
+#content-wrapper > nav {
+  display: flex;
+  justify-content: end;
+}
+
+@media (min-width: 768px) {
+  #content-wrapper > nav > select {
+    position: absolute;
+    top: calc(var(--padding) - 2px);
+    right: var(--padding);
+  }
+}
+
+@media (min-width: 1280px) {
+  #content-wrapper > nav > select {
+    top: 0;
+    right: calc(100vw/5 + var(--padding_x2));
+    padding: calc(1.5*var(--padding_d2));
+  }
+
+  #content-wrapper > nav > select > option {
+    padding: calc(1.5*var(--padding_d2));
+  }
+
+  main > article {
+    padding-top: var(--padding_x2);
+  }
+}
+
 /* ---- */
 
 main > article {

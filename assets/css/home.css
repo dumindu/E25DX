@@ -61,6 +61,33 @@ body {
   justify-content: flex-end;
 }
 
+/* --- menu --- */
+#content-wrapper > nav {
+  display: flex;
+  justify-content: end;
+}
+
+@media (min-width: 768px) {
+  #content-wrapper > nav > select {
+    position: absolute;
+    top: calc(var(--padding) - 2px);
+    right: var(--padding);
+  }
+}
+
+@media (min-width: 1280px) {
+  #content-wrapper > nav > select {
+    top: var(--padding_d2);
+    padding: calc(1.5 * var(--padding_d2));
+  }
+
+  #content-wrapper > nav > select > option {
+    padding: calc(1.5 * var(--padding_d2));
+  }
+}
+
+/* ---- */
+
 main {
   display: flex;
   flex: 1;

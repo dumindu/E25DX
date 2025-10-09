@@ -1,0 +1,18 @@
+{{ if $.Site.Menus.main }}
+
+<nav role="navigation">
+	<select onchange="if (this.value) window.location.href=this.value">
+		<button>
+			<selectedcontent></selectedcontent>
+		</button>
+		{{ $section := .Section }}
+		{{ range $.Site.Menus.main }}
+		<option value="{{ .URL | absLangURL }}" {{ if eq $section .Identifier -}}selected{{ end }}>
+			<span aria-hidden="">{{.Pre}}</span>
+			<span>{{ .Name }}</span>
+		</option>
+		{{ end }}
+	</select>
+</nav>
+
+{{ end }}

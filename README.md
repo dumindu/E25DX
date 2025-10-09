@@ -19,8 +19,8 @@ https://github.com/dumindu/E25DX/assets/1280428/00935567-6d50-4e1b-bb0c-cbd159ad
 - [x] Responsive and adaptive layouts.
 - [x] Built-in light and dark modes.
 - [x] Customizable sidebars using Hugo data templates.
-- [ ] Support for multiple documentation sets.
-- [ ] Implement a menu via Hugo configs.
+- [x] Support for multiple documentation sets.
+- [x] Implement a menu via Hugo configs.
 - [ ] Integrate search or AI assistant.
 
 ## 🚀 Getting Started
@@ -54,7 +54,7 @@ https://github.com/dumindu/E25DX/assets/1280428/00935567-6d50-4e1b-bb0c-cbd159ad
         - name, short_name, description
    
    3. Sample content and sidebar
-      - add `newsite/content/en/docs/_overview.md` for overview
+      - Add `newsite/content/en/docs/_overview.md` for overview
         ```markdown
         ---
         title: Overview
@@ -63,21 +63,21 @@ https://github.com/dumindu/E25DX/assets/1280428/00935567-6d50-4e1b-bb0c-cbd159ad
         - "/docs"
         ---
         ```
-      - add `newsite/content/en/docs/a1.hello-world.md` as the first page of first section
+      - Add `newsite/content/en/docs/a1.hello-world.md` as the first page of first section
         ```markdown
         ---
         title: Hello World
         slug: hello-world
         ---
         ```
-      - add `newsite/content/en/docs/b1.modules.md` as the first page of second section
+      - Add `newsite/content/en/docs/b1.modules.md` as the first page of second section
         ```markdown
         ---
         title: Modules
         slug: modules
         ---
         ```
-      - add `newsite/data/en/docs/sidebar.yml` for section titles and page titles
+      - Add `newsite/data/en/docs/sidebar.yml` for section titles and page titles
         ```markdown
         - title: Documentation
           pages:
@@ -91,6 +91,28 @@ https://github.com/dumindu/E25DX/assets/1280428/00935567-6d50-4e1b-bb0c-cbd159ad
           pages:
             - title: Modules
         ```
-      
-   4. Run `hugo server`
+
+   4. Main menu
+      - Update `newsite/hugo.yaml` to add menu configurations
+        ```markdown
+        menus:
+          main:
+            - identifier: home
+              name: Home
+              pre: <i aria-hidden>🏡</i>
+              pageRef: /
+              weight: 10
+            - identifier: docs
+              name: Docs
+              pre: <i aria-hidden>📖</i>
+              pageRef: /docs
+              weight: 20
+            - identifier: labs
+              name: Labs
+              pre: <i aria-hidden>🧪</i>
+              pageRef: /labs
+              weight: 30
+        ```
+
+   5. Run `hugo server`
       > 💡 Change `newsite/hugo.yaml` -> `enableGitInfo: false`, if you want to run `hugo server` before commit the changes.
