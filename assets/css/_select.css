@@ -29,10 +29,6 @@ select:open::picker-icon {
   transition: 0.4s;
 }
 
-::picker(select) {
-  border: none;
-}
-
 option {
   display: flex;
   justify-content: flex-start;
@@ -83,6 +79,11 @@ option::checkmark {
 }
 
 ::picker(select) {
+  border: none;
+  border-radius: var(--radius);
+  top: calc(anchor(bottom) + 1px);
+  left: calc(-1*var(--padding));
+
   opacity: 0;
   transition: all 0.2s allow-discrete;
 }
@@ -95,9 +96,4 @@ option::checkmark {
   ::picker(select):popover-open {
     opacity: 0;
   }
-}
-
-::picker(select) {
-  top: calc(anchor(bottom) + 1px);
-  left: calc(-1*var(--padding));
 }

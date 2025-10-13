@@ -1,4 +1,4 @@
-/* https://github.com/elad2412/the-new-css-reset v1.11.1 */
+/* https://github.com/elad2412/the-new-css-reset v1.11.3 */
 /* custom styles for: pre, code */
 
 *:where(:not(html, iframe, canvas, img, svg, video, audio, pre, code):not(svg *, symbol *)) {
@@ -24,6 +24,10 @@ a, button {
 
 ol, ul, menu, summary {
   list-style: none;
+}
+
+ol {
+  counter-reset: revert;
 }
 
 img {
