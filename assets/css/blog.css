@@ -1,0 +1,218 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 2em;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  color: var(--color);
+  background: var(--background);
+  font-family: var(--font-sans);
+}
+
+#outer-wrapper {
+  display: flex;
+}
+
+#content-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100svw;
+}
+
+#content-wrapper > header {
+  border-bottom: 1px solid var(--border);
+}
+
+#content-wrapper > header > a {
+  display: inline-block;
+  padding: var(--padding);
+}
+
+#content-wrapper > footer {
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding_x2) var(--padding) 0;
+}
+
+#content-wrapper > footer > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding);
+  gap: var(--padding_d2);
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+#content-wrapper > footer > div:first-child {
+  white-space: initial;
+}
+
+#content-wrapper > footer > div:first-child a {
+  background: var(--foreground-highlight);
+  color: var(--color-highlight);
+  border-radius: var(--radius);
+  cursor: pointer;
+  padding: 0 var(--padding_d2);
+}
+
+#content-wrapper > footer > div:nth-child(2) {
+  justify-content: flex-end;
+}
+
+/* --- menu --- */
+#content-wrapper > nav {
+  display: flex;
+  justify-content: end;
+}
+
+@media (min-width: 768px) {
+  #content-wrapper > nav > select {
+    position: absolute;
+    top: calc(var(--padding) - 2px);
+    right: var(--padding);
+  }
+}
+
+/* ---- */
+
+main > section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+main > section > header {
+  padding: var(--padding);
+}
+
+main > section > header > h1 {
+  line-height: 1em;
+  font-weight: 400;
+  color: var(--color);
+  font-size: 3em;
+}
+
+main > section > header > p {
+  font-size: 1.25em;
+  color: var(--color-fade);
+  padding-top: var(--padding);
+}
+
+main > section > img {
+  height: var(--cover-img-height);
+  object-fit: cover;
+  margin: var(--padding) 0;
+}
+
+
+main > section > footer {
+  display: flex;
+  padding: var(--padding) 0;
+  gap: var(--padding);
+  align-items: center;
+  justify-content: center;
+}
+
+main > section > footer > a {
+  display: flex;
+  padding: var(--padding);
+  gap: calc(var(--padding) / 4);
+  background: var(--foreground);
+  color: var(--color-nav);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+main > section > footer > a:hover:not( .disabled) {
+  background: var(--foreground-hover);
+}
+
+main > section > footer > a.disabled {
+  color: var(--color-fade);
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* main > section > a */
+
+main > section > a {
+  margin: var(--padding_x2) var(--padding_x2) var(--padding);
+  background: var(--foreground);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+main > section > a:hover {
+  background: var(--foreground-hover);
+}
+
+main > section > a > article > img {
+  height: calc(var(--cover-img-height)*.55);
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+main > section > a > article > header > h1 {
+  line-height: 1em;
+  font-weight: 400;
+  color: var(--color);
+  font-size: 1.8em;
+  padding: var(--padding);
+}
+
+main > section > a > article > header > p {
+  font-size: 1em;
+  color: var(--color-fade);
+  padding: var(--padding_d2) var(--padding) var(--padding);
+}
+
+main > section > a > article > footer > time {
+  display: flex;
+  color: var(--color-fade);
+  justify-content: start;
+  gap: var(--padding_d2);
+  padding: var(--padding);
+}
+
+/* From Small Tablet */
+@media (min-width: 768px) {
+  main > section > a {
+    margin: calc(var(--padding_x2)*2) calc(var(--padding_x2)*2) var(--padding_x2);
+  }
+}
+
+/* From Large Tablet */
+@media (min-width: 1024px) {
+  main > section > a {
+    width: 75svw;
+    margin: calc(var(--padding_x2)*2) auto var(--padding_x2);
+  }
+}
+
+/* From Desktop */
+@media (min-width: 1280px) {
+  main > section > a {
+    width: 60svw;
+  }
+}
+
+
+
+

@@ -60,6 +60,9 @@
   --callout-info-color: #ffffff;
   --callout-info-anchor: #d2aefc;
   --callout-info-anchor-text-shadow: .4px 0 .8px black;
+
+  /* cover */
+  --cover-img-height: 40svh;
 }
 
 :root[data-color="dark"] {
@@ -116,4 +119,20 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 800;
+}
+
+/* From Large Tablet */
+@media (min-width: 1024px) {
+  :root {
+    --padding: 16px;
+    --padding_d2: 8px;
+    --padding_x2: 32px;
+  }
+}
+
+/* From Desktop */
+@media (min-width: 1280px) {
+  :root {
+    --cover-img-height: 60svh;
+  }
 }

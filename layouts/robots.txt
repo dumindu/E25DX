@@ -1,0 +1,10 @@
+User-agent: Googlebot
+User-agent: YandexBot
+User-agent: baiduspider
+User-agent: Applebot
+Allow: /
+
+User-agent: *
+{{- range .Pages }}
+Disallow: {{ .RelPermalink }}
+{{- end }}

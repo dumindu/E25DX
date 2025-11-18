@@ -6,8 +6,9 @@
 			<selectedcontent></selectedcontent>
 		</button>
 		{{ $section := .Section }}
+		{{ $currentURL := .RelPermalink }}
 		{{ range $.Site.Menus.main }}
-		<option value="{{ .URL | absLangURL }}" {{ if eq $section .Identifier -}}selected{{ end }}>
+		<option value="{{ .URL | absLangURL }}" {{ if or (eq $section .Identifier) (eq $currentURL .URL) -}}selected{{ end }}>
 			<span aria-hidden="">{{.Pre}}</span>
 			<span>{{ .Name }}</span>
 		</option>

@@ -51,4 +51,7 @@ params:
     description: Description
     getStartedPath: docs/
 
+  pagination:
+    size: 6
+
   enableOGXSEO: false # No automated OG image generation

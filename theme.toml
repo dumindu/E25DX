@@ -10,8 +10,8 @@ homepage = 'https://github.com/dumindu/E25DX'
 demosite = 'https://learning-rust.github.io/docs/overview/'
 
 # Taxonomy terms
-tags = ['modern', 'dark mode', 'light mode', 'responsive', 'documentation']
-features = ['seo', 'syntax highlighting', 'customizable', 'responsive', 'dark mode', 'light mode']
+tags = ['documentation', 'blog', 'light', 'dark', 'minimal']
+features = ['light mode', 'dark mode', 'syntax highlighting', 'responsive', 'seo', 'customizable']
 
 # If the theme has a single author
 [author]

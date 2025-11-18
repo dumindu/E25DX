@@ -21,3 +21,9 @@ previous:
 
 next:
   other: Next
+
+newer:
+  other: Newer
+
+older:
+  other: Older

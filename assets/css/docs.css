@@ -434,12 +434,6 @@ body.model-open {
 
 /* From Large Tablet */
 @media (min-width: 1024px) {
-  :root {
-    --padding: 16px;
-    --padding_d2: 8px;
-    --padding_x2: 32px;
-  }
-
   main {
     flex-direction: row;
   }
