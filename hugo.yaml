@@ -1,6 +1,7 @@
 theme: E25DX
 
 enableGitInfo: true
+enableRobotsTXT: true
 
 defaultContentLanguage: en
 
