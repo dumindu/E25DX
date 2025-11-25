@@ -141,6 +141,14 @@ main > article > footer > time {
     width: 75svw;
     margin: auto;
   }
+
+  main > article > header {
+    padding: var(--padding) 0;
+  }
+
+  #article-body {
+    padding: var(--padding) 0;
+  }
 }
 
 /* From Desktop */
@@ -150,7 +158,7 @@ main > article > footer > time {
   }
 
   main > article > header {
-    padding: var(--padding_x2) var(--padding_x2) var(--padding);
+    padding: var(--padding_x2) 0;
   }
 }
 

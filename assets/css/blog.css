@@ -94,36 +94,28 @@ main > section {
   flex-direction: column;
 }
 
-main > section > header {
-  padding: var(--padding);
+#section-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--padding_x2);
+  padding: calc(var(--padding)*1.6) 0;
 }
-
-main > section > header > h1 {
-  line-height: 1em;
-  font-weight: 400;
-  color: var(--color);
-  font-size: 3em;
-}
-
-main > section > header > p {
-  font-size: 1.25em;
-  color: var(--color-fade);
-  padding-top: var(--padding);
-}
-
-main > section > img {
-  height: var(--cover-img-height);
-  object-fit: cover;
-  margin: var(--padding) 0;
-}
-
 
 main > section > footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 var(--padding_x2);
+  row-gap: var(--padding);
+}
+
+main > section > footer > span {
+  grid-column: 1 / 3;
   display: flex;
-  padding: var(--padding) 0;
-  gap: var(--padding);
-  align-items: center;
+  color: var(--color-fade);
   justify-content: center;
+  padding: var(--padding) 0;
+  gap: var(--padding_d2);
 }
 
 main > section > footer > a {
@@ -135,80 +127,129 @@ main > section > footer > a {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   cursor: pointer;
+  width: 75%;
 }
 
-main > section > footer > a:hover:not( .disabled) {
+main > section > footer > a:hover {
   background: var(--foreground-hover);
 }
 
-main > section > footer > a.disabled {
-  color: var(--color-fade);
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: 0.6;
+main > section > footer > a.hidden {
+  visibility: hidden;
 }
 
-/* main > section > a */
+main > section > footer > a:last-child {
+  display: flex;
+  justify-content: end;
+  margin-left: 25%;
+}
 
-main > section > a {
-  margin: var(--padding_x2) var(--padding_x2) var(--padding);
+/* #section-body */
+
+#section-body > article {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--padding_x2);
+  gap: var(--padding);
+}
+
+#section-body > article > a {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--padding);
   background: var(--foreground);
   border-radius: var(--radius);
   border: 1px solid var(--border);
   cursor: pointer;
 }
 
-main > section > a:hover {
+#section-body > article > a:hover {
   background: var(--foreground-hover);
 }
 
-main > section > a > article > img {
+#section-body > article > a > img {
   height: calc(var(--cover-img-height)*.55);
   width: 100%;
   object-fit: cover;
   border-radius: var(--radius);
 }
 
-main > section > a > article > header > h1 {
+#section-body > article > a > h1 {
   line-height: 1em;
   font-weight: 400;
   color: var(--color);
-  font-size: 1.8em;
-  padding: var(--padding);
+  font-size: 1.6em;
+  padding: 0 var(--padding);
 }
 
-main > section > a > article > header > p {
+#section-body > article > a > p {
   font-size: 1em;
   color: var(--color-fade);
-  padding: var(--padding_d2) var(--padding) var(--padding);
+  padding: 0 var(--padding);
 }
 
-main > section > a > article > footer > time {
+#section-body > article > a > time {
   display: flex;
   color: var(--color-fade);
   justify-content: start;
   gap: var(--padding_d2);
-  padding: var(--padding);
+  padding: var(--padding_d2) var(--padding_d2) var(--padding);
 }
 
 /* From Small Tablet */
 @media (min-width: 768px) {
-  main > section > a {
-    margin: calc(var(--padding_x2)*2) calc(var(--padding_x2)*2) var(--padding_x2);
+  main > section > footer {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 0;
+    padding: var(--padding_x2) var(--padding_x2) 0 ;
+  }
+
+  main > section > footer > span {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  main > section > footer > a:first-child {
+    width: 50%;
+    grid-row: 1;
+  }
+
+  main > section > footer > a:last-child {
+    width: 50%;
+    margin-left: 50%;
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  #section-body > article > a > h1 {
+    font-size: 1.8em;
   }
 }
 
 /* From Large Tablet */
 @media (min-width: 1024px) {
-  main > section > a {
+  main > section {
     width: 75svw;
-    margin: calc(var(--padding_x2)*2) auto var(--padding_x2);
+    margin: auto;
+  }
+
+  main > section > footer {
+    padding: var(--padding_x2) 0 0;
+  }
+
+  #section-body {
+    padding: calc(var(--padding_x2)*2) 0 0;
+    gap: calc(var(--padding_x2)*2);
+  }
+
+  #section-body > article {
+    padding: 0;
   }
 }
 
 /* From Desktop */
 @media (min-width: 1280px) {
-  main > section > a {
+  main > section {
     width: 60svw;
   }
 }

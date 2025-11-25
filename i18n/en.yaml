@@ -13,6 +13,9 @@ onThisPage:
 onThisSection:
   other: On this section
 
+created:
+  other: Created
+
 updated:
   other: Updated
 
@@ -27,3 +30,9 @@ newer:
 
 older:
   other: Older
+
+page:
+  other: Page
+
+of:
+  other: of
