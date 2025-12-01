@@ -206,6 +206,11 @@
   padding: 0;
 }
 
+#article-body li > .highlight > .chroma > code {
+  display: block;
+  background: transparent;
+}
+
 #article-body table {
   max-width: 100%;
   border-radius: var(--radius);
