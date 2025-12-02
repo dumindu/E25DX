@@ -106,6 +106,10 @@
   --chroma-base0F: #a3685a;
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 .site-logo {
   text-transform: uppercase;
   font-family: var(--font-brand);

@@ -51,12 +51,13 @@
 									srcset="{{ $small.RelPermalink }} 440w, {{ $medium.RelPermalink }} 1032w, {{ .RelPermalink }} {{ .Width }}w"
 									sizes="(max-width: 440px) 440px, (max-width: 1032px) 1032px, 100vw"
 									alt="{{ $.Title }} - cover image"
+									style="view-transition-name: {{ .RelPermalink | anchorize }}"
 							/>
 							{{ else }}
 							<p></p>
 							{{ end }}
 
-							<h1>{{ .Title | .RenderString }}</h1>
+							<h1 style="view-transition-name: {{ .RelPermalink | anchorize }}">{{ .Title | .RenderString }}</h1>
 
 							{{ with .Params.summary }}
 							<p>{{ . | $.RenderString }}</p>
