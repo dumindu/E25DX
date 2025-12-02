@@ -95,11 +95,10 @@ main > section {
 }
 
 #section-body {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: var(--padding_x2);
   gap: var(--padding_x2);
-  padding: calc(var(--padding)*1.6) 0;
 }
 
 main > section > footer {
@@ -107,6 +106,7 @@ main > section > footer {
   grid-template-columns: repeat(2, 1fr);
   padding: 0 var(--padding_x2);
   row-gap: var(--padding);
+  margin-top: auto;
 }
 
 main > section > footer > span {
@@ -144,13 +144,11 @@ main > section > footer > a:last-child {
   margin-left: 25%;
 }
 
-/* #section-body */
+/* #section-body > article */
 
 #section-body > article {
   display: flex;
   flex-direction: column;
-  padding: 0 var(--padding_x2);
-  gap: var(--padding);
 }
 
 #section-body > article > a {
@@ -168,7 +166,7 @@ main > section > footer > a:last-child {
 }
 
 #section-body > article > a > img {
-  height: calc(var(--cover-img-height)*.55);
+  height: calc(var(--cover-img-height) * .55);
   width: 100%;
   object-fit: cover;
   border-radius: var(--radius);
@@ -198,10 +196,18 @@ main > section > footer > a:last-child {
 
 /* From Small Tablet */
 @media (min-width: 768px) {
+  #section-body {
+    padding: calc(var(--padding_x2) * 2) var(--padding_x2);
+    gap: calc(var(--padding_x2) * 2);
+  }
+
+  #section-body > article > a > h1 {
+    font-size: 1.8em;
+  }
+
   main > section > footer {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 0;
-    padding: var(--padding_x2) var(--padding_x2) 0 ;
   }
 
   main > section > footer > span {
@@ -220,40 +226,19 @@ main > section > footer > a:last-child {
     grid-column: 3;
     grid-row: 1;
   }
-
-  #section-body > article > a > h1 {
-    font-size: 1.8em;
-  }
 }
 
 /* From Large Tablet */
 @media (min-width: 1024px) {
-  main > section {
-    width: 75svw;
-    margin: auto;
-  }
-
-  main > section > footer {
-    padding: var(--padding_x2) 0 0;
-  }
-
   #section-body {
-    padding: calc(var(--padding_x2)*2) 0 0;
-    gap: calc(var(--padding_x2)*2);
-  }
-
-  #section-body > article {
-    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--padding_x2);
   }
 }
 
 /* From Desktop */
 @media (min-width: 1280px) {
-  main > section {
-    width: 60svw;
+  #section-body {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-
-
-
-
