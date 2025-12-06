@@ -156,7 +156,7 @@ main > section > footer > a:last-child {
   grid-template-columns: 1fr;
   gap: var(--padding);
   background: var(--foreground);
-  border-radius: var(--radius);
+  border-radius: var(--radius-round);
   border: 1px solid var(--border);
   cursor: pointer;
 }
@@ -166,10 +166,11 @@ main > section > footer > a:last-child {
 }
 
 #section-body > article > a > img {
-  height: calc(var(--cover-img-height) * .55);
-  width: 100%;
   object-fit: cover;
-  border-radius: var(--radius);
+  margin: var(--padding_d2);
+  border-radius: calc(var(--radius-round) - var(--padding_d2));
+  width: calc(100% - var(--padding));
+  height: calc(var(--cover-img-height) * .55);
 }
 
 #section-body > article > a > h1 {
