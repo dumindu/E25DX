@@ -97,7 +97,7 @@ main > section {
 #section-body {
   display: grid;
   grid-template-columns: 1fr;
-  padding: var(--padding_x2);
+  padding: var(--padding);
   gap: var(--padding_x2);
 }
 
@@ -198,8 +198,7 @@ main > section > footer > a:last-child {
 /* From Small Tablet */
 @media (min-width: 768px) {
   #section-body {
-    padding: calc(var(--padding_x2) * 2) var(--padding_x2);
-    gap: calc(var(--padding_x2) * 2);
+    padding: var(--padding_x2);
   }
 
   #section-body > article > a > h1 {
@@ -233,7 +232,6 @@ main > section > footer > a:last-child {
 @media (min-width: 1024px) {
   #section-body {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--padding_x2);
   }
 }
 
