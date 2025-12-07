@@ -244,4 +244,8 @@ main > section > footer > a:last-child {
   #section-body {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  #section-body > article > a > img {
+    height: calc(var(--cover-img-height) * .34);
+  }
 }
