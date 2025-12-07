@@ -79,6 +79,10 @@ main {
 }
 
 @media (min-width: 768px) {
+  #content-wrapper > header {
+    border-bottom: none;
+  }
+
   #content-wrapper > nav > select {
     position: absolute;
     top: calc(var(--padding) - 2px);

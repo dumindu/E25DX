@@ -112,7 +112,6 @@
 }
 
 .site-logo {
-  text-transform: uppercase;
   font-family: var(--font-brand);
   font-size: 1.5em;
   color: transparent;

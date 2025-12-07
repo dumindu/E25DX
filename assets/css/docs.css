@@ -119,6 +119,10 @@ main {
 }
 
 @media (min-width: 768px) {
+  #content-wrapper > header {
+    border-bottom: none;
+  }
+
   #content-wrapper > nav > select {
     position: absolute;
     top: calc(var(--padding) - 2px);
@@ -510,7 +514,7 @@ body.model-open {
 
   #aside-wrapper > aside > a {
     display: flex;
-    padding: var(--padding_x2) var(--padding);
+    padding: var(--padding);
   }
 
   main {

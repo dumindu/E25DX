@@ -32,7 +32,7 @@ body {
 #content-wrapper > footer {
   display: flex;
   flex-direction: column;
-  padding: var(--padding);
+  padding: var(--padding_x2) var(--padding) 0;
 }
 
 #content-wrapper > footer > div {
@@ -68,6 +68,10 @@ body {
 }
 
 @media (min-width: 768px) {
+  #content-wrapper > header {
+    border-bottom: none;
+  }
+
   #content-wrapper > nav > select {
     position: absolute;
     top: calc(var(--padding) - 2px);
