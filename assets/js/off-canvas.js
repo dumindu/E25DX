@@ -5,11 +5,16 @@ const asideWrapper = document.querySelector('#aside-wrapper')
 const asideWrapperOpenButton = document.querySelector('main > article > nav > button:first-child')
 const asideWrapperCloseButton = document.querySelector('#aside-wrapper > aside > div .btn')
 
+const asideWrapperSiteLogo = document.querySelector('#aside-wrapper .site-logo')
+const asideWrapperAsideNav = document.querySelector('#aside-wrapper > aside > nav')
+const asideWrapperAsideNavActiveItem = document.querySelector('#aside-wrapper > aside > nav > details > ul > li > a.active');
+
 if (asideWrapper && asideWrapperOpenButton) {
     asideWrapperOpenButton.addEventListener('click', function () {
         body.classList.add('model-open')
         bodyModelOuter.style.display = 'block'
         asideWrapper.classList.add('open')
+        asideWrapperAsideNavActiveItem.scrollIntoView({ behavior: 'auto', block: 'center' });
 
         asideWrapperCloseButton.addEventListener('click', function () {
             body.classList.remove('model-open')
@@ -64,8 +69,6 @@ window.addEventListener('resize', function (event) {
     }
 });
 
-const asideWrapperSiteLogo = document.querySelector('#aside-wrapper .site-logo')
-const asideWrapperAsideNav = document.querySelector('#aside-wrapper > aside > nav')
 const adjustAsideWrapperAsideNavHeight = function () {
     if (window.innerWidth > 1280) {
         asideWrapperAsideNav.style.height = `${window.innerHeight - 1 - asideWrapperSiteLogo.getBoundingClientRect().height}px`
@@ -74,8 +77,19 @@ const adjustAsideWrapperAsideNavHeight = function () {
     }
 }
 
-adjustAsideWrapperAsideNavHeight()
+const scrollToActiveAsideNavItem = function () {
+    const activeItem = asideWrapperAsideNav?.querySelector('details > ul > li > a.active');
+    if (activeItem && activeItem.offsetTop > asideWrapperAsideNav.clientHeight && asideWrapperAsideNav.offsetParent !== null) {
+        asideWrapperAsideNav.scrollTo({
+            top: activeItem.offsetTop - asideWrapperAsideNav.offsetTop - asideWrapperSiteLogo.getBoundingClientRect().height,
+            behavior: "auto"
+        });
+    }
+}
+
+adjustAsideWrapperAsideNavHeight();
+scrollToActiveAsideNavItem();
 window.addEventListener('resize', function (event) {
     adjustAsideWrapperAsideNavHeight();
+    scrollToActiveAsideNavItem()
 })
-

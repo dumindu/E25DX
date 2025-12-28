@@ -50,7 +50,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--padding);
   gap: var(--padding_d2);
   text-align: center;
   flex-wrap: wrap;
@@ -58,6 +57,7 @@ main {
 
 #content-wrapper > footer > div:first-child {
   white-space: initial;
+  padding: var(--padding);
 }
 
 #content-wrapper > footer > div:first-child a {
@@ -70,6 +70,7 @@ main {
 
 #content-wrapper > footer > div:nth-child(2) {
   justify-content: flex-end;
+  padding: var(--padding) 0;
 }
 
 /* --- menu --- */
@@ -85,7 +86,7 @@ main {
 
   #content-wrapper > nav > select {
     position: absolute;
-    top: calc(var(--padding) - 2px);
+    top: calc(var(--padding) - 4px);
     right: var(--padding);
   }
 }

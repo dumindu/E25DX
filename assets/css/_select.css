@@ -19,14 +19,13 @@ select:hover, select:focus {
 }
 
 select::picker-icon {
-  content:"◂▸";
-  rotate: 90deg;
+  content:"⌵";
   font-size: .8rem;
 }
 
 select:open::picker-icon {
-  content:"▸◂";
-  transition: 0.4s;
+  rotate: 180deg;
+  transition: 0.3s;
 }
 
 option {

@@ -50,7 +50,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--padding);
   gap: var(--padding_d2);
   text-align: center;
   flex-wrap: wrap;
@@ -58,6 +57,7 @@ main {
 
 #content-wrapper > footer > div:first-child {
   white-space: initial;
+  padding: var(--padding);
 }
 
 #content-wrapper > footer > div:first-child a {
@@ -70,6 +70,7 @@ main {
 
 #content-wrapper > footer > div:nth-child(2) {
   justify-content: flex-end;
+  padding: var(--padding) 0;
 }
 
 /* --- menu --- */
@@ -85,7 +86,7 @@ main {
 
   #content-wrapper > nav > select {
     position: absolute;
-    top: calc(var(--padding) - 2px);
+    top: calc(var(--padding) - 4px);
     right: var(--padding);
   }
 }
@@ -201,12 +202,12 @@ main > section > footer > a:last-child {
 
 /* From Small Tablet */
 @media (min-width: 768px) {
-  #section-body {
-    padding: var(--padding_x2);
-  }
-
   #section-body > article > a > h1 {
     font-size: 1.8em;
+  }
+
+  #section-body > article > a > img {
+    height: calc(var(--cover-img-height) * .64);
   }
 
   main > section > footer {
@@ -234,6 +235,10 @@ main > section > footer > a:last-child {
 
 /* From Large Tablet */
 @media (min-width: 1024px) {
+  #section-body > article > a > img {
+    height: calc(var(--cover-img-height) * .55);
+  }
+
   #section-body {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -246,6 +251,6 @@ main > section > footer > a:last-child {
   }
 
   #section-body > article > a > img {
-    height: calc(var(--cover-img-height) * .34);
+    height: calc(var(--cover-img-height) * .42);
   }
 }
