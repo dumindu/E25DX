@@ -35,7 +35,7 @@ params:
   project:
     # To omit the startYear, put a ~ in its place.
     startYear: 2022
-    presentYear: 2025
+    presentYear: 2026
     github:
       repo: username/repo
     themeColor:
