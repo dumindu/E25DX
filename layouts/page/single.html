@@ -48,6 +48,12 @@
 				/>
 				{{ end }}
 
+				<nav>
+					<button class="btn" data-url="{{ .Site.Home.Permalink }}" onclick="window.location.href = this.getAttribute('data-url')">
+						<i>↖️</i> {{ i18n "backToHome" }}
+					</button>
+				</nav>
+
         <header>
           <h1>{{ .Title | .RenderString }}</h1>
           {{ with .Params.summary }}

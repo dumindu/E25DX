@@ -99,6 +99,12 @@ main > article {
   flex-direction: column;
 }
 
+main > article > nav {
+  display: flex;
+  justify-content: end;
+  padding: 0 var(--padding);
+}
+
 main > article > img {
   height: var(--cover-img-height);
   object-fit: cover;

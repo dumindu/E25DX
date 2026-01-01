@@ -36,3 +36,9 @@ page:
 
 of:
   other: of
+
+allBlogPosts:
+  other: All Blog Posts
+
+backToHome:
+  other: Back to Home

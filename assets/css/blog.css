@@ -175,7 +175,7 @@ main > section > footer > a:last-child {
   margin: var(--padding_d2);
   border-radius: calc(var(--radius-round) - var(--padding_d2));
   width: calc(100% - var(--padding));
-  height: calc(var(--cover-img-height) * .55);
+  height: var(--section-item-cover-img-height);
 }
 
 #section-body > article > a > h1 {
@@ -206,10 +206,6 @@ main > section > footer > a:last-child {
     font-size: 1.8em;
   }
 
-  #section-body > article > a > img {
-    height: calc(var(--cover-img-height) * .64);
-  }
-
   main > section > footer {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 0;
@@ -235,10 +231,6 @@ main > section > footer > a:last-child {
 
 /* From Large Tablet */
 @media (min-width: 1024px) {
-  #section-body > article > a > img {
-    height: calc(var(--cover-img-height) * .55);
-  }
-
   #section-body {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -248,9 +240,5 @@ main > section > footer > a:last-child {
 @media (min-width: 1280px) {
   #section-body {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  #section-body > article > a > img {
-    height: calc(var(--cover-img-height) * .42);
   }
 }

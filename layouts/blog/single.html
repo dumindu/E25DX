@@ -49,6 +49,12 @@
 				/>
 				{{ end }}
 
+				<nav>
+					<button class="btn" data-url="{{ .CurrentSection.Permalink }}" onclick="window.location.href = this.getAttribute('data-url')">
+						<i>↖️</i> {{ i18n "allBlogPosts" }}
+					</button>
+				</nav>
+
         <header>
           <h1 style="view-transition-name: {{ .RelPermalink | anchorize }}">{{ .Title | .RenderString }}</h1>
           {{ with .Params.summary }}
