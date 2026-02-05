@@ -26,9 +26,10 @@ https://github.com/dumindu/E25DX/assets/1280428/00935567-6d50-4e1b-bb0c-cbd159ad
 
 ## 🚀 Getting Started
 
-### [Install Hugo](https://gohugo.io/installation/).
-    - Use prebuilt binaries via https://github.com/gohugoio/hugo/releases/latest
-    - Verify the installation via `hugo version`
+### [Install Hugo](https://gohugo.io/installation/)
+
+- Use prebuilt binaries via https://github.com/gohugoio/hugo/releases/latest
+- Verify the installation via `hugo version`
 
 ### Create a new Hugo site with the E25DX theme.
 
@@ -113,19 +114,6 @@ cp themes/E25DX/static/manifest.json ./static/
 
 #### 4. Sample blog
 
-- Add `newsite/content/en/blog/_index.md` for blog list page
-
-  ```markdown
-  ---
-  title: Blog
-  summary: This is a sample blog.
-  ---
-
-  Sample blog post
-  ```
-
-- Add any image of png (or jpg) for `newsite/content/en/blog/cover.png` for blog list page cover image
-
 - Add `newsite/content/en/blog/2026_1_hello_world/index.md`
 
   ```markdown
@@ -154,7 +142,6 @@ cp themes/E25DX/static/manifest.json ./static/
   ```
 
 - Add any image of png (or jpg) for `newsite/content/en/page/about/cover.png` for about page cover image
-
 
 #### 6. Main menu
 
