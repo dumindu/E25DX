@@ -3,6 +3,8 @@ theme: E25DX
 enableGitInfo: true
 enableRobotsTXT: true
 
+disableKinds: [taxonomy, term]
+
 defaultContentLanguage: en
 
 languages:
