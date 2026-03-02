@@ -2,7 +2,7 @@
 
 {{- $title := .Title -}}
 {{- $description := .Description | default (printf "%s - %s" .Title .Site.Params.description) -}}
-{{- $image := .Params.og_image | default .Params.featured_image | default .Site.Params.og_image | default (print .Permalink "og.png") | absURL -}}
+{{- $image := .Params.og_image | default .Params.featured_image | default .Site.Params.og_image | default (print .Permalink "og.jpg") | absURL -}}
 {{- $author := .Site.Params.author -}}
 {{- $logo := .Site.Params.logo | absURL -}}
 {{- $siteTitle := .Site.Title -}}
