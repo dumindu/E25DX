@@ -448,7 +448,7 @@ body.model-open {
     flex-direction: column;
     position: sticky;
     top: 0;
-    height: calc(100svh - 68px);
+    height: 100svh;
     overflow-x: auto;
   }
 
