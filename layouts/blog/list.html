@@ -108,6 +108,6 @@
 </div>
 
 {{- $js := slice (resources.Get "js/color-preference.js") | resources.Concat "assets/js/blog.js" | minify | fingerprint }}
-<script type="text/javascript" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.integrity }}"></script>
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.integrity }}"></script>
 </body>
 </html>
