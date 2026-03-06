@@ -239,6 +239,7 @@ main > aside.open {
 
 #aside-wrapper > aside > nav {
   padding: 0 var(--padding);
+  view-transition-name: section-nav;
 }
 
 #aside-wrapper > aside > nav > details {
