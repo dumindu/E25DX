@@ -35,7 +35,8 @@
 
       <a href="{{ .Site.Home.Permalink }}" class="site-logo">{{ .Site.Title }}</a>
 
-      <nav role="navigation">
+			{{ $sectionMenu := index (where site.Menus.main "Identifier" .Section) 0 }}
+      <nav aria-label="{{ $sectionMenu.Name }} Pages">
         {{ $data := index .Site.Data .Site.Language.Lang .Section "sidebar" }}
 
         {{- $url := split .Permalink "/" -}}
@@ -54,7 +55,9 @@
                 {{ $hrefPageTitle := $group.replaceFirstPageTitle -}}
               {{ end -}}
             <li>
-              <a class="{{ if $isActivePage }}active{{ end }}" href="{{ $href }}">{{ $hrefPageTitle }}</a>
+              <a href="{{ $href }}" {{ if $isActivePage }} class="active" aria-current="page" {{ end }}>
+								{{ $hrefPageTitle }}
+							</a>
             </li>
             {{ end -}}
           </ul>

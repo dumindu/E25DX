@@ -1,7 +1,7 @@
 {{ if $.Site.Menus.main }}
 
-<nav role="navigation">
-	<select onchange="if (this.value) window.location.href=this.value">
+<nav>
+	<select name="main-menu" aria-label="Main Navigation" autocomplete="off" onchange="if (this.value) window.location.href=this.value">
 		<button>
 			<selectedcontent></selectedcontent>
 		</button>
