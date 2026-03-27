@@ -178,7 +178,7 @@
   background: var(--background-grey);
   padding: calc(var(--padding)/3.7);
   border-radius: var(--radius);
-  font-size: .9em;
+  font-size: .9rem;
 }
 
 #article-body blockquote code {
