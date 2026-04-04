@@ -37,7 +37,7 @@ main {
 
 #content-wrapper > header > a {
   display: inline-block;
-  padding: var(--padding);
+  margin: var(--padding);
 }
 
 #content-wrapper > footer {
@@ -79,15 +79,33 @@ main {
   justify-content: end;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 744px) {
   #content-wrapper > header {
     border-bottom: none;
+  }
+
+  #content-wrapper > header .site-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   #content-wrapper > nav > select {
     position: absolute;
     top: calc(var(--padding) - 4px);
     right: var(--padding);
+  }
+}
+
+@media (min-width: 1024px) {
+  #content-wrapper > nav > select {
+    right: calc(100vw/4 + var(--padding_x2));
+  }
+}
+
+@media (min-width: 1280px) {
+  #content-wrapper > nav > select {
+    right: calc(100vw/5 + calc(1.5*var(--padding_x2)));
   }
 }
 
@@ -101,14 +119,16 @@ main > article {
 
 main > article > nav {
   display: flex;
-  justify-content: end;
-  padding: 0 var(--padding);
+  padding: var(--padding_x2) var(--padding) var(--padding);
+  gap: 12px;
+  justify-content: space-between;
 }
 
 main > article > img {
   height: var(--cover-img-height);
   object-fit: cover;
-  margin: var(--padding_x2) 0 var(--padding);
+  margin: var(--padding) var(--padding_x2);
+  border-radius: var(--radius);
 }
 
 main > article > header {
@@ -139,37 +159,213 @@ main > article > footer > time {
   gap: var(--padding_d2);
 }
 
+main > aside {
+  width: 85%;
+  right: -85%;
+  display: none;
+  overflow-x: auto;
+}
+
+main > aside.open {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 10;
+  transition: .3s;
+  animation: slide-in-right .3s forwards;
+
+  background: var(--model-background);
+  box-shadow: var(--model-box-shadow);
+}
+
+/* --- toc --- */
+main > aside > div {
+  display: flex;
+  padding: var(--padding);
+}
+
+main > aside > strong {
+  display: flex;
+  padding: var(--padding);
+  color: var(--color-fade);
+  font-weight: bold;
+}
+
+main > aside > nav {
+  padding: 0 var(--padding);
+}
+
+#TableOfContents ul {
+  border-left: 1px solid var(--border);
+}
+
+#TableOfContents a {
+  color: var(--color-nav);
+  display: inline-block;
+  cursor: pointer;
+  padding: var(--padding_d2);
+}
+
+#TableOfContents a code {
+  padding: calc(var(--padding) / 3.7);
+  border-radius: var(--radius);
+  font-size: .9em;
+}
+
+#TableOfContents ul a::before {
+  content: '';
+  display: inline-block;
+  width: calc(var(--padding) / 1.5);
+  height: calc(var(--padding) / 1.5);
+  background: var(--background);
+  border: 1px solid var(--border-nav);
+  position: relative;
+  left: calc((var(--padding) * -.89));
+  top: -3px;
+  border-radius: 30%;
+  transform: rotate(45deg);
+}
+
+#TableOfContents a.active {
+  background: var(--foreground-highlight);
+  color: var(--color-highlight);
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+#TableOfContents ul a.active::before {
+  background: var(--background);
+}
+
+#TableOfContents a:hover:not(.active) {
+  background: var(--foreground-hover);
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+#TableOfContents ul ul {
+  margin-left: calc(var(--padding) * 1.75);
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+body.model-open {
+  overflow: hidden;
+}
+
+#body-model-outer {
+  display: none;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+
+  background: var(--model-foreground);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
 /* From Small Tablet */
-@media (min-width: 768px) {
-  main > article > img {
-    margin: 0 0 var(--padding);
+@media (min-width: 744px) {
+  main {
+    margin-top: calc(var(--padding_x2) * 1.8);
+  }
+
+  main > article > footer > a {
+    width: 50%;
+  }
+
+  main > article > footer > a:last-child {
+    margin-left: 50%;
+  }
+}
+
+/* Small Tablet */
+@media (min-width: 744px) and (max-width: 1023px) {
+  main > aside {
+    width: 50%;
+    right: -50%;
   }
 }
 
 /* From Large Tablet */
 @media (min-width: 1024px) {
-  main > article > *:not(img){
-    width: 75svw;
-    margin: auto;
+  main {
+    margin-top: 0;
+    flex-direction: row;
   }
 
-  main > article > header {
-    padding: var(--padding) 0;
+  main > article {
+    width: 75vw;
+    overflow-x: auto;
+    padding-top: var(--padding_x2);
   }
 
-  #article-body {
-    padding: var(--padding) 0;
+  main > aside {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    overflow-x: auto;
+  }
+
+  main > aside > div {
+    display: none;
+  }
+
+  main > article > nav > button:last-child {
+    display: none;
+  }
+
+  #content-wrapper > footer {
+    padding: var(--padding) var(--padding) 0;
+    flex-direction: row;
+  }
+
+  #content-wrapper > footer > div:first-child {
+    width: 75vw;
+  }
+
+  #content-wrapper > footer > div:nth-child(2) {
+    width: 25%;
   }
 }
 
 /* From Desktop */
 @media (min-width: 1280px) {
-  main > article > *:not(img){
-    width: 60svw;
+  #content-wrapper > header {
+    display: flex;
+    justify-content: end;
+  }
+
+  main {
+    padding: 0 var(--padding_x2);
+  }
+
+  main > article {
+    width: 80vw;
+  }
+
+  main > aside {
+    width: 20%;
   }
 
   main > article > header {
-    padding: var(--padding_x2) 0;
+    padding: var(--padding_x2) var(--padding_x2) var(--padding);
   }
 }
 

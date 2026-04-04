@@ -35,25 +35,25 @@
 
     <main>
       <article>
-				{{ $cover := or (.Resources.GetMatch "cover.jpg") (.Resources.GetMatch "cover.png") }}
-
-				{{ with $cover }}
-				{{ $small := .Resize "440x" }}
-				{{ $medium := .Resize "1032x" }}
-				<img
-						src="{{ .RelPermalink }}"
-						srcset="{{ $small.RelPermalink }} 440w, {{ $medium.RelPermalink }} 1032w, {{ .RelPermalink }} {{ .Width }}w"
-						sizes="(max-width: 440px) 440px, (max-width: 1032px) 1032px, 100vw"
-						alt="{{ $.Title }} - cover image"
-						style="view-transition-name: {{ .RelPermalink | anchorize }}"
-				/>
-				{{ end }}
-
 				<nav>
 					<button class="btn" data-url="{{ .CurrentSection.Permalink }}" onclick="window.location.href = this.getAttribute('data-url')">
 						<i>↖️</i> {{ i18n "allBlogPosts" }}
 					</button>
+					<button class="btn">{{ i18n "onThisPage" }} <i>➡️</i></button>
 				</nav>
+
+				{{ $cover := or (.Resources.GetMatch "cover.jpg") (.Resources.GetMatch "cover.png") }}
+				{{ with $cover }}
+					{{ $small := .Resize "440x" }}
+					{{ $medium := .Resize "1032x" }}
+					<img
+							src="{{ .RelPermalink }}"
+							srcset="{{ $small.RelPermalink }} 440w, {{ $medium.RelPermalink }} 1032w, {{ .RelPermalink }} {{ .Width }}w"
+							sizes="(max-width: 440px) 440px, (max-width: 1032px) 1032px, 100vw"
+							alt="{{ $.Title }} - cover image"
+							style="view-transition-name: {{ .RelPermalink | anchorize }}"
+					/>
+				{{ end }}
 
         <header>
           <h1 style="view-transition-name: {{ .RelPermalink | anchorize }}">{{ .Title | .RenderString }}</h1>
@@ -77,7 +77,15 @@
 					{{ end }}
         </footer>
       </article>
-    </main>
+
+			<aside>
+				<div>
+					<button class="btn"><i>❌</i>{{ i18n "close" }}</button>
+				</div>
+				<strong>{{ i18n "onThisPage" }}</strong>
+				{{ .TableOfContents }}
+			</aside>
+		</main>
 
     <footer>
       <div><i>🧑‍💻</i>{{ i18n "builtByAndCopyright" }}<a href="{{ .Site.Params.author.url }}" target="_blank">{{ .Site.Params.author.name }}</a><i>📅</i> {{ with .Site.Params.project.startYear }}{{.}}-{{ end }}{{ .Site.Params.project.presentYear }}<i>🚀</i> <a href="https://github.com/{{ .Site.Params.project.github.repo }}" target="_blank">GitHub</a></div>
@@ -86,9 +94,12 @@
       </div>
     </footer>
   </div>
+
 </div>
 
-{{- $js := slice (resources.Get "js/color-preference.js") | resources.Concat "assets/js/post.js" | minify | fingerprint }}
+<div id="body-model-outer"></div>
+
+{{- $js := slice (resources.Get "js/color-preference.js") (resources.Get "js/off-canvas-toc.js") (resources.Get "js/table-of-contents.js") | resources.Concat "assets/js/post.js" | minify | fingerprint }}
 <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.integrity }}"></script>
 </body>
 </html>

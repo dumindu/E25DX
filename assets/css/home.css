@@ -26,7 +26,7 @@ body {
 
 #content-wrapper > header > a {
   display: inline-block;
-  padding: var(--padding);
+  margin: var(--padding);
 }
 
 #content-wrapper > footer {
@@ -68,7 +68,7 @@ body {
   justify-content: end;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 744px) {
   #content-wrapper > header {
     border-bottom: none;
   }

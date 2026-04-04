@@ -37,7 +37,7 @@ main {
 
 #content-wrapper > header > a {
   display: inline-block;
-  padding: var(--padding);
+  margin: var(--padding);
 }
 
 #content-wrapper > footer {
@@ -79,7 +79,7 @@ main {
   justify-content: end;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 744px) {
   #content-wrapper > header {
     border-bottom: none;
   }
@@ -103,7 +103,7 @@ main > section {
   display: grid;
   grid-template-columns: 1fr;
   padding: var(--padding);
-  gap: var(--padding_x2);
+  gap: var(--padding);
 }
 
 main > section > footer {
@@ -161,7 +161,7 @@ main > section > footer > a:last-child {
   grid-template-columns: 1fr;
   gap: var(--padding);
   background: var(--foreground);
-  border-radius: var(--radius-round);
+  border-radius: var(--radius);
   border: 1px solid var(--border);
   cursor: pointer;
 }
@@ -173,7 +173,7 @@ main > section > footer > a:last-child {
 #section-body > article > a > img {
   object-fit: cover;
   margin: var(--padding_d2);
-  border-radius: calc(var(--radius-round) - var(--padding_d2));
+  border-radius: calc(var(--radius) - var(--padding_d2));
   width: calc(100% - var(--padding));
   height: var(--section-item-cover-img-height);
 }
@@ -201,7 +201,11 @@ main > section > footer > a:last-child {
 }
 
 /* From Small Tablet */
-@media (min-width: 768px) {
+@media (min-width: 744px) {
+  #section-body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   #section-body > article > a > h1 {
     font-size: 1.8em;
   }
@@ -226,13 +230,6 @@ main > section > footer > a:last-child {
     margin-left: 50%;
     grid-column: 3;
     grid-row: 1;
-  }
-}
-
-/* From Large Tablet */
-@media (min-width: 1024px) {
-  #section-body {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 

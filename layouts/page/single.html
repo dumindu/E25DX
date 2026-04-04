@@ -2,86 +2,97 @@
 <html lang="{{ .Site.LanguageCode | default `en-US` }}">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ .Page.Params.description | default .Site.Params.description | .RenderString }}">
-  <meta name="author" content="{{ .Site.Params.author.name }}">
-  <meta name="theme-color" content="{{ .Site.Params.project.themeColor.light }}" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="{{ .Site.Params.project.themeColor.dark }}" media="(prefers-color-scheme: dark)">
-  {{ with .Params.robots -}}
-  <meta name="robots" content="{{ . }}">
-  {{ end -}}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ .Page.Params.description | default .Site.Params.description | .RenderString }}">
+	<meta name="author" content="{{ .Site.Params.author.name }}">
+	<meta name="theme-color" content="{{ .Site.Params.project.themeColor.light }}" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="{{ .Site.Params.project.themeColor.dark }}" media="(prefers-color-scheme: dark)">
+	{{ with .Params.robots -}}
+	<meta name="robots" content="{{ . }}">
+	{{ end -}}
 
-  <title>{{ .Title | .RenderString }} · {{ .Site.Title | .RenderString }}</title>
-  <link rel="canonical" href="{{ .Permalink }}">
+	<title>{{ .Title | .RenderString }} · {{ .Site.Title | .RenderString }}</title>
+	<link rel="canonical" href="{{ .Permalink }}">
 
-  {{- $css := slice (resources.Get "css/reset.css") (resources.Get "css/theme.css") (resources.Get "css/_btn.css") (resources.Get "css/_select.css") (resources.Get "css/page.css") (resources.Get "css/docs-article.css") (resources.Get "css/docs-chroma.css") (resources.Get "css/docs-shortcodes.css") | resources.Concat "assets/css/page.css" | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.integrity }}">
+	{{- $css := slice (resources.Get "css/reset.css") (resources.Get "css/theme.css") (resources.Get "css/_btn.css") (resources.Get "css/_select.css") (resources.Get "css/page.css") (resources.Get "css/docs-article.css") (resources.Get "css/docs-chroma.css") (resources.Get "css/docs-shortcodes.css") | resources.Concat "assets/css/page.css" | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.integrity }}">
 
-  {{ partial "favicons.html" . }}
-  {{ partial "analytics.html" . }}
-  {{ partial "og-x-seo.html" . }}
+	{{ partial "favicons.html" . }}
+	{{ partial "analytics.html" . }}
+	{{ partial "og-x-seo.html" . }}
 </head>
 
 <body>
 
 <div id="outer-wrapper">
-  <div id="content-wrapper">
-    <header>
-      <a href="{{ .Site.Home.Permalink }}" class="site-logo">{{ .Site.Title }}</a>
-    </header>
+	<div id="content-wrapper">
+		<header>
+			<a href="{{ .Site.Home.Permalink }}" class="site-logo">{{ .Site.Title }}</a>
+		</header>
 
 		{{ partial "menu-main.html" . }}
 
-    <main>
-      <article>
-				{{ $cover := or (.Resources.GetMatch "cover.jpg") (.Resources.GetMatch "cover.png") }}
-
-				{{ with $cover }}
-				{{ $small := .Resize "440x" }}
-				{{ $medium := .Resize "1032x" }}
-				<img
-						src="{{ .RelPermalink }}"
-						srcset="{{ $small.RelPermalink }} 440w, {{ $medium.RelPermalink }} 1032w, {{ .RelPermalink }} {{ .Width }}w"
-						sizes="(max-width: 440px) 440px, (max-width: 1032px) 1032px, 100vw"
-						alt="{{ $.Title }} - cover image"
-				/>
-				{{ end }}
-
+		<main>
+			<article>
 				<nav>
 					<button class="btn" data-url="{{ .Site.Home.Permalink }}" onclick="window.location.href = this.getAttribute('data-url')">
 						<i>↖️</i> {{ i18n "backToHome" }}
 					</button>
+					<button class="btn">{{ i18n "onThisPage" }} <i>➡️</i></button>
 				</nav>
 
-        <header>
-          <h1>{{ .Title | .RenderString }}</h1>
-          {{ with .Params.summary }}
-          <p>{{ . | $.RenderString }}</p>
-          {{ end }}
-        </header>
+				{{ $cover := or (.Resources.GetMatch "cover.jpg") (.Resources.GetMatch "cover.png") }}
+				{{ with $cover }}
+					{{ $small := .Resize "440x" }}
+					{{ $medium := .Resize "1032x" }}
+					<img
+							src="{{ .RelPermalink }}"
+							srcset="{{ $small.RelPermalink }} 440w, {{ $medium.RelPermalink }} 1032w, {{ .RelPermalink }} {{ .Width }}w"
+							sizes="(max-width: 440px) 440px, (max-width: 1032px) 1032px, 100vw"
+							alt="{{ $.Title }} - cover image"
+					/>
+				{{ end }}
 
-        <div id="article-body">
-          {{ .Content | safeHTML }}
-        </div>
+				<header>
+					<h1>{{ .Title | .RenderString }}</h1>
+					{{ with .Params.summary }}
+					<p>{{ . | $.RenderString }}</p>
+					{{ end }}
+				</header>
 
-        <footer>
-          {{ $lastMod := .Lastmod.Format "2006-01-02" -}}
-          <time datetime="{{ $lastMod }}"><i>🕒</i> {{ i18n "updated" }}: {{ $lastMod }}</time>
-        </footer>
-      </article>
-    </main>
+				<div id="article-body">
+					{{ .Content | safeHTML }}
+				</div>
 
-    <footer>
-      <div><i>🧑‍💻</i>{{ i18n "builtByAndCopyright" }}<a href="{{ .Site.Params.author.url }}" target="_blank">{{ .Site.Params.author.name }}</a><i>📅</i> {{ with .Site.Params.project.startYear }}{{.}}-{{ end }}{{ .Site.Params.project.presentYear }}<i>🚀</i> <a href="https://github.com/{{ .Site.Params.project.github.repo }}" target="_blank">GitHub</a></div>
-      <div>
-        <button class="btn"><i>☀️</i><i>⁄</i><i>🌑</i></button>
-      </div>
-    </footer>
-  </div>
+				<footer>
+					{{ $lastMod := .Lastmod.Format "2006-01-02" }}
+					<time datetime="{{ $lastMod }}"><i>🕒</i> {{ i18n "updated" }}: {{ $lastMod }}</time>
+				</footer>
+			</article>
+
+			<aside>
+				<div>
+					<button class="btn"><i>❌</i>{{ i18n "close" }}</button>
+				</div>
+				<strong>{{ i18n "onThisPage" }}</strong>
+				{{ .TableOfContents }}
+			</aside>
+		</main>
+
+		<footer>
+			<div><i>🧑‍💻</i>{{ i18n "builtByAndCopyright" }}<a href="{{ .Site.Params.author.url }}" target="_blank">{{ .Site.Params.author.name }}</a><i>📅</i> {{ with .Site.Params.project.startYear }}{{.}}-{{ end }}{{ .Site.Params.project.presentYear }}<i>🚀</i> <a href="https://github.com/{{ .Site.Params.project.github.repo }}" target="_blank">GitHub</a></div>
+			<div>
+				<button class="btn"><i>☀️</i><i>⁄</i><i>🌑</i></button>
+			</div>
+		</footer>
+	</div>
+
 </div>
 
-{{- $js := slice (resources.Get "js/color-preference.js") | resources.Concat "assets/js/page.js" | minify | fingerprint }}
+<div id="body-model-outer"></div>
+
+{{- $js := slice (resources.Get "js/color-preference.js") (resources.Get "js/off-canvas-toc.js") (resources.Get "js/table-of-contents.js") | resources.Concat "assets/js/page.js" | minify | fingerprint }}
 <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.integrity }}"></script>
 </body>
 </html>
