@@ -128,7 +128,7 @@ main > article > img {
   height: var(--cover-img-height);
   object-fit: cover;
   margin: var(--padding) var(--padding_x2);
-  border-radius: var(--radius);
+  border-radius: calc(var(--radius)*4);
 }
 
 main > article > header {

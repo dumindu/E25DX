@@ -161,9 +161,10 @@ main > section > footer > a:last-child {
   grid-template-columns: 1fr;
   gap: var(--padding);
   background: var(--foreground);
-  border-radius: var(--radius);
+  border-radius: calc(var(--radius)*4);
   border: 1px solid var(--border);
   cursor: pointer;
+  overflow: hidden;
 }
 
 #section-body > article > a:hover {
@@ -173,9 +174,15 @@ main > section > footer > a:last-child {
 #section-body > article > a > img {
   object-fit: cover;
   margin: var(--padding_d2);
-  border-radius: calc(var(--radius) - var(--padding_d2));
+  border-radius: calc(var(--radius)*4 - var(--padding_d2));
   width: calc(100% - var(--padding));
   height: var(--section-item-cover-img-height);
+  transition: transform 0.4s ease;
+}
+
+#section-body > article > a > img:hover,
+#section-body > article > a:hover > img {
+  transform: scale(1.06);
 }
 
 #section-body > article > a > h1 {
