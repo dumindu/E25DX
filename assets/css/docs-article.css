@@ -247,7 +247,7 @@
 #article-body ol code,
 #article-body dl code,
 #article-body table code {
-  font-size: .9rem;
+  font-size: .9em;
   padding: calc(var(--padding)/3.7);
   background: var(--background-grey);
   border-radius: var(--radius);
