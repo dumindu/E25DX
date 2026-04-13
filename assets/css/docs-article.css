@@ -241,13 +241,31 @@
 #article-body h4 code,
 #article-body h5 code,
 #article-body h6 code,
+#article-body p code {
+  font-size: .9em;
+}
+
 #article-body p code,
 #article-body blockquote code,
 #article-body ul code,
 #article-body ol code,
 #article-body dl code,
 #article-body table code {
-  font-size: .9em;
+  font-size: .9rem;
+}
+
+#article-body h1 code,
+#article-body h2 code,
+#article-body h3 code,
+#article-body h4 code,
+#article-body h5 code,
+#article-body h6 code,
+#article-body p code,
+#article-body blockquote code,
+#article-body ul code,
+#article-body ol code,
+#article-body dl code,
+#article-body table code {
   padding: calc(var(--padding)/3.7);
   background: var(--background-grey);
   border-radius: var(--radius);

@@ -1,4 +1,4 @@
-/* Background */ .chroma { font-size: .9em; color: var(--chroma-base05); background-color: var(--chroma-base00); border-radius: 6px; padding: 16px 24px; overflow-x: auto; }
+/* Background */ .chroma { font-size: .9rem; color: var(--chroma-base05); background-color: var(--chroma-base00); border-radius: var(--radius); padding: var(--padding) calc(var(--padding_d2)*3); overflow-x: auto; }
 /* Other */ .chroma .x { color: var(--chroma-base05) }
 /* Error */ .chroma .err { color: var(--chroma-base08) }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
