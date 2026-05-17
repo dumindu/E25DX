@@ -8,14 +8,22 @@
   <meta name="author" content="{{ .Site.Params.author.name }}">
   <meta name="theme-color" content="{{ .Site.Params.project.themeColor.light }}" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="{{ .Site.Params.project.themeColor.dark }}" media="(prefers-color-scheme: dark)">
-  {{ with .Params.robots -}}
+  {{ with .Params.robots }}
   <meta name="robots" content="{{ . }}">
-  {{- end }}
+  {{ end }}
 
   <title>{{ .Site.Title | .RenderString }} · {{ .Site.Params.description | .RenderString }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
 
-  {{- $css := slice (resources.Get "css/reset.css") (resources.Get "css/theme.css") (resources.Get "css/_btn.css") (resources.Get "css/_select.css") (resources.Get "css/home.css") | resources.Concat "assets/css/home.css" | minify | fingerprint }}
+  {{ $css := slice
+		(resources.Get "css/reset.css")
+		(resources.Get "css/theme.css")
+		(resources.Get "css/components/button.css")
+		(resources.Get "css/components/select.css")
+		(resources.Get "css/site/header.css")
+		(resources.Get "css/site/footer.css")
+		(resources.Get "css/site/layout-home.css")
+	| resources.Concat "assets/css/home.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.integrity }}">
 
   {{ partial "favicons.html" . }}
@@ -26,10 +34,7 @@
 <body>
 
 <div id="content-wrapper">
-  <header>
-    <a href="{{ .Site.Home.Permalink }}" class="site-logo">{{ .Site.Title }}</a>
-  </header>
-
+	{{ partial "site/header.html" . }}
 	{{ partial "menu-main.html" . }}
 
   <main>
@@ -47,15 +52,8 @@
     </section>
   </main>
 
-  <footer>
-    <div><i>🧑‍💻</i>{{ i18n "builtByAndCopyright" }}<a href="{{ .Site.Params.author.url }}" target="_blank">{{ .Site.Params.author.name }}</a><i>📅</i> {{ with .Site.Params.project.startYear }}{{.}}-{{ end }}{{ .Site.Params.project.presentYear }}<i>🚀</i> <a href="https://github.com/{{ .Site.Params.project.github.repo }}" target="_blank">GitHub</a></div>
-    <div>
-      <button class="btn"><i>☀️</i><i>⁄</i><i>🌑</i></button>
-    </div>
-  </footer>
+	{{ partial "site/footer.html" . }}
 </div>
-
-<div id="body-model-outer"></div>
 
 {{- $js := slice (resources.Get "js/color-preference.js") | resources.Concat "assets/js/home.js" | minify | fingerprint }}
 <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.integrity }}"></script>

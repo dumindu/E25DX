@@ -1,0 +1,29 @@
+#content-wrapper > header {
+  display: flex;
+}
+
+#content-wrapper > header .site-logo {
+  display: inline-block;
+  margin: var(--padding);
+}
+
+/* --- menu --- */
+#content-wrapper > nav {
+  display: flex;
+  justify-content: end;
+}
+
+@media (min-width: 744px) {
+  #content-wrapper > nav > select {
+    position: absolute;
+    top: calc(var(--padding) - 4px);
+    right: var(--padding);
+  }
+}
+
+/*
+@media (min-width: 1024px) {
+  #content-wrapper > header .site-logo {
+    display: none;
+  }
+}*/

@@ -75,35 +75,37 @@ const adjustAsideWrapperAsideNavHeight = function () {
     }
 }
 
-adjustAsideWrapperAsideNavHeight()
-window.addEventListener('resize', function (event) {
-    adjustAsideWrapperAsideNavHeight();
-})
+if (asideWrapperAsideNav) {
+    adjustAsideWrapperAsideNavHeight()
+    window.addEventListener('resize', function (event) {
+        adjustAsideWrapperAsideNavHeight();
+    })
 
-const section = window.location.pathname.split('/').filter(Boolean)[0] || 'default';
-const sectionSidebarPositionKey = `${section}-sidebar-position`;
+    const section = window.location.pathname.split('/').filter(Boolean)[0] || 'default';
+    const sectionSidebarPositionKey = `${section}-sidebar-position`;
 
-window.addEventListener('DOMContentLoaded', () => {
-    const savedScroll = sessionStorage.getItem(sectionSidebarPositionKey);
-    if (savedScroll === null) {
-        const navRect = asideWrapperAsideNav.getBoundingClientRect();
-        const itemRect = asideWrapperAsideNavActiveItem.getBoundingClientRect();
+    window.addEventListener('DOMContentLoaded', () => {
+        const savedScroll = sessionStorage.getItem(sectionSidebarPositionKey);
+        if (savedScroll === null) {
+            const navRect = asideWrapperAsideNav.getBoundingClientRect();
+            const itemRect = asideWrapperAsideNavActiveItem.getBoundingClientRect();
 
-        const isVisible =
-            itemRect.top >= navRect.top &&
-            itemRect.bottom <= navRect.bottom;
+            const isVisible =
+                itemRect.top >= navRect.top &&
+                itemRect.bottom <= navRect.bottom;
 
-        if (!isVisible) {
-            asideWrapperAsideNav.scrollTo({
-                top: asideWrapperAsideNavActiveItem.offsetTop - asideWrapperAsideNav.offsetTop - asideWrapperSiteLogo.getBoundingClientRect().height,
-                behavior: "auto"
-            });
+            if (!isVisible) {
+                asideWrapperAsideNav.scrollTo({
+                    top: asideWrapperAsideNavActiveItem.offsetTop - asideWrapperAsideNav.offsetTop - asideWrapperSiteLogo.getBoundingClientRect().height,
+                    behavior: "auto"
+                });
+            }
+        } else {
+            asideWrapperAsideNav.scrollTop = parseInt(savedScroll, 10);
         }
-    } else {
-        asideWrapperAsideNav.scrollTop = parseInt(savedScroll, 10);
-    }
-});
+    });
 
-window.addEventListener('beforeunload', () => {
-    sessionStorage.setItem(sectionSidebarPositionKey, asideWrapperAsideNav.scrollTop);
-});
+    window.addEventListener('beforeunload', () => {
+        sessionStorage.setItem(sectionSidebarPositionKey, asideWrapperAsideNav.scrollTop);
+    });
+}

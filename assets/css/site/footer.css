@@ -1,0 +1,25 @@
+#content-wrapper > footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--padding_d2);
+  text-align: center;
+  flex-wrap: wrap;
+  white-space: initial;
+  padding: var(--padding_x2);
+}
+
+#content-wrapper > footer > a {
+  background: var(--foreground-highlight);
+  color: var(--color-highlight);
+  border-radius: var(--radius);
+  cursor: pointer;
+  padding: 0 var(--padding_d2);
+}
+
+/* From Large Tablet */
+@media (min-width: 1024px) {
+  #content-wrapper > footer {
+    width: 75vw;
+  }
+}

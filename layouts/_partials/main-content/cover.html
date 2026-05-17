@@ -1,0 +1,12 @@
+{{ $cover := or (.Resources.GetMatch "cover.jpg") (.Resources.GetMatch "cover.png") }}
+{{ with $cover }}
+	{{ $small := .Resize "440x" }}
+	{{ $medium := .Resize "1032x" }}
+	<img
+			src="{{ .RelPermalink }}"
+			srcset="{{ $small.RelPermalink }} 440w, {{ $medium.RelPermalink }} 1032w, {{ .RelPermalink }} {{ .Width }}w"
+			sizes="(max-width: 440px) 440px, (max-width: 1032px) 1032px, 100vw"
+			alt="{{ $.Title }} - cover image"
+			style="view-transition-name: {{ .RelPermalink | anchorize }}"
+	/>
+{{ end }}

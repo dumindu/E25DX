@@ -1,0 +1,24 @@
+{{ with index .Site.Data .Site.Language.Lang .Section "sidebar" }}
+<nav>
+	<button class="btn"><i>⬅️</i> {{ i18n "onThisSection" }}</button>
+	<button class="btn">{{ i18n "onThisPage" }} <i>➡️</i></button>
+</nav>
+{{ else }}
+
+	{{ with .Page.Params.isBlog }}
+		<nav>
+			<button class="btn" data-url="{{ $.CurrentSection.Permalink }}" onclick="window.location.href = this.getAttribute('data-url')">
+				<i>↖️</i> {{ i18n "allBlogPosts" }}
+			</button>
+			<button class="btn">{{ i18n "onThisPage" }} <i>➡️</i></button>
+		</nav>
+	{{ else }}
+	<nav>
+		<button class="btn" data-url="{{ $.Site.Home.Permalink }}" onclick="window.location.href = this.getAttribute('data-url')">
+			<i>↖️</i> {{ i18n "backToHome" }}
+		</button>
+		<button class="btn">{{ i18n "onThisPage" }} <i>➡️</i></button>
+	</nav>
+	{{ end }}
+
+{{ end }}

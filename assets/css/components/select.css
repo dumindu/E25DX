@@ -2,6 +2,14 @@ select, ::picker(select) {
   appearance: base-select;
 }
 
+@supports not (appearance: base-select) {
+  select {
+    appearance: menulist;
+    height: 2.4em;
+    align-items: center;
+  }
+}
+
 select {
   display: flex;
   padding: var(--padding_d2);

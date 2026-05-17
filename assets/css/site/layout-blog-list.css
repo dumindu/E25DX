@@ -13,10 +13,6 @@ body {
   font-family: var(--font-sans);
 }
 
-#outer-wrapper {
-  display: flex;
-}
-
 #content-wrapper {
   display: flex;
   flex: 1;
@@ -31,67 +27,9 @@ main {
   width: 100svw;
 }
 
-#content-wrapper > header {
-  border-bottom: 1px solid var(--border);
-}
-
-#content-wrapper > header > a {
-  display: inline-block;
-  margin: var(--padding);
-}
-
 #content-wrapper > footer {
-  display: flex;
-  flex-direction: column;
-  padding: var(--padding_x2) var(--padding) 0;
+  width: 100%;
 }
-
-#content-wrapper > footer > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--padding_d2);
-  text-align: center;
-  flex-wrap: wrap;
-}
-
-#content-wrapper > footer > div:first-child {
-  white-space: initial;
-  padding: var(--padding);
-}
-
-#content-wrapper > footer > div:first-child a {
-  background: var(--foreground-highlight);
-  color: var(--color-highlight);
-  border-radius: var(--radius);
-  cursor: pointer;
-  padding: 0 var(--padding_d2);
-}
-
-#content-wrapper > footer > div:nth-child(2) {
-  justify-content: flex-end;
-  padding: var(--padding) 0;
-}
-
-/* --- menu --- */
-#content-wrapper > nav {
-  display: flex;
-  justify-content: end;
-}
-
-@media (min-width: 744px) {
-  #content-wrapper > header {
-    border-bottom: none;
-  }
-
-  #content-wrapper > nav > select {
-    position: absolute;
-    top: calc(var(--padding) - 4px);
-    right: var(--padding);
-  }
-}
-
-/* ---- */
 
 main > section {
   display: flex;
