@@ -1,39 +1,37 @@
-<div id="aside-wrapper">
-	<aside>
-		<div>
-			<button class="btn"><i>❌</i>{{ i18n "close" }}</button>
-		</div>
+<aside id="left-sidebar">
+	<div>
+		<button class="btn"><i>❌</i>{{ i18n "close" }}</button>
+	</div>
 
-		<a href="{{ site.Home.Permalink }}" class="site-logo">{{ site.Title }}</a>
+	<a href="{{ site.Home.Permalink }}" class="site-logo">{{ site.Title }}</a>
 
-		{{ $sectionMenu := index (where site.Menus.main "Identifier" page.Section) 0 }}
-		<nav aria-label="{{ $sectionMenu.Name }} Pages">
-			{{ $data := index site.Data site.Language.Lang page.Section "sidebar" }}
+	{{ $sectionMenu := index (where site.Menus.main "Identifier" page.Section) 0 }}
+	<nav aria-label="{{ $sectionMenu.Name }} Pages">
+		{{ $data := index site.Data site.Language.Lang page.Section "sidebar" }}
 
-			{{- $url := split page.Permalink "/" -}}
-			{{- $urlPageSlug := index $url (sub (len $url) 2) -}}
+		{{- $url := split page.Permalink "/" -}}
+		{{- $urlPageSlug := index $url (sub (len $url) 2) -}}
 
-			{{ range $group := $data -}}
-			<details open>
-				<summary>{{ $group.title }}</summary>
-				<ul>
-					{{ range $index, $page := $group.pages -}}
-					{{ $pageSlug := $page.title | urlize -}}
-					{{ $isActivePage := eq $urlPageSlug $pageSlug -}}
-					{{ $href := printf "%s%s/%s/" site.Home.Permalink page.Section $pageSlug -}}
-					{{ $hrefPageTitle := $page.title -}}
-					{{ if and (eq $index 0) $group.replaceFirstPageTitle -}}
-					{{ $hrefPageTitle := $group.replaceFirstPageTitle -}}
-					{{ end -}}
-					<li>
-						<a href="{{ $href }}" {{ if $isActivePage }} class="active" aria-current="page" {{ end }}>
-							{{ $hrefPageTitle }}
-						</a>
-					</li>
-					{{ end -}}
-				</ul>
-			</details>
-			{{ end }}
-		</nav>
-	</aside>
-</div>
+		{{ range $group := $data -}}
+		<details open>
+			<summary>{{ $group.title }}</summary>
+			<ul>
+				{{ range $index, $page := $group.pages -}}
+				{{ $pageSlug := $page.title | urlize -}}
+				{{ $isActivePage := eq $urlPageSlug $pageSlug -}}
+				{{ $href := printf "%s%s/%s/" site.Home.Permalink page.Section $pageSlug -}}
+				{{ $hrefPageTitle := $page.title -}}
+				{{ if and (eq $index 0) $group.replaceFirstPageTitle -}}
+				{{ $hrefPageTitle := $group.replaceFirstPageTitle -}}
+				{{ end -}}
+				<li>
+					<a href="{{ $href }}" {{ if $isActivePage }} class="active" aria-current="page" {{ end }}>
+						{{ $hrefPageTitle }}
+					</a>
+				</li>
+				{{ end -}}
+			</ul>
+		</details>
+		{{ end }}
+	</nav>
+</aside>

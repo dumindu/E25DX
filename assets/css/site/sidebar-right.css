@@ -1,11 +1,11 @@
-main > aside {
+#right-sidebar {
   width: 85%;
   right: -85%;
   display: none;
   overflow-x: auto;
 }
 
-main > aside.open {
+#right-sidebar.open {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -31,24 +31,24 @@ main > aside.open {
 
 /* ----- */
 
-main > aside > div {
+#right-sidebar > div {
   display: flex;
   padding: var(--padding);
 }
 
-main > aside > div > .btn {
+#right-sidebar > div > .btn {
   font-size: .75em;
   font-weight: 800;
 }
 
-main > aside > strong {
+#right-sidebar > strong {
   display: flex;
   padding: var(--padding);
   color: var(--color-fade);
   font-weight: bold;
 }
 
-main > aside > nav {
+#right-sidebar > nav {
   padding: 0 var(--padding);
 }
 
@@ -106,7 +106,7 @@ main > aside > nav {
 
 /* Small Tablet */
 @media (min-width: 744px) and (max-width: 1023px) {
-  main > aside {
+  #right-sidebar {
     width: 50%;
     right: -50%;
   }
@@ -114,7 +114,7 @@ main > aside > nav {
 
 /* From Large Tablet */
 @media (min-width: 1024px) {
-  main > aside {
+  #right-sidebar {
     width: 25%;
     display: flex;
     flex-direction: column;
@@ -124,7 +124,7 @@ main > aside > nav {
     overflow-x: auto;
   }
 
-  main > aside > div {
+  #right-sidebar > div {
     display: none;
   }
 }

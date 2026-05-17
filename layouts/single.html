@@ -55,7 +55,7 @@
 				{{ partial "main-content/nav.html" . }}
 				{{ partial "main-content/cover.html" . }}
 
-        <header>
+        <header id="article-header">
           <h1 style="view-transition-name: {{ .RelPermalink | anchorize }}">{{ .Title | .RenderString }}</h1>
 					{{ with .Params.summary }}
 					<p>{{ . | $.RenderString }}</p>

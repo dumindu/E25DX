@@ -12,7 +12,7 @@ let colorPreference = getColorPreference()
 localStorage.setItem(lsKeyColorPreference, colorPreference)
 document.firstElementChild.setAttribute('data-color', colorPreference)
 
-const colorPreferenceButton = document.querySelector('#content-wrapper > footer > div:last-child > button:last-child')
+const colorPreferenceButton = document.querySelector('#site-footer > div:last-child > button:last-child')
 if (colorPreferenceButton) {
     colorPreferenceButton.addEventListener('click', function () {
         if (colorPreference == 'dark') {

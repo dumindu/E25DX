@@ -64,7 +64,7 @@ body.model-open {
     overflow-x: auto;
   }
 
-  main > article > nav > button:last-child {
+  #article-nav > button:last-child {
     display: none;
   }
 }
@@ -81,15 +81,15 @@ body.model-open {
     overflow-x: auto;
   }
 
-  main > aside {
+  #right-sidebar {
     width: 20%;
   }
 
-  #content-wrapper > footer {
+  #site-footer {
     width: 80vw;
   }
 
-  main > article > header {
+  #article-header {
     padding: var(--padding_x2) var(--padding_x2) var(--padding);
   }
 }

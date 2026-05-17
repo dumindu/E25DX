@@ -64,7 +64,7 @@ body.model-open {
     overflow-x: auto;
   }
 
-  main > article > nav > button:last-child {
+  #article-nav > button:last-child {
     display: none;
   }
 }
@@ -74,6 +74,7 @@ body.model-open {
   body {
     flex-direction: row;
   }
+
   main {
     width: 80svw;
     padding: 0 var(--padding_x2);
@@ -84,19 +85,19 @@ body.model-open {
     overflow-x: auto;
   }
 
-  main > article > nav {
+  #article-nav {
     display: none;
   }
 
-  #content-wrapper > footer {
+  #site-footer {
     width: 60vw;
   }
 
-  main > aside {
+  #right-sidebar {
     width: 25%;
   }
 
-  main > article > header {
+  #article-header {
     padding: var(--padding_x2) var(--padding_x2) var(--padding);
   }
 }

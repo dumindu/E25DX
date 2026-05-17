@@ -1,8 +1,8 @@
-#content-wrapper > header {
+#site-header {
   display: flex;
 }
 
-#content-wrapper > header .site-logo {
+#site-header .site-logo {
   display: inline-block;
   margin: var(--padding);
 }
@@ -23,7 +23,7 @@
 
 /*
 @media (min-width: 1024px) {
-  #content-wrapper > header .site-logo {
+  #site-header .site-logo {
     display: none;
   }
 }*/

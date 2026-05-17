@@ -1,11 +1,11 @@
-#aside-wrapper{
+#left-sidebar {
   width: 85%;
   left: -85%;
   display: none;
   overflow-x: auto;
 }
 
-#aside-wrapper.open {
+#left-sidebar.open {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -31,64 +31,64 @@
 
 /* ---------- */
 
-#aside-wrapper > aside > div {
+#left-sidebar > div {
   display: flex;
   padding: var(--padding);
   justify-content: flex-end;
 }
 
-#aside-wrapper > aside > a {
+#left-sidebar > a {
   display: none;
 }
 
-#aside-wrapper > aside > div .btn {
+#left-sidebar > div .btn {
   font-size: .75em;
   font-weight: 800;
 }
 
 /* --- left sidebar --- */
-#aside-wrapper {
+#left-sidebar {
   position: sticky;
   top: 0;
 }
 
-#aside-wrapper > aside > nav {
+#left-sidebar > nav {
   padding: 0 var(--padding);
   view-transition-name: section-nav;
 }
 
-#aside-wrapper > aside > nav > details {
+#left-sidebar > nav > details {
   padding-bottom: 0;
 }
 
-#aside-wrapper > aside > nav > details[open] {
+#left-sidebar > nav > details[open] {
   padding-bottom: calc(var(--padding) * 1.5);
 }
 
-#aside-wrapper > aside > nav > details > summary {
+#left-sidebar > nav > details > summary {
   display: flex;
   padding: var(--padding) 0;
   color: var(--color);
   font-weight: bold;
 }
 
-#aside-wrapper > aside > nav > details[open] > summary {
+#left-sidebar > nav > details[open] > summary {
   color: var(--color-fade);
 }
 
-#aside-wrapper > aside > nav > details > ul > li {
+#left-sidebar > nav > details > ul > li {
   margin: 0 var(--padding_d2);
   border-left: 1px solid var(--border-nav);
 }
 
-#aside-wrapper > aside > nav > details > ul > li > a {
+#left-sidebar > nav > details > ul > li > a {
   color: var(--color-nav);
   display: flex;
   cursor: pointer;
   padding: var(--padding_d2);
 }
 
-#aside-wrapper > aside > nav > details > ul > li > a::before {
+#left-sidebar > nav > details > ul > li > a::before {
   content: '';
   display: inline-block;
   background: var(--background);
@@ -101,20 +101,20 @@
   top: 3px;
 }
 
-#aside-wrapper > aside > nav > details > ul > li > a.active {
+#left-sidebar > nav > details > ul > li > a.active {
   background: var(--foreground-highlight);
   color: var(--color-highlight);
   border-top-right-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
 }
 
-#aside-wrapper > aside > nav > details > ul > li > a.active::before {
+#left-sidebar > nav > details > ul > li > a.active::before {
   background: var(--foreground-highlight);
   border: var(--foreground-highlight);
   left: calc((var(--padding) * -.76));
 }
 
-#aside-wrapper > aside > nav > details > ul > li > a:hover:not(.active) {
+#left-sidebar > nav > details > ul > li > a:hover:not(.active) {
   background: var(--foreground-hover);
   border-top-right-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
@@ -122,7 +122,7 @@
 
 /* Small Tablet */
 @media (min-width: 744px) and (max-width: 1023px) {
-  #aside-wrapper {
+  #left-sidebar {
     width: 50%;
     left: -50%;
   }
@@ -130,7 +130,7 @@
 
 /* Large Tablet */
 @media (min-width: 1024px) and (max-width: 1279px) {
-  #aside-wrapper {
+  #left-sidebar {
     width: 33%;
     left: -33%;
   }
@@ -138,7 +138,7 @@
 
 /* From Desktop */
 @media (min-width: 1280px) {
-  #aside-wrapper {
+  #left-sidebar {
     width: 20%;
     display: flex;
     flex-direction: column;
@@ -149,15 +149,15 @@
     overflow-x: auto;
   }
 
-  #aside-wrapper > aside > div {
+  #left-sidebar > div {
     display: none;
   }
 
-  #aside-wrapper > aside > nav {
+  #left-sidebar > nav {
     overflow-x: auto;
   }
 
-  #aside-wrapper > aside > a {
+  #left-sidebar > a {
     display: flex;
     padding: var(--padding);
   }

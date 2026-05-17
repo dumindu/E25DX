@@ -1,4 +1,4 @@
-#content-wrapper > footer {
+#site-footer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +9,7 @@
   padding: var(--padding_x2);
 }
 
-#content-wrapper > footer > a {
+#site-footer > a {
   background: var(--foreground-highlight);
   color: var(--color-highlight);
   border-radius: var(--radius);
@@ -19,7 +19,7 @@
 
 /* From Large Tablet */
 @media (min-width: 1024px) {
-  #content-wrapper > footer {
+  #site-footer {
     width: 75vw;
   }
 }

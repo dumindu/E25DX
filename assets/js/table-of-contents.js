@@ -31,7 +31,7 @@ if ('IntersectionObserver' in window) {
 
             link.addEventListener('click', function () {
                 if (body.classList.contains('model-open')) {
-                    mainAsideCloseButton.click()
+                    rightSidebarCloseButton.click()
                 }
             });
         });
