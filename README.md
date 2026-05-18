@@ -22,7 +22,7 @@ https://github.com/dumindu/E25DX/assets/1280428/00935567-6d50-4e1b-bb0c-cbd159ad
 - [x] Support for multiple documentation sets.
 - [x] Support for maintaining a blog.
 - [x] Implement a menu via Hugo configs.
-- [ ] Integrate search or AI assistant.
+- [x] Integrate page search.
 
 ## 🚀 Getting Started
 

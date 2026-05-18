@@ -12,17 +12,16 @@ let colorPreference = getColorPreference()
 localStorage.setItem(lsKeyColorPreference, colorPreference)
 document.firstElementChild.setAttribute('data-color', colorPreference)
 
-const colorPreferenceButton = document.querySelector('#site-footer > div:last-child > button:last-child')
-if (colorPreferenceButton) {
-    colorPreferenceButton.addEventListener('click', function () {
-        if (colorPreference == 'dark') {
-            colorPreference = 'light'
-        } else {
-            colorPreference = 'dark'
+let colorSchemes = document.querySelectorAll('.color-scheme')
+colorSchemes.forEach(el => {
+    el.addEventListener('click', function () {
+        let newColorPreference = el.dataset.value
+        if (newColorPreference !== colorPreference) {
+            colorPreference = newColorPreference
+            setColorPreference()
         }
-        setColorPreference()
-    });
-}
+    })
+});
 
 const setColorPreference = () => {
     localStorage.setItem(lsKeyColorPreference, colorPreference)

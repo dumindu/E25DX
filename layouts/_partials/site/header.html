@@ -1,3 +1,32 @@
 <header id="site-header">
-	<a href="{{ .Site.Home.Permalink }}" class="site-logo">{{ .Site.Title }}</a>
+	<div id="site-header-logo">
+		<a href="{{ site.Home.Permalink }}" class="site-logo">{{ site.Title }}</a>
+	</div>
+
+	<div id="site-header-actions">
+		{{ partial "components/theme-dropdown.html" . }}
+	</div>
+
+	{{ if site.Menus.main }}
+	<nav>
+		<select name="main-menu" aria-label="Main Navigation" autocomplete="off" onchange="if (this.value) window.location.href=this.value">
+			<button>
+				<selectedcontent></selectedcontent>
+			</button>
+			{{ $section := .Section }}
+			{{ $currentURL := .RelPermalink }}
+			{{ range site.Menus.main }}
+			<option value="{{ .URL | absLangURL }}" {{ if or (eq $section .Identifier) (eq $currentURL .URL) -}}selected{{ end }}>
+				<span aria-hidden="">{{.Pre}}</span>
+				<span>{{ .Name }}</span>
+			</option>
+			{{ end }}
+		</select>
+	</nav>
+	{{ end }}
+
+	<div id="search-box">
+		<pagefind-modal-trigger></pagefind-modal-trigger>
+		<pagefind-modal></pagefind-modal>
+	</div>
 </header>

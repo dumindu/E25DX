@@ -1,0 +1,65 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding_d2);
+  background: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  gap: var(--padding_d2);
+  cursor: pointer;
+  color: var(--color-nav);
+}
+
+.dropdown-btn:hover, .dropdown-btn:focus {
+  background: var(--foreground-hover);
+  color: var(--color-nav);
+}
+
+.dropdown-btn .icon-select {
+  transform: rotate(90deg);
+  opacity: .6;
+}
+
+.dropdown-btn .icon-select::before {
+  content: "\2039 \203A";
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+
+  right: 0;
+  top: 2.125rem;
+  min-width: 4rem;
+  max-height: 15rem;
+  overflow-x: auto;
+
+  background: var(--foreground-hover);
+  color: var(--color-nav);
+  z-index: 15;
+  border-radius: var(--radius);
+  padding: var(--padding_d2);
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu button, .dropdown-menu a {
+  width: 100%;
+  display: flex;
+  gap: var(--padding_d2);
+  padding: var(--padding_d2);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.dropdown-menu button:hover, .dropdown-menu a:hover {
+  background: var(--foreground-hover);
+  color: var(--color-nav);
+}

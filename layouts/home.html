@@ -20,11 +20,16 @@
 		(resources.Get "css/theme.css")
 		(resources.Get "css/components/button.css")
 		(resources.Get "css/components/select.css")
+		(resources.Get "css/components/dropdown.css")
 		(resources.Get "css/site/header.css")
 		(resources.Get "css/site/footer.css")
 		(resources.Get "css/site/layout-home.css")
 	| resources.Concat "assets/css/home.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.integrity }}">
+
+	{{ with .Site.Params.enablePageFind }}
+	<link href="{{ "pagefind/pagefind-component-ui.css" | absURL }}" rel="stylesheet">
+	{{ end }}
 
   {{ partial "favicons.html" . }}
   {{ partial "analytics.html" . }}
@@ -32,30 +37,35 @@
 </head>
 
 <body>
+	<div id="content-wrapper">
+		{{ partial "site/header.html" . }}
 
-<div id="content-wrapper">
-	{{ partial "site/header.html" . }}
-	{{ partial "menu-main.html" . }}
+		<main>
+			<section>
+				<div>
+					<header>
+						<h1>{{ .Site.Params.home.heading }}{{ with .Site.Params.home.headingSegment2 }}<span>{{.}}</span>{{ end }}</h1>
+						<p>{{ .Site.Params.home.description }}</p>
+					</header>
+					<div>
+						<a href="{{ .Site.Home.Permalink }}{{ .Site.Params.home.getStartedPath }}" class="btn">{{ i18n "getStarted" }}</a>
+						<a href="https://github.com/{{ .Site.Params.project.github.repo }}" target="_blank" class="btn">GitHub</a>
+					</div>
+				</div>
+			</section>
+		</main>
 
-  <main>
-    <section>
-      <div>
-        <header>
-          <h1>{{ .Site.Params.home.heading }}{{ with .Site.Params.home.headingSegment2 }}<span>{{.}}</span>{{ end }}</h1>
-          <p>{{ .Site.Params.home.description }}</p>
-        </header>
-        <div>
-          <a href="{{ .Site.Home.Permalink }}{{ .Site.Params.home.getStartedPath }}" class="btn">{{ i18n "getStarted" }}</a>
-          <a href="https://github.com/{{ .Site.Params.project.github.repo }}" target="_blank" class="btn">GitHub</a>
-        </div>
-      </div>
-    </section>
-  </main>
+		{{ partial "site/footer.html" . }}
+	</div>
 
-	{{ partial "site/footer.html" . }}
-</div>
+	{{- $js := slice
+		(resources.Get "js/components/dropdown.js")
+		(resources.Get "js/site/color-preference.js")
+	| resources.Concat "assets/js/home.js" | minify | fingerprint }}
+	<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.integrity }}"></script>
 
-{{- $js := slice (resources.Get "js/color-preference.js") | resources.Concat "assets/js/home.js" | minify | fingerprint }}
-<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.integrity }}"></script>
+	{{ with .Site.Params.enablePageFind }}
+	<script src="{{ "pagefind/pagefind-component-ui.js" | absURL }}" type="module"></script>
+	{{ end }}
 </body>
 </html>

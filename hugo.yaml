@@ -58,3 +58,4 @@ params:
     size: 6
 
   enableOGXSEO: false # No automated OG image generation
+  enablePageFind: false # Run pagefind --site dir after build

@@ -85,6 +85,10 @@ body.model-open {
     overflow-x: auto;
   }
 
+  #site-header-logo {
+    display: none;
+  }
+
   #article-nav {
     display: none;
   }

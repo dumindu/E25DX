@@ -105,6 +105,16 @@
   --chroma-base0D: #6699cc;
   --chroma-base0E: #cc99cc;
   --chroma-base0F: #a3685a;
+
+  --pf-background: var(--background-grey);
+  --pf-text: var(--color-nav);
+  --pf-text-muted: var(--color-fade);
+  --pf-hover: var(--foreground-hover);
+  --pf-text-secondary: var(--color-nav);
+  --pf-modal-backdrop: var(--foreground);
+  --pf-border: var(--border);
+  --pf-mark: var(--foreground-highlight);
+  --pf-skeleton: var(--foreground-hover);
 }
 
 @view-transition {
