@@ -1,27 +1,86 @@
 #site-header {
   display: grid;
-  align-items: center;
-  gap: var(--padding);
-  padding: var(--padding);
-
   grid-template-columns: 1fr auto;
   grid-template-areas:
     "logo actions"
-    "nav search";
+    "menu menu";
+  column-gap: var(--padding);
+  row-gap: 0;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  background: var(--foreground);
 }
 
-#site-header-logo { grid-area: logo; }
-#site-header-actions { grid-area: actions; justify-self: end; }
-#site-header > nav { grid-area: nav; }
-#search-box { grid-area: search;  }
+#site-header-logo {
+  grid-area: logo;
+  padding: var(--padding_d2);
+}
 
-@media (min-width: 744px) {
+#site-header-actions {
+  grid-area: actions;
+  display: flex;
+  align-items: center;
+  gap: var(--padding_d2);
+  padding-right: var(--padding);
+}
+
+#site-header-menu {
+  grid-area: menu;
+  display: flex;
+  flex-wrap: wrap;
+
+  border-top: 1px solid var(--border);
+  padding: 0 var(--padding_d2);
+  gap: var(--padding_d2);
+}
+
+#site-header-menu a {
+  color: var(--color-fade);
+  padding: var(--padding) var(--padding_d2);
+  font-weight: 600;
+}
+
+#site-header-menu a:hover {
+  color: var(--color-nav);
+  background: var(--foreground-hover);
+  border-radius: var(--radius);
+}
+
+#site-header-menu a.active {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: var(--padding_d2);
+  text-decoration-color: var(--foreground-highlight);
+}
+
+#search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 743px) {
+  .pf-trigger-shortcut {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
   #site-header {
     grid-template-columns: auto 1fr auto auto;
-    grid-template-areas: "logo nav search actions";
+    grid-template-areas: "logo menu actions";
+
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(var(--blur));
+    z-index: 10;
   }
 
-  #site-header > nav, #search-box {
-    justify-self: end;
+  #site-header-actions {
+    padding-right: 0;
+  }
+
+  #site-header-menu {
+    border:none;
   }
 }

@@ -21,7 +21,7 @@
 
 .dropdown-btn .icon-select {
   transform: rotate(90deg);
-  opacity: .6;
+  opacity: .8;
 }
 
 .dropdown-btn .icon-select::before {
@@ -33,7 +33,7 @@
   position: absolute;
 
   right: 0;
-  top: 2.125rem;
+  top: 2.25rem;
   min-width: 4rem;
   max-height: 15rem;
   overflow-x: auto;

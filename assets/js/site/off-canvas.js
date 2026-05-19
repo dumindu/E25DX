@@ -1,5 +1,5 @@
 const body = document.body;
-const bodyModelOuter = document.querySelector('#body-model-outer')
+const bodyModelOuter = document.querySelector('#off-canvas-model')
 
 const leftSidebar = document.querySelector('#left-sidebar')
 const leftSidebarOpenButton = document.querySelector('#article-nav > button:first-child')

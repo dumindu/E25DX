@@ -26,6 +26,7 @@
   --padding_d2: 6px;
   --padding_x2: 24px;
 
+  --blur: 16px;
   --model-blur: 10px;
 
   --border: #efefef;
@@ -54,16 +55,11 @@
   --chroma-base0E: #8959a8;
   --chroma-base0F: #a3685a;
 
-  /* shortcodes */
-  --callout-info-backgound: #954ce3;
-  --callout-info-foreground: rgba(0, 0, 0, .08);
-  --callout-info-color: #ffffff;
-  --callout-info-anchor: #d2aefc;
-  --callout-info-anchor-text-shadow: .4px 0 .8px black;
-
   /* cover */
   --cover-img-height: 32svh;
   --section-item-cover-img-height: 24svh;
+
+  --site-header-height: 60px;
 }
 
 :root[data-color="dark"] {
@@ -119,20 +115,6 @@
 
 @view-transition {
   navigation: auto;
-}
-
-.site-logo {
-  font-family: var(--font-brand);
-  font-size: 1.5em;
-  color: transparent;
-  -webkit-text-stroke: .5px var(--border);
-  background: transparent;
-  letter-spacing: 3px;
-  background: linear-gradient(45deg, #866ee7, #ea60da, #ed8f57, #fbd41d, #2cca91);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 800;
 }
 
 /* From Small Tablet & Portrait */

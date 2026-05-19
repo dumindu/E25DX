@@ -1,32 +1,28 @@
 <header id="site-header">
 	<div id="site-header-logo">
-		<a href="{{ site.Home.Permalink }}" class="site-logo">{{ site.Title }}</a>
+		<a href="{{ site.Home.Permalink }}">
+			<img height="40px" src="{{ "logo.svg" | absURL }}" alt="Site Logo">
+		</a>
 	</div>
 
 	<div id="site-header-actions">
+		<div id="search-box">
+			<pagefind-modal-trigger compact="true"></pagefind-modal-trigger>
+			<pagefind-modal></pagefind-modal>
+		</div>
+
 		{{ partial "components/theme-dropdown.html" . }}
 	</div>
 
-	{{ if site.Menus.main }}
-	<nav>
-		<select name="main-menu" aria-label="Main Navigation" autocomplete="off" onchange="if (this.value) window.location.href=this.value">
-			<button>
-				<selectedcontent></selectedcontent>
-			</button>
-			{{ $section := .Section }}
-			{{ $currentURL := .RelPermalink }}
-			{{ range site.Menus.main }}
-			<option value="{{ .URL | absLangURL }}" {{ if or (eq $section .Identifier) (eq $currentURL .URL) -}}selected{{ end }}>
-				<span aria-hidden="">{{.Pre}}</span>
-				<span>{{ .Name }}</span>
-			</option>
+	{{ with site.Menus.main }}
+	<nav id="site-header-menu" aria-label="Main">
+		{{ range . }}
+			{{ if (urls.Parse .URL).IsAbs }}
+			<a href="{{ .URL | absLangURL }}" rel="external" target="_blank">{{ .Name }}</a>
+			{{ else }}
+			<a href="{{ .URL | absLangURL }}" {{ if or (eq $.Section .Identifier) (eq $.RelPermalink .URL) -}} class="active"{{ end }}>{{ .Name }}</a>
 			{{ end }}
-		</select>
+		{{ end }}
 	</nav>
 	{{ end }}
-
-	<div id="search-box">
-		<pagefind-modal-trigger></pagefind-modal-trigger>
-		<pagefind-modal></pagefind-modal>
-	</div>
 </header>

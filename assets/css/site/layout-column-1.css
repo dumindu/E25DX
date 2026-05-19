@@ -1,6 +1,12 @@
 html {
   scroll-behavior: smooth;
-  scroll-padding: 2em;
+  scroll-padding: 6em;
+}
+
+@media (1024px <= width <= 1279px) {
+  html {
+    scroll-padding: 8em;
+  }
 }
 
 body {
@@ -37,7 +43,7 @@ body.model-open {
   overflow: hidden;
 }
 
-#body-model-outer {
+#off-canvas-model {
   display: none;
   content: "";
   position: fixed;
@@ -45,11 +51,10 @@ body.model-open {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 5;
+  z-index: 15;
 
   background: var(--model-foreground);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(var(--blur));
 }
 
 /* From Large Tablet */
@@ -62,10 +67,6 @@ body.model-open {
   main > article {
     width: 75vw;
     overflow-x: auto;
-  }
-
-  #article-nav > button:last-child {
-    display: none;
   }
 }
 

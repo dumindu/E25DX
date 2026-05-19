@@ -19,6 +19,12 @@
   padding: var(--padding);
   gap: 12px;
   justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--foreground);
+  backdrop-filter: blur(var(--blur));
 }
 
 /* --- cover --- */
@@ -70,17 +76,6 @@
   display: flex;
   justify-content: end;
   margin-left: 25%;
-}
-
-/* From Small Tablet */
-@media (min-width: 744px) {
-  #article-footer > a {
-    width: 50%;
-  }
-
-  #article-footer > a:last-child {
-    margin-left: 50%;
-  }
 }
 
 /* ------------ */
@@ -392,4 +387,40 @@
 #article-body li > .highlight > .chroma > code {
   display: block;
   background: transparent;
+}
+
+/* From Small Tablet */
+@media (min-width: 744px) {
+  #article-footer > a {
+    width: 50%;
+  }
+
+  #article-footer > a:last-child {
+    margin-left: 50%;
+  }
+}
+
+/* From Large Tablet */
+@media (min-width: 1024px) {
+  #article-nav {
+    background: none;
+    backdrop-filter: none;
+    width: fit-content;
+    z-index: 10;
+
+    position: fixed;
+    top: var(--site-header-height);
+  }
+
+  #article-nav > button:first-child {
+    backdrop-filter: blur(var(--blur));
+  }
+
+  #article-nav > button:last-child {
+    display: none;
+  }
+
+  #article-header {
+    padding-top: var(--site-header-height);
+  }
 }

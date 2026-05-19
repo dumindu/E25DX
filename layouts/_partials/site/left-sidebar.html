@@ -3,7 +3,9 @@
 		<button class="btn"><i>❌</i>{{ i18n "close" }}</button>
 	</div>
 
-	<a href="{{ site.Home.Permalink }}" class="site-logo">{{ site.Title }}</a>
+	<a href="{{ site.Home.Permalink }}" class="site-logo">
+		<img height="40px" src="{{ "logo.svg" | absURL }}" alt="Site Logo">
+	</a>
 
 	{{ $sectionMenu := index (where site.Menus.main "Identifier" page.Section) 0 }}
 	<nav aria-label="{{ $sectionMenu.Name }} Pages">
