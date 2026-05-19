@@ -419,8 +419,4 @@
   #article-nav > button:last-child {
     display: none;
   }
-
-  #article-header {
-    padding-top: var(--site-header-height);
-  }
 }

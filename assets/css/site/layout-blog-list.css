@@ -35,6 +35,7 @@ main > section {
   display: flex;
   flex: 1;
   flex-direction: column;
+  margin: var(--padding_d2) 0;
 }
 
 #section-body {

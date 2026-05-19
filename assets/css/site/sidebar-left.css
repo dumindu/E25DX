@@ -159,6 +159,6 @@
 
   #left-sidebar > a {
     display: flex;
-    padding: var(--padding);
+    padding: var(--padding_d2);
   }
 }

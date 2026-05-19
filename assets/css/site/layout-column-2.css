@@ -67,6 +67,7 @@ body.model-open {
   main > article {
     width: 75vw;
     overflow-x: auto;
+    margin-top: calc(var(--padding_x2) *1.7);
   }
 }
 
@@ -83,7 +84,7 @@ body.model-open {
 
   main > article {
     width: 60vw;
-    overflow-x: auto;
+    margin-top: 0;
   }
 
   #site-header-logo {
