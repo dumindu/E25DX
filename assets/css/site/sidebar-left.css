@@ -102,20 +102,22 @@
 }
 
 #left-sidebar > nav > details > ul > li > a.active {
-  background: var(--foreground-highlight);
-  color: var(--color-highlight);
   border-top-right-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
+
+  background: var(--primary);
+  color: var(--color-primary);
 }
 
 #left-sidebar > nav > details > ul > li > a.active::before {
-  background: var(--foreground-highlight);
-  border: var(--foreground-highlight);
   left: calc((var(--padding) * -.76));
+
+  background: var(--primary);
+  border: var(--primary);
 }
 
 #left-sidebar > nav > details > ul > li > a:hover:not(.active) {
-  background: var(--foreground-hover);
+  background: var(--background-hover);
   border-top-right-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
 }
@@ -144,7 +146,7 @@
     flex-direction: column;
     height: 100svh;
 
-    background: var(--foreground);
+    background: var(--background-dim);
     border-right: 1px solid var(--border);
     overflow-x: auto;
   }

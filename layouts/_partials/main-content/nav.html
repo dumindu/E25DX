@@ -1,23 +1,23 @@
-{{ with index .Site.Data .Site.Language.Lang .Section "sidebar" }}
+{{ with index site.Data site.Language.Lang .Section "sidebar" }}
 <nav id="article-nav">
-	<button class="btn"><i>⬅️</i> {{ i18n "onThisSection" }}</button>
-	<button class="btn">{{ i18n "onThisPage" }} <i>➡️</i></button>
+	<button class="btn">{{ partial "icon.html" "side_navigation" }} {{ i18n "onThisSection" }}</button>
+	<button class="btn">{{ i18n "onThisPage" }} {{ partial "icon.html" "list_alt" }}</button>
 </nav>
 {{ else }}
 
 	{{ with .Page.Params.isBlog }}
 		<nav id="article-nav">
 			<button class="btn" data-url="{{ $.CurrentSection.Permalink }}" onclick="window.location.href = this.getAttribute('data-url')">
-				<i>↖️</i> {{ i18n "allBlogPosts" }}
+				{{ partial "icon.html" "arrow_insert" }} {{ i18n "allBlogPosts" }}
 			</button>
-			<button class="btn">{{ i18n "onThisPage" }} <i>➡️</i></button>
+			<button class="btn">{{ i18n "onThisPage" }} {{ partial "icon.html" "list_alt" }}</button>
 		</nav>
 	{{ else }}
 	<nav id="article-nav">
-		<button class="btn" data-url="{{ $.Site.Home.Permalink }}" onclick="window.location.href = this.getAttribute('data-url')">
-			<i>↖️</i> {{ i18n "backToHome" }}
+		<button class="btn" data-url="{{ site.Home.Permalink }}" onclick="window.location.href = this.getAttribute('data-url')">
+			{{ partial "icon.html" "arrow_insert" }} {{ i18n "backToHome" }}
 		</button>
-		<button class="btn">{{ i18n "onThisPage" }} <i>➡️</i></button>
+		<button class="btn">{{ i18n "onThisPage" }} {{ partial "icon.html" "list_alt" }}</button>
 	</nav>
 	{{ end }}
 

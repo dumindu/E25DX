@@ -1,0 +1,66 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  gap: var(--padding_x2);
+  min-height: 64svh;
+}
+
+.hero-header .hero-svg svg {
+  padding-top: var(--padding_x2);
+  max-width: 80%;
+  height: auto;
+}
+
+.hero-header h2 {
+  font-size: clamp(2.5rem, 11vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.hero-header h2 span {
+  color: var(--primary);
+}
+
+.hero-content {
+  max-width: 48rem;
+  font-size: 1.12rem;
+  line-height: 1.3;
+}
+
+.hero-controls {
+  display: flex;
+  flex-direction: row;
+  gap: var(--padding);
+  padding-top: var(--padding);
+}
+
+/* utils */
+.hero-section .btn {
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  border-radius: calc(var(--radius) * 4);
+}
+
+.hero-section .badge {
+  text-transform: uppercase;
+  margin-bottom: var(--padding_x2);
+}
+
+@media (min-width: 744px) {
+  .hero-section {
+    min-height: 40svh;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .hero-section {
+    min-height: 60svh;
+  }
+}

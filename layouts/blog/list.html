@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default `en-US` }}">
+<html lang="{{ site.LanguageCode | default `en-US` }}">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ .Page.Params.description | default .Site.Params.description | .RenderString }}">
-  <meta name="author" content="{{ .Site.Params.author.name }}">
-  <meta name="theme-color" content="{{ .Site.Params.project.themeColor.light }}" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="{{ .Site.Params.project.themeColor.dark }}" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="{{ .Page.Params.description | default site.Params.description | .RenderString }}">
+  <meta name="author" content="{{ site.Params.author.name }}">
+  <meta name="theme-color" content="{{ site.Params.project.themeColor.light }}" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="{{ site.Params.project.themeColor.dark }}" media="(prefers-color-scheme: dark)">
   {{ with .Params.robots -}}
   <meta name="robots" content="{{ . }}">
   {{ end -}}
 
-  <title>{{ .Title | .RenderString }} · {{ .Site.Title | .RenderString }}</title>
+  <title>{{ .Title | .RenderString }} · {{ site.Title | .RenderString }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
 
   {{- $css := slice
 		(resources.Get "css/reset.css")
 		(resources.Get "css/theme.css")
 		(resources.Get "css/components/button.css")
-		(resources.Get "css/components/select.css")
 		(resources.Get "css/components/dropdown.css")
 		(resources.Get "css/site/header.css")
 		(resources.Get "css/site/footer.css")
@@ -27,7 +26,7 @@
 	| resources.Concat "assets/css/blog-list.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.integrity }}">
 
-	{{ with .Site.Params.enablePageFind }}
+	{{ with site.Params.enablePageFind }}
 	<link href="{{ "pagefind/pagefind-component-ui.css" | absURL }}" rel="stylesheet">
 	{{ end }}
 
@@ -45,7 +44,7 @@
 				<section>
 					<div id="section-body">
 						{{ $pages := .CurrentSection.Pages }}
-						{{ $paginator := .Paginate $pages .Site.Params.pagination.size }}
+						{{ $paginator := .Paginate $pages site.Params.pagination.size }}
 
 						{{ range $paginator.Pages }}
 						<article>
@@ -116,7 +115,7 @@
 	| resources.Concat "assets/js/blog-list.js" | minify | fingerprint }}
 	<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.integrity }}"></script>
 
-	{{ with .Site.Params.enablePageFind }}
+	{{ with site.Params.enablePageFind }}
 	<script src="{{ "pagefind/pagefind-component-ui.js" | absURL }}" type="module"></script>
 	{{ end }}
 </body>

@@ -16,15 +16,19 @@
 /* --- nav --- */
 #article-nav {
   display: flex;
-  padding: var(--padding);
-  gap: 12px;
+  padding: var(--padding_d2) var(--padding);
   justify-content: space-between;
 
   position: sticky;
   top: 0;
   z-index: 10;
-  background: var(--foreground);
+
+  background: var(--background-subtle);
   backdrop-filter: blur(var(--blur));
+}
+
+#article-nav .btn {
+  border-color: var(--border-subtle);
 }
 
 /* --- cover --- */
@@ -47,6 +51,7 @@
   grid-column: 1 / 3;
   display: flex;
   color: var(--color-fade);
+  fill: var(--color-fade);
   justify-content: center;
   padding: var(--padding) 0;
   gap: var(--padding_d2);
@@ -56,16 +61,20 @@
   display: flex;
   padding: var(--padding);
   gap: calc(var(--padding) / 4);
-  background: var(--foreground);
-  color: var(--color-nav);
+
+  background: var(--background-dim);
+  backdrop-filter: blur(var(--blur));
   border: 1px solid var(--border);
   border-radius: var(--radius);
+
+  color: var(--color-nav);
+  fill: var(--color-nav);
   cursor: pointer;
   width: 75%;
 }
 
 #article-footer > a:hover {
-  background: var(--foreground-hover);
+  background: var(--background-hover);
 }
 
 #article-footer > a.hidden {
@@ -118,7 +127,7 @@
 #article-body h5,
 #article-body h6 {
   line-height: 1em;
-  font-weight: 400;
+  font-weight: 500;
   margin: 2.6em 0 .1em;
   color: var(--color)
 }
@@ -175,7 +184,8 @@
 /* Blockquote */
 #article-body blockquote {
   padding: var(--padding);
-  background: var(--background-grey);
+  background: var(--background-subtle);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius);
 }
 
@@ -235,12 +245,9 @@
   padding: calc(var(--padding)/3) var(--padding);
 }
 
+#article-body table thead tr,
 #article-body table tr:nth-child(2n) {
-  background: var(--background-grey)
-}
-
-#article-body table thead tr {
-  background: var(--background-grey-embed)
+  background: var(--background-subtle)
 }
 
 /* Links */
@@ -264,6 +271,7 @@
 /* Spacing */
 #article-body .highlight,
 #article-body blockquote,
+#article-body .alert,
 #article-body iframe,
 #article-body p,
 #article-body table {
@@ -316,12 +324,19 @@
   padding: var(--padding_d2);
 }
 
-#article-body blockquote *:first-child {
+#article-body blockquote *:first-child,
+#article-body .alert *:first-child{
   margin-top: 0;
 }
 
 /* Code/ Highlight/ Chroma */
-#article-body code, #article-body pre {
+#article-body .chroma code, #article-body pre {
+  font-family: var(--font-mono);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(var(--blur));
+}
+
+#article-body code {
   font-family: var(--font-mono);
 }
 
@@ -357,12 +372,21 @@
 #article-body dl code,
 #article-body table code {
   padding: calc(var(--padding)/3.7);
-  background: var(--background-grey);
+  background: var(--background-subtle);
   border-radius: var(--radius);
+  border: 1px solid var(--border-subtle);
+}
+
+#article-body .chroma code {
+  padding: unset;
+  background: unset;
+  border-radius: unset;
+  border: unset;
+  backdrop-filter: unset;
 }
 
 #article-body blockquote code {
-  background: var(--background-grey-embed);
+  background: var(--background-subtle);
 }
 
 #article-body pre:not(.chroma) {
@@ -376,7 +400,6 @@
 }
 
 #article-body blockquote .chroma, #article-body blockquote pre:not(.chroma) {
-  background: var(--foreground-hover);
   margin-bottom: 1em;
 }
 

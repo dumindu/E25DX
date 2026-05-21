@@ -1,5 +1,5 @@
 <footer id="site-footer">
-	<i>🧑‍💻</i>{{ i18n "builtByAndCopyright" }}<a href="{{ .Site.Params.author.url }}" target="_blank">{{ .Site.Params.author.name }}</a>
-	<i>📅</i> {{ with .Site.Params.project.startYear }}{{.}}-{{ end }}{{ .Site.Params.project.presentYear }}
-	<i>🚀</i> <a href="https://github.com/{{ .Site.Params.project.github.repo }}" target="_blank">GitHub</a>
+	{{ partial "icon.html" "attribution" }} {{ i18n "builtByAndCopyright" }}<a href="{{ site.Params.author.url }}" target="_blank">{{ site.Params.author.name }}</a>
+	{{ partial "icon.html" "calendar_today" }} {{ with site.Params.project.startYear }}{{.}}-{{ end }}{{ site.Params.project.presentYear }}
+	{{ partial "icon.html" "rocket_launch" }} <a href="{{ site.Params.project.repo.main }}" target="_blank">GitHub</a>
 </footer>

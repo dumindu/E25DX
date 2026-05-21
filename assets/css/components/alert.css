@@ -1,0 +1,34 @@
+.alert {
+  overflow: hidden;
+  background: var(--background-subtle);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-subtle);
+}
+
+.alert-header {
+  display: flex;
+  align-items: center;
+  padding: var(--padding_d2);
+  gap: calc(var(--padding_d2) / 2);
+  border-bottom: 1px solid var(--border-subtle);
+  fill: currentColor;
+}
+
+.alert-body {
+  overflow-x: auto;
+  padding: var(--padding_d2);
+}
+
+/* Small Tablet */
+@media (min-width: 744px) and (max-width: 1023px) {
+  .alert-body {
+    padding: var(--padding);
+  }
+}
+
+/* From Desktop */
+@media (min-width: 1280px) {
+  .alert-body {
+    padding: var(--padding);
+  }
+}

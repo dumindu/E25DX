@@ -1,33 +1,34 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default `en-US` }}">
+<html lang="{{ site.LanguageCode | default `en-US` }}">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ .Site.Params.description | .RenderString }}">
-  <meta name="author" content="{{ .Site.Params.author.name }}">
-  <meta name="theme-color" content="{{ .Site.Params.project.themeColor.light }}" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="{{ .Site.Params.project.themeColor.dark }}" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="{{ site.Params.description | .RenderString }}">
+  <meta name="author" content="{{ site.Params.author.name }}">
+  <meta name="theme-color" content="{{ site.Params.project.themeColor.light }}" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="{{ site.Params.project.themeColor.dark }}" media="(prefers-color-scheme: dark)">
   {{ with .Params.robots }}
   <meta name="robots" content="{{ . }}">
   {{ end }}
 
-  <title>{{ .Site.Title | .RenderString }} · {{ .Site.Params.description | .RenderString }}</title>
+  <title>{{ site.Title | .RenderString }} · {{ site.Params.description | .RenderString }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
 
   {{ $css := slice
 		(resources.Get "css/reset.css")
 		(resources.Get "css/theme.css")
 		(resources.Get "css/components/button.css")
-		(resources.Get "css/components/select.css")
 		(resources.Get "css/components/dropdown.css")
+		(resources.Get "css/components/badge.css")
 		(resources.Get "css/site/header.css")
 		(resources.Get "css/site/footer.css")
 		(resources.Get "css/site/layout-home.css")
+		(resources.Get "css/sections/hero.css")
 	| resources.Concat "assets/css/home.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.integrity }}">
 
-	{{ with .Site.Params.enablePageFind }}
+	{{ with site.Params.enablePageFind }}
 	<link href="{{ "pagefind/pagefind-component-ui.css" | absURL }}" rel="stylesheet">
 	{{ end }}
 
@@ -41,18 +42,7 @@
 		{{ partial "site/header.html" . }}
 
 		<main>
-			<section>
-				<div>
-					<header>
-						<h1>{{ .Site.Params.home.heading }}{{ with .Site.Params.home.headingSegment2 }}<span>{{.}}</span>{{ end }}</h1>
-						<p>{{ .Site.Params.home.description }}</p>
-					</header>
-					<div>
-						<a href="{{ .Site.Home.Permalink }}{{ .Site.Params.home.getStartedPath }}" class="btn">{{ i18n "getStarted" }}</a>
-						<a href="https://github.com/{{ .Site.Params.project.github.repo }}" target="_blank" class="btn">GitHub</a>
-					</div>
-				</div>
-			</section>
+			{{ partial "sections/hero.html" (index site.Data site.Language.Lang "home" "hero") }}
 		</main>
 
 		{{ partial "site/footer.html" . }}
@@ -64,7 +54,7 @@
 	| resources.Concat "assets/js/home.js" | minify | fingerprint }}
 	<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.integrity }}"></script>
 
-	{{ with .Site.Params.enablePageFind }}
+	{{ with site.Params.enablePageFind }}
 	<script src="{{ "pagefind/pagefind-component-ui.js" | absURL }}" type="module"></script>
 	{{ end }}
 </body>

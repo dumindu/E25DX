@@ -1,0 +1,28 @@
+{{ $iconMap := dict
+"note" "info"
+"tip" "lightbulb_2"
+"important" "feedback"
+"warning" "warning"
+"caution" "report"
+"search" "search"
+"assignment" "assignment"
+"lab" "science"
+"recap" "comic_bubble"
+}}
+
+<div class="alert alert-{{ .AlertType }}">
+	<div class="alert-header">
+		{{ $icon:= index $iconMap .AlertType }}
+		{{ partial "icon.html" $icon }}
+		<span>
+		{{ with .AlertTitle }}
+			{{ . }}
+		{{ else }}
+			{{ or (i18n .AlertType) (title .AlertType) }}
+		{{ end }}
+		</span>
+	</div>
+	<div class="alert-body">
+		{{ .Text }}
+	</div>
+</div>

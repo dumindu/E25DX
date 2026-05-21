@@ -7,14 +7,17 @@
   flex-wrap: wrap;
   white-space: initial;
   padding: var(--padding_x2);
+  color: var(--color-fade);
+  fill: var(--color-fade);
 }
 
 #site-footer > a {
-  background: var(--foreground-highlight);
-  color: var(--color-highlight);
+  background: var(--primary);
+  color: var(--color-primary);
+
   border-radius: var(--radius);
-  cursor: pointer;
   padding: 0 var(--padding_d2);
+  cursor: pointer;
 }
 
 /* From Large Tablet */

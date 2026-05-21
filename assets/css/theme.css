@@ -2,21 +2,18 @@
   --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --font-brand: "Arial", serif;
+
+  --background: rgb(255 255 255);
+  --background-subtle: rgb(200 200 200 / .1);
+  --background-hover: rgb(220, 220, 220, .35);
+  --background-dim: rgb(247 247 247 / .25);
 
   --color: rgba(0, 0, 0, 1);
-  --color-fade: rgba(0, 0, 0, .54);
+  --color-fade: rgba(0, 0, 0, .4);
   --color-nav: rgba(0, 0, 0, .7);
 
-  --background: #ffffff;
-  --background-grey: #f9f9f9;
-  --background-grey-embed: #f0f0f0;
-
-  --foreground: rgba(247, 247, 247, .25);
-  --foreground-hover: rgba(220, 220, 220, .35);
-
-  --foreground-highlight: #f5d41f;
-  --color-highlight: #130606;
+  --primary: rgb(245 212 31);
+  --color-primary: rgb(34 34 34 / .7);
 
   --model-background: #ffffff;
   --model-foreground: rgba(247, 247, 247, .25);
@@ -26,19 +23,20 @@
   --padding_d2: 6px;
   --padding_x2: 24px;
 
-  --blur: 16px;
+  --blur: 4px;
   --model-blur: 10px;
 
   --border: #efefef;
   --border-nav: #dddddd;
+  --border-subtle: rgb(200 200 200 / .2);
 
-  --radius: 4px;
+  --radius: 6px;
 
   --anchor: #235ce8;
   --hover: #547ce3;
 
   /* base16 tomorrow */
-  --chroma-base00: #f9f9f9;
+  --chroma-base00: var(--background-subtle);
   --chroma-base01: #e0e0e0;
   --chroma-base02: rgba(159, 218, 159, .2);
   --chroma-base03: #8e908c;
@@ -67,12 +65,10 @@
   --color-fade: rgba(255, 255, 255, .5);
   --color-nav: rgba(255, 255, 255, .8);
 
-  --background: #101010;
-  --background-grey: #1e1e1e;
-  --background-grey-embed: #2f2d2d;
-
-  --foreground: rgba(19, 19, 19, 1);
-  --foreground-hover: rgba(35, 35, 35, 1);
+  --background: rgb(16 16 16);
+  --background-subtle: rgb(255 255 255 / .05);
+  --background-hover: rgba(255, 255, 255, 0.075);
+  --background-dim: rgba(255, 255, 255, 0.0126);
 
   --model-background: rgba(16, 16, 16, 1);
   --model-foreground: rgba(225, 225, 225, .05);
@@ -80,12 +76,13 @@
 
   --border: rgba(225, 225, 225, .1);
   --border-nav: rgba(255, 255, 255, .2);
+  --border-subtle: rgba(255, 255, 255, .05);
 
   --anchor: #2e87f1;
   --hover: #044b9d;
 
   /* base16 tomorrow night */
-  --chroma-base00: var(--background-grey);
+  --chroma-base00: var(--background-subtle);
   --chroma-base01: #393939;
   --chroma-base02: rgba(159, 218, 159, .1);
   --chroma-base03: #999999;
@@ -102,15 +99,15 @@
   --chroma-base0E: #cc99cc;
   --chroma-base0F: #a3685a;
 
-  --pf-background: var(--background-grey);
+  --pf-background: var(--background);
   --pf-text: var(--color-nav);
   --pf-text-muted: var(--color-fade);
-  --pf-hover: var(--foreground-hover);
+  --pf-hover: var(--background-hover);
   --pf-text-secondary: var(--color-nav);
-  --pf-modal-backdrop: var(--foreground);
+  --pf-modal-backdrop: var(--background-dim);
   --pf-border: var(--border);
-  --pf-mark: var(--foreground-highlight);
-  --pf-skeleton: var(--foreground-hover);
+  --pf-mark: var(--primary);
+  --pf-skeleton: var(--background-hover);
 }
 
 @view-transition {

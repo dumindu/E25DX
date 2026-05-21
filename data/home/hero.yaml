@@ -1,0 +1,15 @@
+badge: Documentation · Blog · Pages · Search
+
+svg: hero.svg
+
+title: Simple, Modular <br/><span>& Customizable</span>
+
+description: Project description
+
+btn_primary:
+  label: Get Started
+  url: /docs
+
+btn_secondary:
+  label: Contribute
+  url: https://github.com/user/repo

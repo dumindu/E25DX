@@ -66,7 +66,7 @@ main > section > footer > a {
   display: flex;
   padding: var(--padding);
   gap: calc(var(--padding) / 4);
-  background: var(--foreground);
+  background: var(--background-dim);
   color: var(--color-nav);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -75,7 +75,7 @@ main > section > footer > a {
 }
 
 main > section > footer > a:hover {
-  background: var(--foreground-hover);
+  background: var(--background-hover);
 }
 
 main > section > footer > a.hidden {
@@ -99,7 +99,7 @@ main > section > footer > a:last-child {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--padding);
-  background: var(--foreground);
+  background: var(--background-dim);
   border-radius: calc(var(--radius) * 4);
   border: 1px solid var(--border);
   cursor: pointer;
@@ -107,7 +107,7 @@ main > section > footer > a:last-child {
 }
 
 #section-body > article > a:hover {
-  background: var(--foreground-hover);
+  background: var(--background-hover);
 }
 
 #section-body > article > a > img {

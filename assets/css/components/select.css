@@ -13,16 +13,20 @@ select, ::picker(select) {
 select {
   display: flex;
   padding: var(--padding_d2);
-  background: var(--foreground);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
   gap: var(--padding_d2);
-  cursor: pointer;
+
+  background: var(--background-dim);
+  backdrop-filter: blur(--blur);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+
   color: var(--color-nav);
+  fill: var(--color-nav);
+  cursor: pointer;
 }
 
 select:hover, select:focus {
-  background: var(--foreground-hover);
+  background: var(--background-hover);
   color: var(--color-nav);
 }
 
@@ -40,7 +44,7 @@ option {
   display: flex;
   justify-content: flex-start;
   padding: var(--padding_d2);
-  background: var(--foreground);
+  background: var(--background-hover);
   border: 1px solid var(--border);
   gap: var(--padding_d2);
   transition: 0.6s;
@@ -60,11 +64,11 @@ option:not(option:last-of-type) {
 }
 
 option:nth-of-type(even) {
-  background: var(--background-grey);
+  background: var(--background-subtle);
 }
 
 option:hover, option:focus {
-  background: var(--foreground-hover);
+  background: var(--background-hover);
 }
 
 option .icon {
@@ -76,7 +80,7 @@ selectedcontent .icon {
 }
 
 option:checked {
-  background: var(--background-grey-embed);
+  background: var(--background-subtle_embed);
 }
 
 option::checkmark {

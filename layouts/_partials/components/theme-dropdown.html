@@ -1,10 +1,14 @@
 <div id="theme-dropdown" class="dropdown">
 	<button class="dropdown-btn" aria-haspopup="menu" aria-label="Select the theme">
-		<span>🎨</span>
-		<span class="icon-select"></span>
+		<span>
+			{{ partial "icon.html" "palette" }}
+		</span>
+		<span>
+			{{ partial "icon.html" "unfold_more" }}
+		</span>
 	</button>
 	<ul role="menu" class="dropdown-menu">
-		{{ range index .Site.Data "themes" }}
+		{{ range index site.Data "themes" }}
 		<li role="menuitem">
 			<button title="{{ .name }}" class="color-scheme" data-value="{{ .value }}" style="background:{{ .background }};color:{{ .color }};">
 				<span style="color:{{ .color }}">Aa</span>
