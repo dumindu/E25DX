@@ -1,6 +1,6 @@
 .alert {
   overflow: hidden;
-  background: var(--background-subtle);
+  backdrop-filter: blur(var(--blur));
   border-radius: var(--radius);
   border: 1px solid var(--border-subtle);
 }
@@ -32,3 +32,23 @@
     padding: var(--padding);
   }
 }
+
+.alert-note { background: var(--alert-note) }
+.alert-tip { background: var(--alert-tip) }
+.alert-important { background: var(--alert-important) }
+.alert-warning { background: var(--alert-warning) }
+.alert-caution { background: var(--alert-caution) }
+.alert-search { background: var(--alert-search) }
+.alert-assignment { background: var(--alert-assignment) }
+.alert-lab { background: var(--alert-lab) }
+.alert-recap { background: var(--alert-recap) }
+
+.alert-note .alert-header { fill: rgb(from var(--alert-note) r g b/ 1) }
+.alert-tip .alert-header { fill: rgb(from var(--alert-tip) r g b/ 1) }
+.alert-important .alert-header { fill: rgb(from var(--alert-important) r g b/ 1) }
+.alert-warning .alert-header { fill: rgb(from var(--alert-warning) r g b/ 1) }
+.alert-caution .alert-header { fill: rgb(from var(--alert-caution) r g b/ 1) }
+.alert-search .alert-header { fill: rgb(from var(--alert-search) r g b/ 1) }
+.alert-assignment .alert-header { fill: rgb(from var(--alert-assignment) r g b/ 1) }
+.alert-lab .alert-header { fill: rgb(from var(--alert-lab) r g b/ 1) }
+.alert-recap .alert-header { fill: rgb(from var(--alert-recap) r g b/ 1) }

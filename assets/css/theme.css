@@ -52,6 +52,17 @@
   --chroma-base0E: #8959a8;
   --chroma-base0F: #a3685a;
 
+  /* alert backgrounds */
+  --alert-note: rgb(from var(--chroma-base0D) r g b / .06);
+  --alert-tip: rgb(from var(--chroma-base0B) r g b / .06);
+  --alert-important: rgb(from var(--chroma-base0E) r g b / .06);
+  --alert-warning: rgb(from var(--chroma-base09) r g b / .06);
+  --alert-caution: rgb(from var(--chroma-base08) r g b / .06);
+  --alert-search: rgb(from var(--chroma-base0E) r g b / .06);
+  --alert-assignment: rgb(from var(--chroma-base0A) r g b / .06);
+  --alert-lab: rgb(from var(--chroma-base0B) r g b / .06);
+  --alert-recap: rgb(from var(--chroma-base0D) r g b / .06);
+
   /* cover */
   --cover-img-height: 32svh;
   --section-item-cover-img-height: 24svh;
@@ -99,6 +110,17 @@
   --chroma-base0D: #6699cc;
   --chroma-base0E: #cc99cc;
   --chroma-base0F: #a3685a;
+
+  /* alert backgrounds */
+  --alert-note: rgb(from var(--chroma-base0D) r g b / .12);
+  --alert-tip: rgb(from var(--chroma-base0B) r g b / .12);
+  --alert-important: rgb(from var(--chroma-base0E) r g b / .12);
+  --alert-warning: rgb(from var(--chroma-base09) r g b / .12);
+  --alert-caution: rgb(from var(--chroma-base08) r g b / .12);
+  --alert-search: rgb(from var(--chroma-base0E) r g b / .12);
+  --alert-assignment: rgb(from var(--chroma-base0A) r g b / .12);
+  --alert-lab: rgb(from var(--chroma-base0B) r g b / .12);
+  --alert-recap: rgb(from var(--chroma-base0D) r g b / .12);
 
   --pf-background: var(--background);
   --pf-text: var(--color-nav);

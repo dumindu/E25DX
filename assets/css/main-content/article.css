@@ -287,6 +287,7 @@
 
 #article-body blockquote,
 #article-body li .highlight,
+#article-body li .alert,
 #article-body li iframe,
 #article-body li table {
   margin-bottom: 1em;
