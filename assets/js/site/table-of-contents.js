@@ -35,5 +35,10 @@ if ('IntersectionObserver' in window) {
                 }
             });
         });
+
+        const backToTop = document.getElementById('back-to-top');
+        backToTop.addEventListener('click', function () {
+            rightSidebarCloseButton.click()
+        });
     });
 }

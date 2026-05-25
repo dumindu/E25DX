@@ -41,7 +41,7 @@
   font-weight: 800;
 }
 
-#right-sidebar > strong {
+#right-sidebar header h3 {
   display: flex;
   padding: var(--padding);
   color: var(--color-fade);
@@ -136,4 +136,16 @@
   #right-sidebar > div {
     display: none;
   }
+}
+
+#back-to-top {
+  display: inline-block;
+  padding: var(--padding);
+  color: var(--color-nav);
+  border-radius: var(--radius);
+}
+
+#back-to-top:hover {
+  background: var(--background-hover);
+  color: var(--color);
 }

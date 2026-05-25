@@ -15,7 +15,7 @@
   border-radius: var(--radius);
 
   color: var(--color-nav);
-  fill: var(--color-nav);
+  fill: currentColor;
   cursor: pointer;
 }
 
@@ -33,7 +33,7 @@
   z-index: 15;
 
   right: 0;
-  top: 2.25rem;
+  top: 2.4rem;
   min-width: 3.6rem;
   max-height: 15rem;
   overflow-x: auto;
@@ -61,4 +61,11 @@
 .dropdown-menu button:hover, .dropdown-menu a:hover {
   background: var(--background-hover);
   color: var(--color-nav);
+}
+
+/* From Large Tablet */
+@media (min-width: 1024px) {
+  .dropdown-menu {
+    top: 2.7rem;
+  }
 }

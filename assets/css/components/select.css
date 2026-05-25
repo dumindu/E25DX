@@ -21,7 +21,7 @@ select {
   border-radius: var(--radius);
 
   color: var(--color-nav);
-  fill: var(--color-nav);
+  fill: currentColor;
   cursor: pointer;
 }
 

@@ -11,7 +11,7 @@
   border-radius: var(--radius);
 
   color: var(--color-nav);
-  fill: var(--color-nav);
+  fill: currentColor;
   cursor: pointer;
 }
 
@@ -20,12 +20,12 @@
 }
 
 .btn-primary {
-  font-weight: 600;
-  background: var(--primary);
-  color: var(--color-primary);
+  background: rgb(from var(--primary) r g b / .5);
+  border: 1px solid rgb(from var(--primary) r g b / .6);
+  color: rgb(from var(--color-nav) r g b / .8);
 }
 
 .btn-primary:hover, .btn-primary:focus {
   background: var(--primary);
-  color: var(--color);
+  color: var(--color-nav);
 }

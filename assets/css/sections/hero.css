@@ -24,6 +24,7 @@
 
 .hero-header h2 span {
   color: var(--primary);
+  text-shadow: 0 0 3px var(--border-nav);
 }
 
 .hero-content {
@@ -46,6 +47,7 @@
   letter-spacing: .05em;
   text-transform: uppercase;
   border-radius: calc(var(--radius) * 4);
+  padding: var(--padding_d2) var(--padding);
 }
 
 .hero-section .badge {

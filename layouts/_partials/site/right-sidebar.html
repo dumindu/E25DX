@@ -2,6 +2,14 @@
 	<div>
 		<button class="btn">{{ partial "icon.html" "close" }} {{ i18n "close" }}</button>
 	</div>
-	<strong>{{ i18n "onThisPage" }}</strong>
+
+	<header>
+		<h3>{{ i18n "onThisPage" }}</h3>
+	</header>
+
 	{{ .TableOfContents }}
+
+	<footer>
+		<a id="back-to-top" href="#">{{ i18n "backToTop" }}</a>
+	</footer>
 </aside>

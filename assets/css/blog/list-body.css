@@ -1,0 +1,114 @@
+#section-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: var(--padding);
+  gap: var(--padding_x2);
+}
+
+#section-body > article {
+  display: flex;
+  flex-direction: column;
+}
+
+#section-body > article > a {
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  flex: 1;
+
+  background: var(--background-dim);
+  backdrop-filter: blur(var(--blur));
+
+  border-radius: calc(var(--radius) * 3);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+#section-body > article > a:hover {
+  background: var(--background-hover);
+}
+
+#section-body > article > a > img {
+  height: var(--section-item-cover-img-height);
+  width: 100%;
+  object-fit: cover;
+  border-radius: calc(var(--radius) * 3 - 1px);
+}
+
+#section-body > article > a > h1 {
+  font-weight: 600;
+  line-height: .86em;
+  font-size: 1.6em;
+
+  margin: var(--padding_x2) 0;
+  padding: 0 var(--padding);
+}
+
+#section-body > article > a > p {
+  font-size: 1em;
+  line-height: 1.25em;
+
+  hyphens: auto;
+  word-break: break-word;
+  padding: 0 var(--padding);
+
+  color: var(--color-nav);
+}
+
+#section-body > article > a > time {
+  display: flex;
+  justify-content: end;
+  gap: var(--padding_d2);
+  padding: var(--padding_x2);
+  color: var(--color-nav);
+  fill: currentColor;
+}
+
+/* From Small Tablet */
+@media (min-width: 744px) {
+  #section-body {
+    grid-template-columns: repeat(2, 1fr);
+    padding: var(--padding) var(--padding_x2);
+  }
+
+  #section-body > article > a {
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  #section-body > article > a > h1 {
+    font-size: 1.8em;
+  }
+}
+
+/* From Desktop */
+@media (min-width: 1024px) {
+  #section-body {
+    padding: var(--padding_x2);
+  }
+
+  #article-nav {
+    padding: 0;
+    left: var(--padding);
+  }
+}
+
+/* From Desktop */
+@media (min-width: 1280px) {
+  #section-body {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #section-body > article > a {
+    background: unset;
+  }
+
+  #section-body > article > a > img {
+    opacity: .86;
+    filter: brightness(92%);
+  }
+
+  #section-body > article > a:hover > img {
+    opacity: 1;
+    filter: brightness(100%);
+  }
+}

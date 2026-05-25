@@ -3,21 +3,20 @@
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
+  --primary: rgb(245 212 31);
+
   --background: rgb(255 255 255);
   --background-subtle: rgb(200 200 200 / .1);
   --background-hover: rgb(220, 220, 220, .35);
   --background-dim: rgb(247 247 247 / .25);
 
-  --color: rgba(0, 0, 0, 1);
-  --color-fade: rgba(0, 0, 0, .4);
-  --color-nav: rgba(0, 0, 0, .7);
-
-  --primary: rgb(245 212 31);
-  --color-primary: rgb(34 34 34 / .7);
+  --color: rgb(34 40 40);
+  --color-fade: rgb(153 153 153);
+  --color-nav: rgb(0 0 0/ .7);
 
   --model-background: #ffffff;
-  --model-foreground: rgba(247, 247, 247, .25);
-  --model-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .37);
+  --model-foreground: rgb(247 247 247/ .25);
+  --model-box-shadow: 0 8px 32px 0 rgb(31 38 135/ .37);
 
   --padding: 12px;
   --padding_d2: 6px;
@@ -26,8 +25,8 @@
   --blur: 4px;
   --model-blur: 10px;
 
-  --border: #efefef;
-  --border-nav: #dddddd;
+  --border: rgb(0 0 0/ .063);
+  --border-nav: rgb(0 0 0/ .133);
   --border-subtle: rgb(200 200 200 / .2);
 
   --radius: 6px;
@@ -38,7 +37,7 @@
   /* base16 tomorrow */
   --chroma-base00: var(--background-subtle);
   --chroma-base01: #e0e0e0;
-  --chroma-base02: rgba(159, 218, 159, .2);
+  --chroma-base02: rgb(159 218 159/ .2);
   --chroma-base03: #8e908c;
   --chroma-base04: #969896;
   --chroma-base05: #4d4d4c;
@@ -61,22 +60,24 @@
 }
 
 :root[data-color="dark"] {
-  --color: rgba(255, 255, 255, 1);
-  --color-fade: rgba(255, 255, 255, .5);
-  --color-nav: rgba(255, 255, 255, .8);
+  --primary: rgb(245 212 31);
 
   --background: rgb(16 16 16);
-  --background-subtle: rgb(255 255 255 / .05);
-  --background-hover: rgba(255, 255, 255, 0.075);
-  --background-dim: rgba(255, 255, 255, 0.0126);
+  --background-subtle: rgb(255 255 255/ .05);
+  --background-hover: rgb(255 255 255/ .075);
+  --background-dim: rgb(255 255 255/ .0126);
 
-  --model-background: rgba(16, 16, 16, 1);
-  --model-foreground: rgba(225, 225, 225, .05);
-  --model-box-shadow: 0 8px 32px 0 rgba(241, 235, 235, 0.1);
+  --color: rgb(255 255 255);
+  --color-fade: rgb(255 255 255/ .5);
+  --color-nav: rgb(255 255 255/ .8);
 
-  --border: rgba(225, 225, 225, .1);
-  --border-nav: rgba(255, 255, 255, .2);
-  --border-subtle: rgba(255, 255, 255, .05);
+  --model-background: rgb(16 16 16);
+  --model-foreground: rgb(255 255 255/ .05);
+  --model-box-shadow: 0 8px 32px 0 rgb(241 235 235/ .1);
+
+  --border: rgb(225 225 225/ .1);
+  --border-nav: rgb(255 255 255/ .2);
+  --border-subtle: rgb(255 255 255/ .05);
 
   --anchor: #2e87f1;
   --hover: #044b9d;
@@ -84,7 +85,7 @@
   /* base16 tomorrow night */
   --chroma-base00: var(--background-subtle);
   --chroma-base01: #393939;
-  --chroma-base02: rgba(159, 218, 159, .1);
+  --chroma-base02: rgb(159 218 159/ .1);
   --chroma-base03: #999999;
   --chroma-base04: #b4b7b4;
   --chroma-base05: #cccccc;

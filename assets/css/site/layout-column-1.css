@@ -67,7 +67,7 @@ body.model-open {
   main > article {
     width: 75vw;
     overflow-x: auto;
-    margin-top: calc(var(--padding_x2) *1.7);
+    margin-top: calc(var(--padding_x2) *1.2);
   }
 }
 
@@ -80,6 +80,15 @@ body.model-open {
 
   main > article {
     width: 80vw;
+  }
+
+  #article-nav {
+    padding: 0;
+    left: var(--padding);
+  }
+
+  #article-body {
+    padding: var(--padding_d2) calc(var(--padding_x2)*1) var(--padding_d2) calc(var(--padding_x2)*4);
   }
 
   #right-sidebar {

@@ -1,0 +1,40 @@
+{{ $pages := .CurrentSection.Pages }}
+{{ $paginator := .Paginate $pages site.Params.pagination.size }}
+
+{{ range $paginator.Pages }}
+<article>
+	<a href="{{ .RelPermalink }}">
+		{{ with or (.Resources.GetMatch "cover.jpg") (.Resources.GetMatch "cover.png") }}
+			{{ $small := .Resize "440x" }}
+			{{ $medium := .Resize "1032x" }}
+			<img src="{{ .RelPermalink }}"
+					 srcset="{{ $small.RelPermalink }} 440w, {{ $medium.RelPermalink }} 1032w, {{ .RelPermalink }} {{ .Width }}w"
+					 sizes="(max-width: 440px) 440px, (max-width: 1032px) 1032px, 100vw"
+					 alt="{{ $.Title }} - cover image"
+					 style="view-transition-name: {{ .RelPermalink | anchorize }}"
+			/>
+		{{ else }}
+			<p></p>
+		{{ end }}
+
+		<h1 style="view-transition-name: {{ .RelPermalink | anchorize }}">{{ .Title | .RenderString }}</h1>
+
+		{{ with .Params.summary }}
+		<p>{{ . | $.RenderString }}</p>
+		{{ end }}
+
+		{{ if .Date }}
+			{{ $created := .Date.Format "2006-01-02" }}
+			{{ $lastMod := .Lastmod.Format "2006-01-02" }}
+			<time datetime="{{ $created }}" title="{{ i18n "updated" }}: {{ $lastMod }}">
+				{{ partial "icon.html" "calendar_month" }} {{ i18n "created" }}: {{ $created }}
+			</time>
+		{{ else }}
+			{{ $lastMod := .Lastmod.Format "2006-01-02" }}
+			<time datetime="{{ $lastMod }}">
+				{{ partial "icon.html" "calendar_month" }} {{ i18n "updated" }}: {{ $lastMod }}
+			</time>
+		{{ end }}
+	</a>
+</article>
+{{ end }}

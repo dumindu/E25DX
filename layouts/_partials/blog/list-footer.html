@@ -1,0 +1,20 @@
+{{ with .Paginate .CurrentSection.Pages site.Params.pagination.size }}
+<footer id="section-footer">
+	<span>{{ i18n "page" }} {{ .PageNumber }} {{ i18n "of" }} {{ .TotalPages }}</span>
+
+	{{ if or .HasPrev .HasNext }}
+		{{ if .HasPrev }}
+			<a href="{{ .Prev.URL }}">{{ partial "icon.html" "keyboard_arrow_left" }} {{ i18n "newer" }}</a>
+		{{ else }}
+			<a href="#" aria-disabled="true" class="hidden">{{ partial "icon.html" "keyboard_arrow_left" }} {{ i18n "newer" }}</a>
+		{{ end }}
+
+		{{ if .HasNext }}
+			<a href="{{ .Next.URL }}">{{ i18n "older" }} {{ partial "icon.html" "keyboard_arrow_right" }}</a>
+		{{ else }}
+			<a href="#" aria-disabled="true" class="hidden">{{ i18n "older" }} {{ partial "icon.html" "keyboard_arrow_right" }}</a>
+		{{ end }}
+	{{ end }}
+
+</footer>
+{{ end }}
