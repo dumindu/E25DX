@@ -32,14 +32,17 @@ markup:
       attribute:
         block: true
         title: true
+  tableOfContents:
+    pre: <nav id="TableOfContents" aria-label="Table of Contents">
+    post: </nav>
 
 params:
   project:
     # To omit the startYear, put a ~ in its place.
-    startYear: 2022
+    startYear: 2024
     presentYear: 2026
-    github:
-      repo: username/repo
+    repo:
+      main: username/repo
     themeColor:
       light: '#ffffff'
       dark: '#101010'
@@ -47,12 +50,6 @@ params:
   author:
     name: Name
     url: https://github.com/username
-
-  home:
-    heading: Your next
-    headingSegment2: Theme
-    description: Description
-    getStartedPath: docs/
 
   pagination:
     size: 6
