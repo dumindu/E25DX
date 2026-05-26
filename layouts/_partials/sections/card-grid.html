@@ -1,0 +1,23 @@
+<section class="card-grid-section">
+	<header class="card-grid-header">
+		<h2>{{ .header.title }}</h2>
+		<p>{{ .header.description }}</p>
+	</header>
+
+	<div class="card-grid-body">
+
+		{{ range .items }}
+		<div class="card-grid-card">
+			<header>
+				<span>{{ partial "icon.html" .icon }}</span>
+				<h3>{{ .title }}</h3>
+			</header>
+			<p>{{ .description | markdownify }}</p>
+			<footer>
+				<a class="btn" href="{{ .link.url }}">{{ .link.label }}</a>
+			</footer>
+		</div>
+		{{ end }}
+
+	</div>
+</section>

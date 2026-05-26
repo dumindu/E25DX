@@ -25,6 +25,7 @@
 		(resources.Get "css/site/footer.css")
 		(resources.Get "css/site/layout-home.css")
 		(resources.Get "css/sections/hero.css")
+		(resources.Get "css/sections/card-grid.css")
 	| resources.Concat "assets/css/home.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.integrity }}">
 
@@ -43,6 +44,7 @@
 
 		<main>
 			{{ partial "sections/hero.html" (index site.Data site.Language.Lang "home" "hero") }}
+			{{ partial "sections/card-grid.html" (index site.Data site.Language.Lang "home" "card-grid") }}
 		</main>
 
 		{{ partial "site/footer.html" . }}

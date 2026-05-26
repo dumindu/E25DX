@@ -16,7 +16,7 @@
 		<p>{{ .description | markdownify }}</p>
 	</div>
 	<div class="hero-controls">
-		<a href="{{ .btn_primary.url }}" class="btn btn-primary">{{ .btn_primary.label }}</a>
-		<a href="{{ .btn_secondary.url }}" class="btn btn-outline">{{ .btn_secondary.label }}</a>
+		<a href="{{ .btn_primary.url | absLangURL }}" class="btn btn-primary">{{ .btn_primary.label }}</a>
+		<a href="{{ .btn_secondary.url | absLangURL }}" class="btn btn-outline" {{ if (urls.Parse .btn_secondary.url).IsAbs }}target="_blank"{{ end }}>{{ .btn_secondary.label }}</a>
 	</div>
 </section>

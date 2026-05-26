@@ -26,6 +26,8 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  gap: calc(var(--padding_x2) * 2);
 }
 
 #site-footer {
@@ -34,4 +36,24 @@ main {
 
 main > section {
   scroll-snap-align: start;
+}
+
+/* typography */
+main h2 {
+  font-size: 2.5rem
+}
+
+main h3 {
+  font-size: 1.4rem
+}
+
+main h4 {
+  font-size: 1.1rem
+}
+
+/* From Large Tablet */
+@media (min-width: 1024px) {
+  main {
+    gap: var(--padding_x2);
+  }
 }
