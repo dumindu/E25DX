@@ -73,7 +73,7 @@
 }
 
 :root[data-color="dark"] {
-  --primary: rgb(245 212 31);
+  --primary: rgb(245 212 31/ .8);
 
   --background: rgb(16 16 16);
   --background-subtle: rgb(255 255 255/ .05);

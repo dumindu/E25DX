@@ -119,6 +119,11 @@
   font-style: italic
 }
 
+#article-body del {
+  text-decoration: line-through;
+  text-decoration-thickness: .1em;
+}
+
 /* Headings */
 #article-body h1,
 #article-body h2,
@@ -126,30 +131,17 @@
 #article-body h4,
 #article-body h5,
 #article-body h6 {
-  line-height: 1em;
-  margin: 2.6em 0 .1em;
+  line-height: 1.25em;
+  margin: 2.5rem 0 .75rem;
   color: var(--color)
 }
 
-#article-body h1 {
-  font-size: 1.8em
-}
+#article-body h1 { font-size: 2.369em; }
+#article-body h2 { font-size: 1.777em; }
+#article-body h3 { font-size: 1.4em; }
+#article-body h4 { font-size: 1.2em; }
 
-#article-body h2 {
-  font-size: 1.5em
-}
-
-#article-body h3 {
-  font-size: 1.3em
-}
-
-#article-body h4 {
-  font-size: 1.1em
-}
-
-#article-body h2:first-child {
-  margin-top: .6em
-}
+#article-body h2:first-child { margin-top: .2em; }
 
 /* Lists */
 #article-body ul {
@@ -178,6 +170,11 @@
 
 #article-body li > ol > li > ol {
   list-style: lower-roman;
+}
+
+#article-body ul:has(li input[type="checkbox"]) {
+  list-style-type: none;
+  margin-left: .8rem;
 }
 
 /* Blockquote */
@@ -271,6 +268,8 @@
 #article-body .highlight,
 #article-body blockquote,
 #article-body .alert,
+#article-body .tabs,
+#article-body .code-window,
 #article-body iframe,
 #article-body p,
 #article-body table {
@@ -288,6 +287,8 @@
 #article-body blockquote,
 #article-body li .highlight,
 #article-body li .alert,
+#article-body li .tabs,
+#article-body li .code-window,
 #article-body li iframe,
 #article-body li table {
   margin-bottom: 1em;
@@ -296,7 +297,7 @@
 #article-body dl,
 #article-body ol,
 #article-body ul {
-  margin: .6rem 0 0 1.8rem;
+  margin: 1.8rem 0 0 1.8rem;
 }
 
 #article-body dl dl,
@@ -317,7 +318,7 @@
 
 #article-body li .highlight,
 #article-body li blockquote {
-  margin: .6rem 1.2rem .6rem 0;
+  margin: .6rem 1.2rem 1.2rem 0;
 }
 
 #article-body li blockquote {
@@ -383,6 +384,11 @@
   border-radius: unset;
   border: unset;
   backdrop-filter: unset;
+}
+
+#article-body .code-body > .chroma {
+  background: transparent;
+  border: none;
 }
 
 #article-body blockquote code {

@@ -1,0 +1,87 @@
+.accordion-vertical-tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--padding_d2);
+  overflow: hidden;
+}
+
+.accordion-vertical-tabs > details {
+  background: var(--background-subtle);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.accordion-vertical-tabs > details > summary {
+  font-weight: 500;
+  cursor: pointer;
+
+  color: var(--color-nav);
+  padding: var(--padding);
+}
+
+.accordion-vertical-tabs > details > summary:hover, .accordion-vertical-tabs > details > summary:focus {
+  background: var(--background-hover);
+}
+
+.accordion-vertical-tabs > details[open] :is(summary, .summary) {
+  background: var(--primary);
+  color: var(--color-nav);
+  pointer-events: none;
+}
+
+.accordion-vertical-tabs > details[open]::details-content {
+  background: var(--background-subtle);
+  padding: 0 var(--padding) var(--padding);
+}
+
+@media (min-width: 1024px) {
+  .accordion-vertical-tabs {
+    display: grid;
+    grid-template-columns: var(--tab-width, 20svw) 1fr; /* 1. Fix the sidebar width */
+    grid-template-rows: repeat(calc(var(--tabs-count, 5) + 1), auto); /* 2. Define rows for tabs only */
+
+    background: var(--background-subtle);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+
+  .accordion-vertical-tabs > details {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: 1 / span calc(var(--tabs-count, 5) + 1);
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    gap: 0;
+
+    background: none;
+    border: none;
+  }
+
+  .accordion-vertical-tabs > details > summary {
+    grid-column: 1;
+    grid-row: var(--n);
+
+    height: var(--tab-height, 3.75rem); /* 3. Constant height for every tab */
+    display: flex;
+    align-items: center;
+
+    z-index: 1;
+
+    background: var(--background-subtle);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .accordion-vertical-tabs > details[open]::details-content {
+    grid-column: 2;
+    grid-row: 1 / span calc(var(--tabs-count, 5) + 1);
+    border-left: 1px solid var(--border);
+    overflow: auto;
+    z-index: 1;
+  }
+
+  .accordion-vertical-tabs > details:not([open])::details-content {
+    display: none;
+  }
+}

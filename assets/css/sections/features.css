@@ -1,0 +1,86 @@
+.features-section {
+  background: var(--background-subtle);
+  padding-top: var(--padding_x2);
+  padding-bottom: var(--padding_x2);
+  width: 100%;
+}
+
+.features-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--padding);
+}
+
+.features-body {
+  margin: var(--padding);
+  gap: var(--padding);
+  overflow-x: auto;
+}
+
+@media (min-width: 1024px) {
+  .features-body {
+    max-width: 80svw;
+    margin: var(--padding) auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .features-body {
+    max-width: 60svw;
+  }
+}
+
+/* Typography */
+.features-body {
+  font-size: .95rem;
+}
+.features-body p,
+.features-body pre:not(.chroma),
+.features-body .highlight {
+  line-height: 1.8em;
+  letter-spacing: -.1px;
+}
+
+.features-body strong, .features-body b, .features-body table th {
+  font-weight: 600
+}
+
+.features-body em {
+  font-style: italic
+}
+
+/* Links */
+.features-body a {
+  color: var(--primary);
+  text-decoration: none
+}
+
+.features-body a:hover {
+  text-decoration: underline;
+  background: var(--background-hover);
+}
+
+/* Spacing */
+.features-body p,
+.features-body .highlight {
+  margin-top: 1rem;
+}
+
+/* Code/ Highlight/ Chroma */
+.features-body code, .features-body pre {
+  font-family: var(--font-mono);
+  font-size: .875rem;
+}
+
+.features-body pre, .features-body pre code {
+  display: inline-grid;
+}
+
+.features-body .chroma code {
+  padding: unset;
+  background: unset;
+  border-radius: unset;
+  border: unset;
+}

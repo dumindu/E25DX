@@ -1,0 +1,21 @@
+<section class="bento-section">
+
+	{{ range .items }}
+	<div class="bento-card {{ .col }}">
+		<div>
+			<span class="card-icon">{{ partial "icon.html" .icon }}</span>
+			<h3>{{ .title | markdownify }}</h3>
+			<p>{{ .description | markdownify }}</p>
+		</div>
+
+		{{ with .badges }}
+		<footer>
+			{{ range . }}
+			<span class="badge">{{ . }}</span>
+			{{ end }}
+		</footer>
+		{{ end }}
+	</div>
+	{{ end }}
+
+</section>

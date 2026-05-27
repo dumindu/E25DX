@@ -1,0 +1,28 @@
+{{ $title := .Attributes.title }}
+{{ $link := .Attributes.link }}
+
+{{ if or $title $link }}
+<div class="code-window highlight">
+    {{ with $title }}
+	<div class="code-header">
+		<div class="traffic-lights">
+			<div class="light light-red"></div>
+			<div class="light light-yellow"></div>
+			<div class="light light-green"></div>
+		</div>
+		<span class="code-title">{{ . }}</span>
+		<div>
+			{{ with $link }}
+			<a href="{{ $link }}" class="code-label">Source</a>
+			{{ end }}
+		</div>
+	</div>
+    {{ end }}
+	<div class="code-body">
+		<pre tabindex="0" class="chroma"><code {{ with .Type }} class="language-{{ . }}" data-lang="{{ . }}" {{end}}>{{ with transform.HighlightCodeBlock . }}{{- .Inner -}}{{ end }}</code></pre>
+	</div>
+</div>
+{{ else }}
+	{{- $result := transform.HighlightCodeBlock . -}}
+	{{- $result.Wrapped -}}
+{{ end }}

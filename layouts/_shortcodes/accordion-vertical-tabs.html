@@ -1,0 +1,10 @@
+{{ $label := .Get "label" | default "Select option" }}
+{{ $count := .Get "count" | default "5" }}
+
+{{ $tabWidth := .Get "tabWidth" | default "20svw" }}
+{{ $tabHeight := .Get "tabHeight" | default "60px" }}
+
+<div class="accordion-vertical-tabs" aria-label="{{ $label }}" open
+     style="--tabs-count: {{ $count }}; --tab-width: {{ $tabWidth }}; --tab-height: {{ $tabHeight }};" >
+	{{ .Inner }}
+</div>

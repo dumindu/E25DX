@@ -1,0 +1,59 @@
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(var(--tabs-count, 3), minmax(80px, 1fr));
+  grid-template-rows: auto 1fr;
+}
+
+.tabs > details {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 1 / span 2;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
+
+.tabs > details > summary {
+  grid-column: var(--n) / span 1;
+  grid-row: 1;
+  display: grid;
+  z-index: 1;
+  cursor: pointer;
+
+  font-size: .875rem;
+  font-family: var(--font-mono);
+  color: var(--color-nav);
+
+  border: 1px solid var(--border-subtle);
+  border-top-left-radius: calc(var(--radius)*2);
+  border-top-right-radius: calc(var(--radius)*2);
+  background: var(--background-subtle);
+  padding: var(--padding_d2);
+
+}
+
+.tabs > details > summary:hover, .tabs > details > summary:focus {
+  background: var(--background-hover);
+}
+
+.tabs > details[open] :is(summary, .summary) {
+  background: var(--primary);
+  color: var(--color-nav);
+  pointer-events: none;
+}
+
+.tabs > details::details-content {
+  grid-row: 2;
+  grid-column: 1 / -1;
+  background: var(--background-subtle);
+  padding: 0 var(--padding) var(--padding);
+  border-bottom-left-radius: calc(var(--radius));
+  border-bottom-right-radius: calc(var(--radius));
+}
+
+.tabs > details[open]::details-content {
+  z-index: 1;
+}
+
+.tabs > details:not([open])::details-content {
+  display: none;
+}

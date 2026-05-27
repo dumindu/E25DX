@@ -59,7 +59,7 @@
   background: var(--background-subtle);
   backdrop-filter: blur(var(--blur));
   border: 1px solid var(--border-subtle);
-  cursor: initial;
+  pointer-events: none;
 }
 
 #search-box {

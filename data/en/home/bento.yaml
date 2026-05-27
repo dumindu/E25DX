@@ -1,0 +1,24 @@
+items:
+  - col: col-5
+    icon: bento/rocket_launch
+    title: Built for Performance
+    description: Powered by GoHugo, the world's fastest static site framework; With a premium search experience with Pagefind that aims to perform well on large sites. No external CSS, JS, icon, font frameworks.
+    badges: [ ]
+
+  - col: col-7
+    icon: bento/extension
+    title: Extensible Architecture
+    description: Enjoy a modular, themeable layout and partials designed specifically for technical wizards and creators. Manage your composable CSS and partials with a YAML data-driven approach, side-by-side using pure Markdown files.
+    badges: [ Static Pages, Multiple Documentations, Blog, Search ]
+
+  - col: col-7
+    icon: bento/shield
+    title: Zero Bloat and Secure
+    description: Build your site without dragging along hundreds of npm packages or thousands of CSS classes. We leverage native Hugo features to keep your project clean, secure, and incredibly easy to maintain.
+    badges: [No NPM Dependencies, Even No Need To Install Node ]
+
+  - col: col-5
+    icon: bento/palette
+    title: Fully Themeable
+    description: Take total control of your design system. Effortlessly customize layouts, components, partials and color modes using isolated CSS, JavaScript, and data-driven template configurations. Take full advantage of native Hugo pipes for asset minification, custom markdown render hooks for styled blocks.
+    badges: [ ]

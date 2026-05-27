@@ -1,0 +1,94 @@
+.bento-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--padding);
+  margin: 0 auto;
+
+  padding: 0 var(--padding);
+}
+
+.bento-card {
+  background: var(--background-subtle);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+
+  padding: var(--padding);
+  transition: all 0.3s;
+}
+
+.bento-card:hover {
+  background: var(--background-hover);
+}
+
+.bento-card h3 {
+  margin-bottom: var(--padding);
+}
+
+.bento-card p {
+  color: var(--color-nav);
+}
+
+.bento-card footer {
+  margin-top: var(--padding);
+  padding-top: var(--padding);
+  gap: 1rem;
+
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  border-top: 1px solid var(--border);
+}
+
+.bento-card .card-icon {
+  display: flex;
+  margin-bottom: var(--padding);
+  height: 32px;
+  fill: var(--color-nav);
+}
+
+.col-7, .col-5 {
+  grid-column: span 12;
+}
+
+@media (min-width: 744px) {
+  .col-7 {
+    grid-column: span 7;
+  }
+
+  .col-5 {
+    grid-column: span 5;
+  }
+
+  .bento-section {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .bento-section {
+    max-width: 80svw;
+    min-height: 80svh;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+  .bento-section {
+    min-height: 50svh;
+  }
+}
+
+@media (min-width: 1280px) {
+  .bento-section {
+    min-height: 60svh;
+    gap: var(--padding_x2);
+  }
+
+  .bento-card {
+    padding: var(--padding_x2);
+  }
+
+  .bento-card footer {
+    margin-top: var(--padding_x2);
+    padding-top: var(--padding_x2);
+  }
+}

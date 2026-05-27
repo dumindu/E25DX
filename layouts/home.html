@@ -15,7 +15,7 @@
   <title>{{ site.Title | .RenderString }} · {{ site.Params.description | .RenderString }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
 
-  {{ $css := slice
+  {{ $cssFiles := slice
 		(resources.Get "css/reset.css")
 		(resources.Get "css/theme.css")
 		(resources.Get "css/components/button.css")
@@ -25,9 +25,21 @@
 		(resources.Get "css/site/footer.css")
 		(resources.Get "css/site/layout-home.css")
 		(resources.Get "css/sections/hero.css")
+		(resources.Get "css/sections/bento.css")
 		(resources.Get "css/sections/card-grid.css")
-	| resources.Concat "assets/css/home.css" | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.integrity }}">
+	}}
+
+	{{ if site.GetPage "/home/features" }}
+		{{ $cssFiles = $cssFiles | append
+			(resources.Get "css/components/accordion-vertical-tabs.css")
+			(resources.Get "css/components/code-window.css")
+			(resources.Get "css/components/chroma.css")
+			(resources.Get "css/sections/features.css")
+		}}
+	{{ end }}
+
+	{{ $css := $cssFiles | resources.Concat "assets/css/home.css" | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.integrity }}">
 
 	{{ with site.Params.enablePageFind }}
 	<link href="{{ "pagefind/pagefind-component-ui.css" | absURL }}" rel="stylesheet">
@@ -44,6 +56,12 @@
 
 		<main>
 			{{ partial "sections/hero.html" (index site.Data site.Language.Lang "home" "hero") }}
+			{{ partial "sections/bento.html" (index site.Data site.Language.Lang "home" "bento") }}
+
+			{{ with site.GetPage "/home/features" }}
+				{{ partial "sections/features.html" . }}
+			{{ end }}
+
 			{{ partial "sections/card-grid.html" (index site.Data site.Language.Lang "home" "card-grid") }}
 		</main>
 

@@ -1,0 +1,64 @@
+.code-window {
+  background: var(--background-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: var(--padding_d2) var(--padding);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.traffic-lights {
+  display: flex;
+  gap: .375rem;
+}
+
+.traffic-lights .light {
+  width: .625rem;
+  height: .625rem;
+  border-radius: 50%;
+  opacity: .8;
+}
+
+.traffic-lights .light-red {
+  background: #ff5f56;
+}
+
+.traffic-lights .light-yellow {
+  background: #ffbd2e;
+}
+
+.traffic-lights .light-green {
+  background: #27c93f;
+}
+
+.code-title {
+  font-size: .875rem;
+  font-family: var(--font-mono);
+  color: var(--color-nav);
+}
+
+.code-label {
+  font-size: .625rem;
+  line-height: 2;
+  background: var(--background-hover);
+  padding: calc(var(--padding_d2) * .32) calc(var(--padding_d2) * .7);
+  text-transform: uppercase;
+}
+
+.code-body {
+  box-shadow: var(--box-shadow);
+}
+
+.code-body > .chroma {
+  background: transparent;
+  border: none;
+  width: 100%;
+  overflow-x: auto;
+}

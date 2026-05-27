@@ -1,0 +1,9 @@
+{{ $label := .Get "label" | markdownify }}
+<details name="tabs-{{ add .Parent.Ordinal 1 }}" style="--n: {{ add .Ordinal 1 }}" open>
+	<summary data-index="{{ $label }}">
+		{{ $label }}
+	</summary>
+	<div>
+		{{ .Inner | markdownify }}
+	</div>
+</details>

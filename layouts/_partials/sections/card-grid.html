@@ -14,7 +14,9 @@
 			</header>
 			<p>{{ .description | markdownify }}</p>
 			<footer>
-				<a class="btn" href="{{ .link.url }}">{{ .link.label }}</a>
+				<a class="btn" href="{{ .link.url }}" {{ if (urls.Parse .link.url).IsAbs }}rel="external" target="_blank"{{end}}>
+					{{ .link.label }}
+				</a>
 			</footer>
 		</div>
 		{{ end }}
