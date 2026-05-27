@@ -22,7 +22,112 @@ https://github.com/dumindu/E25DX/assets/1280428/00935567-6d50-4e1b-bb0c-cbd159ad
 - [x] Support for multiple documentation sets.
 - [x] Support for maintaining a blog.
 - [x] Implement a menu via Hugo configs.
-- [x] Integrate page search.
+- [x] Integrate a search via Pagefind.
+
+## Folder structure
+
+```
+├── content
+│   └── en
+│       ├── docs
+│       │   └── page.md
+│       └── blog
+│           └── page.md
+├── i18n
+│   └── en.yaml
+│
+├── layouts
+│   ├── _shortcodes
+│   │   └── blockquote.html
+│   ├── _markup
+│   │   ├── render-blockquote-alert.html
+│   │   └── render-link.html
+│   ├── _partials
+│   │   ├── main-content
+│   │   │   ├── cover.html
+│   │   │   ├── footer.html
+│   │   │   └── nav.html
+│   │   ├── sections
+│   │   │   ├── card-grid.html
+│   │   │   └── hero.html
+│   │   ├── blog
+│   │   │   ├── list-body.html
+│   │   │   └── list-footer.html
+│   │   ├── components
+│   │   │   └── theme-dropdown.html
+│   │   ├── favicons.html
+│   │   ├── icon.html
+│   │   ├── analytics.html
+│   │   ├── og-x-seo.html
+│   │   └── site
+│   │       ├── header.html
+│   │       ├── footer.html
+│   │       ├── left-sidebar.html
+│   │       └── right-sidebar.html
+│   ├── blog
+│   │   └── list.html
+│   ├── home.html
+│   └── single.html
+│
+├── static
+│   ├── favicon
+│   │   ├── android-chrome-192x192.png
+│   │   ├── android-chrome-512x512.png
+│   │   ├── apple-touch-icon.png
+│   │   ├── favicon-16x16.png
+│   │   ├── favicon-32x32.png
+│   │   └── favicon.ico
+│   ├── logo.svg
+│   ├── manifest.json
+│   └── sw.js
+│
+├── assets
+│   ├── icons                         # Any icon can be added in svg, width="20px", height="20px"
+│   ├── css
+│   │   ├── site
+│   │   │   ├── header.css
+│   │   │   ├── footer.css
+│   │   │   ├── layout-home.css
+│   │   │   ├── layout-column-1.css
+│   │   │   ├── layout-column-2.css
+│   │   │   ├── layout-blog-list.css
+│   │   │   ├── sidebar-left.css
+│   │   │   └── sidebar-right.css
+│   │   ├── blog
+│   │   │   ├── list-body.css
+│   │   │   └── list-footer.css
+│   │   ├── main-content
+│   │   │   └── article.css
+│   │   ├── components                # Any new component can be added here with/without layouts/_partials
+│   │   │   ├── alert.css
+│   │   │   ├── badge.css
+│   │   │   ├── button.css
+│   │   │   ├── chroma.css
+│   │   │   └── dropdown.css
+│   │   ├── sections                  # Any new page UI section can be added here with sample data yaml
+│   │   │   ├── card-grid.css
+│   │   │   └── hero.css
+│   │   ├── reset.css
+│   │   └── theme.css
+│   └── js
+│       ├── components
+│       │   └── dropdown.js
+│       └── site
+│           ├── color-preference.js
+│           ├── off-canvas.js
+│           └── table-of-contents.js
+├── data
+│   ├── en
+│   │   ├── docs
+│   │   │   └── sidebar.yml         # Controls /docs sidebar
+│   │   └── home
+│   │       ├── card-grid.yaml      # Controls card-grid
+│   │       └── hero.yaml           # Controls hero unit
+│   └── themes.yaml
+├── hugo.yaml
+└── theme.toml
+
+```
 
 ## 🚀 Getting Started
 
