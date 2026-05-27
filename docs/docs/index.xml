@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docs on Site Name</title><link>https://dumindu.github.io/e25dx/docs/</link><description>Recent content in Docs on Site Name</description><generator>Hugo</generator><language>en-US</language><atom:link href="https://dumindu.github.io/e25dx/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Add Menu Items</title><link>https://dumindu.github.io/e25dx/docs/add-menu-items/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/add-menu-items/</guid><description>&lt;div class="code-window highlight"&gt;
+ 
+	&lt;div class="code-header"&gt;
+		&lt;div class="traffic-lights"&gt;
+			&lt;div class="light light-red"&gt;&lt;/div&gt;
+			&lt;div class="light light-yellow"&gt;&lt;/div&gt;
+			&lt;div class="light light-green"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;span class="code-title"&gt;Folder Structure&lt;/span&gt;
+		&lt;div&gt;
+			
+		&lt;/div&gt;
+	&lt;/div&gt;
+ 
+	&lt;div class="code-body"&gt;
+		&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell" &gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── static
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── manifest.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── sw.js
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hugo.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── themes
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── E25DX&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="add-main-menu-items"&gt;Add Main Menu Items&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Add new &lt;code&gt;menus&lt;/code&gt; block to &lt;code&gt;hugo.yaml&lt;/code&gt; to add menu items&lt;/p&gt;
+
+
+
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;menus&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;main&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;identifier&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;home&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Home&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;pageRef&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;/&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;params&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;icon&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;home&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;identifier&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;docs&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Documentation&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;pageRef&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;/docs&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;params&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;icon&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;menu_book&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;identifier&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;blog&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Blog&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;pageRef&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;/blog&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;params&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;icon&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;news&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;identifier&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;about&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;About Me&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;pageRef&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;/page/about&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;params&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;icon&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;account_circle&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>Add Our First Blog Posts</title><link>https://dumindu.github.io/e25dx/docs/add-our-first-blog-posts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/add-our-first-blog-posts/</guid><description>&lt;div class="code-window highlight"&gt;
+ 
+	&lt;div class="code-header"&gt;
+		&lt;div class="traffic-lights"&gt;
+			&lt;div class="light light-red"&gt;&lt;/div&gt;
+			&lt;div class="light light-yellow"&gt;&lt;/div&gt;
+			&lt;div class="light light-green"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;span class="code-title"&gt;Folder Structure&lt;/span&gt;
+		&lt;div&gt;
+			
+		&lt;/div&gt;
+	&lt;/div&gt;
+ 
+	&lt;div class="code-body"&gt;
+		&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell" &gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── content
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── en
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── blog
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── static
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── manifest.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── sw.js
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hugo.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── themes
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── E25DX&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="initialize-the-blog"&gt;Initialize the Blog&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Add &lt;code&gt;content/en/blog/_index.md&lt;/code&gt;&lt;/p&gt;
+
+
+
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cascade:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;isBlog: true
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;---&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="alert alert-tip"&gt;
+	&lt;div class="alert-header"&gt;
+		
+		
+
+	&lt;svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"&gt;&lt;path d="M407.74-240Q378-240 357-261.15 336-282.3 336-312v-67q-57-37.3-88.5-95.65Q216-533 216-600q0-110.31 76.78-187.16 76.78-76.84 187-76.84T667-787.16q77 76.85 77 187.16 0 66.82-31.5 125.41T624-379v67q0 29.7-21.18 50.85Q581.65-240 551.91-240H407.74Zm.26-72h144v-86q0-9.29 4-17.64 4-8.36 12-12.92l17-10.93q41-25.51 64-68.69 23-43.18 23-91.82 0-79.68-56.23-135.84-56.22-56.16-136-56.16Q400-792 344-735.84 288-679.68 288-600q0 48.64 23 91.82 23 43.18 64 68.69l17 10.93q8 4.56 12 12.92 4 8.35 4 17.64v86ZM396-96q-15.3 0-25.65-10.29Q360-116.58 360-131.79t10.35-25.71Q380.7-168 396-168h168q15.3 0 25.65 10.29Q600-147.42 600-132.21t-10.35 25.71Q579.3-96 564-96H396Zm84-504Z"/&gt;&lt;/svg&gt;
+
+
+		&lt;span&gt;
+		
+			Tip
+		
+		&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class="alert-body"&gt;
+		&lt;p&gt;This helps to change the labels of back navigation; &amp;ldquo;All Blog Posts&amp;rdquo;&lt;/p&gt;</description></item><item><title>Add Our First Documentation</title><link>https://dumindu.github.io/e25dx/docs/add-our-first-documentation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/add-our-first-documentation/</guid><description>&lt;div class="code-window highlight"&gt;
+ 
+	&lt;div class="code-header"&gt;
+		&lt;div class="traffic-lights"&gt;
+			&lt;div class="light light-red"&gt;&lt;/div&gt;
+			&lt;div class="light light-yellow"&gt;&lt;/div&gt;
+			&lt;div class="light light-green"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;span class="code-title"&gt;Folder Structure&lt;/span&gt;
+		&lt;div&gt;
+			
+		&lt;/div&gt;
+	&lt;/div&gt;
+ 
+	&lt;div class="code-body"&gt;
+		&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell" &gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── content
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── en
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── docs
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── data
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── en
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── docs
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── static
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── manifest.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── sw.js
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hugo.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── themes
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── E25DX&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="initialize-our-first-documentation"&gt;Initialize Our First Documentation&lt;/h2&gt;
+
+
+&lt;div class="alert alert-recap"&gt;
+	&lt;div class="alert-header"&gt;
+		
+		
+
+	&lt;svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"&gt;&lt;path d="m687-273-78-160 95-95-79.77-79.77v-112.46H511.77L432-800l-79.77 79.77H239.77v112.46L160-528l79.77 79.77v112.46h112.46L432-256l95-95 160 78Zm104 104q-8 8-19 10.5t-22-3.5L541-264l-84 84q-10.64 11-24.82 11T407-180l-84.26-84H204q-15.3 0-25.65-10.35Q168-284.7 168-300v-118.74L84-503q-11-10.64-11-24.82T84-553l84-84.26V-756q0-15.3 10.35-25.65Q188.7-792 204-792h118.74L407-876q10.64-11 24.82-11T457-876l84.26 84H660q15.3 0 25.65 10.35Q696-771.3 696-756v118.74L780-553q11 10.64 11 24.82T780-503l-84 84 102 209q6 11 3.5 22T791-169ZM432-528Z"/&gt;&lt;/svg&gt;
+
+
+		&lt;span&gt;
+		
+			Recap
+		
+		&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class="alert-body"&gt;
+		&lt;p&gt;Here, we are going to create the documentation&amp;rsquo;s overview and two more pages belongs to two sections in the sidebar.
+For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::Hello World&amp;rdquo; and &amp;ldquo;Beyond The Basics::Modules&amp;rdquo;&lt;/p&gt;</description></item><item><title>Add Separate Site Pages</title><link>https://dumindu.github.io/e25dx/docs/add-separate-site-pages/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/add-separate-site-pages/</guid><description>&lt;div class="code-window highlight"&gt;
+ 
+	&lt;div class="code-header"&gt;
+		&lt;div class="traffic-lights"&gt;
+			&lt;div class="light light-red"&gt;&lt;/div&gt;
+			&lt;div class="light light-yellow"&gt;&lt;/div&gt;
+			&lt;div class="light light-green"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;span class="code-title"&gt;Folder Structure&lt;/span&gt;
+		&lt;div&gt;
+			
+		&lt;/div&gt;
+	&lt;/div&gt;
+ 
+	&lt;div class="code-body"&gt;
+		&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell" &gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── content
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── en
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── page
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── static
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── manifest.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── sw.js
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hugo.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── themes
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── E25DX&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="create-separate-site-pages"&gt;Create Separate Site Pages&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Add &lt;code&gt;content/en/page/about/index.md&lt;/code&gt; for about page&lt;/p&gt;
+
+
+
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;title: About
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;url: &amp;#34;about&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;About/ Any Markdown&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add any image of png (or jpg) for &lt;code&gt;content/en/page/about/cover.png&lt;/code&gt; for about page cover image&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>Create a New Project</title><link>https://dumindu.github.io/e25dx/docs/create-a-new-project/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/create-a-new-project/</guid><description>&lt;div class="code-window highlight"&gt;
+ 
+	&lt;div class="code-header"&gt;
+		&lt;div class="traffic-lights"&gt;
+			&lt;div class="light light-red"&gt;&lt;/div&gt;
+			&lt;div class="light light-yellow"&gt;&lt;/div&gt;
+			&lt;div class="light light-green"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;span class="code-title"&gt;Folder Structure&lt;/span&gt;
+		&lt;div&gt;
+			
+		&lt;/div&gt;
+	&lt;/div&gt;
+ 
+	&lt;div class="code-body"&gt;
+		&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell" &gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── static
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── manifest.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── sw.js
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hugo.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── themes
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── E25DX&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="create-a-new-project"&gt;Create a New Project&lt;/h2&gt;
+
+
+
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;hugo new site newsite
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; newsite
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git init
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git submodule add https://github.com/dumindu/E25DX.git themes/E25DX
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rm hugo.toml &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; cp themes/E25DX/hugo.yaml .
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cp themes/E25DX/static/sw.js ./static/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cp themes/E25DX/static/manifest.json ./static/&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="alert alert-note"&gt;
+	&lt;div class="alert-header"&gt;
+		
+		
+
+	&lt;svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"&gt;&lt;path d="M505.5-298.35Q516-308.7 516-324v-168q0-15.3-10.29-25.65Q495.42-528 480.21-528t-25.71 10.35Q444-507.3 444-492v168q0 15.3 10.29 25.65Q464.58-288 479.79-288t25.71-10.35Zm0-311.94q10.5-10.29 10.5-25.5t-10.29-25.71q-10.29-10.5-25.5-10.5t-25.71 10.29q-10.5 10.29-10.5 25.5t10.29 25.71q10.29 10.5 25.5 10.5t25.71-10.29ZM480.28-96Q401-96 331-126t-122.5-82.5Q156-261 126-330.96t-30-149.5Q96-560 126-629.5q30-69.5 82.5-122T330.96-834q69.96-30 149.5-30t149.04 30q69.5 30 122 82.5T834-629.28q30 69.73 30 149Q864-401 834-331t-82.5 122.5Q699-156 629.28-126q-69.73 30-149 30Zm-.28-72q130 0 221-91t91-221q0-130-91-221t-221-91q-130 0-221 91t-91 221q0 130 91 221t221 91Zm0-312Z"/&gt;&lt;/svg&gt;
+
+
+		&lt;span&gt;
+		
+			Note
+		
+		&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class="alert-body"&gt;
+		&lt;p&gt;We don&amp;rsquo;t need generated &lt;code&gt;archetypes&lt;/code&gt;, &lt;code&gt;assets&lt;/code&gt;, &lt;code&gt;i18n&lt;/code&gt;, &lt;code&gt;layouts&lt;/code&gt; folders in the &lt;code&gt;newsite&lt;/code&gt; folder&lt;/p&gt;</description></item><item><title>Foundation</title><link>https://dumindu.github.io/e25dx/docs/foundation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/foundation/</guid><description>&lt;h2 id="install-hugo"&gt;Install Hugo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Use prebuilt binaries via &lt;a href="https://github.com/gohugoio/hugo/releases/latest" target="_blank" &gt;https://github.com/gohugoio/hugo/releases/latest&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Verify the installation via &lt;code&gt;hugo version&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;div class="alert alert-note"&gt;
+	&lt;div class="alert-header"&gt;
+		
+		
+
+	&lt;svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"&gt;&lt;path d="M505.5-298.35Q516-308.7 516-324v-168q0-15.3-10.29-25.65Q495.42-528 480.21-528t-25.71 10.35Q444-507.3 444-492v168q0 15.3 10.29 25.65Q464.58-288 479.79-288t25.71-10.35Zm0-311.94q10.5-10.29 10.5-25.5t-10.29-25.71q-10.29-10.5-25.5-10.5t-25.71 10.29q-10.5 10.29-10.5 25.5t10.29 25.71q10.29 10.5 25.5 10.5t25.71-10.29ZM480.28-96Q401-96 331-126t-122.5-82.5Q156-261 126-330.96t-30-149.5Q96-560 126-629.5q30-69.5 82.5-122T330.96-834q69.96-30 149.5-30t149.04 30q69.5 30 122 82.5T834-629.28q30 69.73 30 149Q864-401 834-331t-82.5 122.5Q699-156 629.28-126q-69.73 30-149 30Zm-.28-72q130 0 221-91t91-221q0-130-91-221t-221-91q-130 0-221 91t-91 221q0 130 91 221t221 91Zm0-312Z"/&gt;&lt;/svg&gt;
+
+
+		&lt;span&gt;
+		
+			Note
+		
+		&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class="alert-body"&gt;
+		&lt;p&gt;Refer &lt;a href="https://gohugo.io/installation" target="_blank" &gt;https://gohugo.io/installation&lt;/a&gt; for troubleshooting.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="install-pagefind"&gt;Install Pagefind&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Use prebuilt binaries via &lt;a href="https://github.com/pagefind/pagefind/releases" target="_blank" &gt;https://github.com/pagefind/pagefind/releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Verify the installation via &lt;code&gt;pagefind --version&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;div class="alert alert-note"&gt;
+	&lt;div class="alert-header"&gt;
+		
+		
+
+	&lt;svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"&gt;&lt;path d="M505.5-298.35Q516-308.7 516-324v-168q0-15.3-10.29-25.65Q495.42-528 480.21-528t-25.71 10.35Q444-507.3 444-492v168q0 15.3 10.29 25.65Q464.58-288 479.79-288t25.71-10.35Zm0-311.94q10.5-10.29 10.5-25.5t-10.29-25.71q-10.29-10.5-25.5-10.5t-25.71 10.29q-10.5 10.29-10.5 25.5t10.29 25.71q10.29 10.5 25.5 10.5t25.71-10.29ZM480.28-96Q401-96 331-126t-122.5-82.5Q156-261 126-330.96t-30-149.5Q96-560 126-629.5q30-69.5 82.5-122T330.96-834q69.96-30 149.5-30t149.04 30q69.5 30 122 82.5T834-629.28q30 69.73 30 149Q864-401 834-331t-82.5 122.5Q699-156 629.28-126q-69.73 30-149 30Zm-.28-72q130 0 221-91t91-221q0-130-91-221t-221-91q-130 0-221 91t-91 221q0 130 91 221t221 91Zm0-312Z"/&gt;&lt;/svg&gt;
+
+
+		&lt;span&gt;
+		
+			Note
+		
+		&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class="alert-body"&gt;
+		&lt;p&gt;Refer &lt;a href="https://pagefind.app/docs/installation" target="_blank" &gt;https://pagefind.app/docs/installation&lt;/a&gt; for troubleshooting.&lt;/p&gt;</description></item><item><title>Markdown</title><link>https://dumindu.github.io/e25dx/docs/markdown/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/markdown/</guid><description>&lt;div class="alert alert-tip"&gt;
+	&lt;div class="alert-header"&gt;
+		
+		
+
+	&lt;svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"&gt;&lt;path d="M407.74-240Q378-240 357-261.15 336-282.3 336-312v-67q-57-37.3-88.5-95.65Q216-533 216-600q0-110.31 76.78-187.16 76.78-76.84 187-76.84T667-787.16q77 76.85 77 187.16 0 66.82-31.5 125.41T624-379v67q0 29.7-21.18 50.85Q581.65-240 551.91-240H407.74Zm.26-72h144v-86q0-9.29 4-17.64 4-8.36 12-12.92l17-10.93q41-25.51 64-68.69 23-43.18 23-91.82 0-79.68-56.23-135.84-56.22-56.16-136-56.16Q400-792 344-735.84 288-679.68 288-600q0 48.64 23 91.82 23 43.18 64 68.69l17 10.93q8 4.56 12 12.92 4 8.35 4 17.64v86ZM396-96q-15.3 0-25.65-10.29Q360-116.58 360-131.79t10.35-25.71Q380.7-168 396-168h168q15.3 0 25.65 10.29Q600-147.42 600-132.21t-10.35 25.71Q579.3-96 564-96H396Zm84-504Z"/&gt;&lt;/svg&gt;
+
+
+		&lt;span&gt;
+		
+			Tip
+		
+		&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class="alert-body"&gt;
+		&lt;ul&gt;
+&lt;li&gt;This is for writing and formatting syntax for e25DX only.&lt;/li&gt;
+&lt;li&gt;Refer &lt;a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax" target="_blank" &gt;Basic writing and formatting syntax on GitHub&lt;/a&gt; for a complete Markdown syntax guild.&lt;/li&gt;
+&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="styling-text"&gt;Styling Text&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Style&lt;/th&gt;
+ &lt;th&gt;Syntax&lt;/th&gt;
+ &lt;th&gt;Example&lt;/th&gt;
+ &lt;th&gt;Output&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Bold&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;** **&lt;/code&gt; or &lt;code&gt;__ __&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;**This is bold text**&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;This is bold text&lt;/strong&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Italic&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;* *&lt;/code&gt; or &lt;code&gt;_ _&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;_This text is italicized_&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;em&gt;This text is italicized&lt;/em&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Strikethrough&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;~~ ~~&lt;/code&gt; or &lt;code&gt;~ ~&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;~~This was mistaken text~~&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;del&gt;This was mistaken text&lt;/del&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="quoting-text"&gt;Quoting Text&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Syntax&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Overview</title><link>https://dumindu.github.io/e25dx/docs/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/overview/</guid><description>&lt;h2 id="inspiration"&gt;Inspiration&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Build a simple and modular technical documentation and blog.&lt;/li&gt;
+&lt;li&gt;Build the website without using node/npm or any external frameworks(CSS, JS, icon, font).&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;div class="alert alert-recap"&gt;
+	&lt;div class="alert-header"&gt;
+		
+		
+
+	&lt;svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"&gt;&lt;path d="m687-273-78-160 95-95-79.77-79.77v-112.46H511.77L432-800l-79.77 79.77H239.77v112.46L160-528l79.77 79.77v112.46h112.46L432-256l95-95 160 78Zm104 104q-8 8-19 10.5t-22-3.5L541-264l-84 84q-10.64 11-24.82 11T407-180l-84.26-84H204q-15.3 0-25.65-10.35Q168-284.7 168-300v-118.74L84-503q-11-10.64-11-24.82T84-553l84-84.26V-756q0-15.3 10.35-25.65Q188.7-792 204-792h118.74L407-876q10.64-11 24.82-11T457-876l84.26 84H660q15.3 0 25.65 10.35Q696-771.3 696-756v118.74L780-553q11 10.64 11 24.82T780-503l-84 84 102 209q6 11 3.5 22T791-169ZM432-528Z"/&gt;&lt;/svg&gt;
+
+
+		&lt;span&gt;
+		
+			Recap
+		
+		&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class="alert-body"&gt;
+		&lt;ul&gt;
+&lt;li&gt;As a maintainer of a technical documentation, I started with &lt;a href="https://github.com/hexojs/site/tree/master/themes/navy" target="_blank" &gt;navy theme&lt;/a&gt; of &lt;a href="https://hexo.io" target="_blank" &gt;Hexo&lt;/a&gt; docs in 2018.&lt;/li&gt;
+&lt;li&gt;Then I created &lt;a href="https://docura.github.io/" target="_blank" &gt;Docura&lt;/a&gt; to add light and dark modes and copied &lt;code&gt;yaml&lt;/code&gt; based sidebars inspired by the Navy theme.&lt;/li&gt;
+&lt;li&gt;e25DX is the next iteration, with a modern UI, fully local search, and a blog theme.&lt;/li&gt;
+&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="features"&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked="" disabled="" type="checkbox"&gt; Responsive and adaptive layouts.&lt;/li&gt;
+&lt;li&gt;&lt;input checked="" disabled="" type="checkbox"&gt; Support for light and dark modes.&lt;/li&gt;
+&lt;li&gt;&lt;input checked="" disabled="" type="checkbox"&gt; Support for multiple documentation sets.&lt;/li&gt;
+&lt;li&gt;&lt;input checked="" disabled="" type="checkbox"&gt; Support for a blog.&lt;/li&gt;
+&lt;li&gt;&lt;input checked="" disabled="" type="checkbox"&gt; Implement a menu via Hugo configs.&lt;/li&gt;
+&lt;li&gt;&lt;input checked="" disabled="" type="checkbox"&gt; Customizable sidebars using Hugo data templates.&lt;/li&gt;
+&lt;li&gt;&lt;input checked="" disabled="" type="checkbox"&gt; Plug-and-play/ repeatable home page blocks using separate partials/ css/ data templates.&lt;/li&gt;
+&lt;li&gt;&lt;input checked="" disabled="" type="checkbox"&gt; Integrate a search via Pagefind.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Short Codes</title><link>https://dumindu.github.io/e25dx/docs/short-codes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/short-codes/</guid><description>&lt;h2 id="embeds"&gt;Embeds&lt;/h2&gt;
+&lt;h3 id="youtube"&gt;YouTube&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Syntax&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{{&amp;lt; youtube WPl10ZrhCtk &amp;gt;}}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/WPl10ZrhCtk?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+&lt;h3 id="x"&gt;X&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Syntax&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{{&amp;lt; x user=&amp;quot;timberners_lee&amp;quot; id=&amp;quot;290140454211698689&amp;quot; &amp;gt;}}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Aaron dead.&lt;br&gt;World wanderers, we have lost a wise elder.&lt;br&gt;Hackers for right, we are one down.&lt;br&gt;Parents all, we have lost a child. Let us weep.&lt;/p&gt;&amp;mdash; Tim Berners-Lee (@timberners_lee) &lt;a href="https://twitter.com/timberners_lee/status/290140454211698689?ref_src=twsrc%5Etfw"&gt;January 12, 2013&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+
+&lt;h3 id="instagram"&gt;Instagram&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Syntax&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Update Home Page</title><link>https://dumindu.github.io/e25dx/docs/update-home-page/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/update-home-page/</guid><description>&lt;div class="code-window highlight"&gt;
+ 
+	&lt;div class="code-header"&gt;
+		&lt;div class="traffic-lights"&gt;
+			&lt;div class="light light-red"&gt;&lt;/div&gt;
+			&lt;div class="light light-yellow"&gt;&lt;/div&gt;
+			&lt;div class="light light-green"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;span class="code-title"&gt;Folder Structure&lt;/span&gt;
+		&lt;div&gt;
+			
+		&lt;/div&gt;
+	&lt;/div&gt;
+ 
+	&lt;div class="code-body"&gt;
+		&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell" &gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── data
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── en
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── home
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── bento.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── card-grid.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── hero.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── content
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── en
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── home
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── features
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── index.md&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="hero-block"&gt;Hero Block&lt;/h2&gt;
+&lt;p&gt;Copy &lt;code&gt;theme/E25DX/data/en/home/hero.yaml&lt;/code&gt; to &lt;code&gt;data/en/home/hero.yaml&lt;/code&gt; and update accordingly.&lt;/p&gt;
+
+
+
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;badge&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Documentation · Blog · Search&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;svg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;hero.svg&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;No&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;need Hundreds of NPM Packages &amp;lt;br/&amp;gt; &amp;amp; Thousands of CSS Classes&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;For Modern &amp;amp; Modular Technical Documentation &amp;amp; Blog Setup&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;btn_primary&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;label&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Get Started&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;/docs&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;btn_secondary&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;label&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Contribute&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;https://github.com/dumindu/e25dx&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="bento-block"&gt;Bento Block&lt;/h2&gt;
+&lt;p&gt;Copy &lt;code&gt;theme/E25DX/data/en/home/bento.yaml&lt;/code&gt; to &lt;code&gt;data/en/home/bento.yaml&lt;/code&gt; and update accordingly.&lt;/p&gt;</description></item></channel></rss>

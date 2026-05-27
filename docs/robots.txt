@@ -1,0 +1,20 @@
+User-agent: Googlebot
+User-agent: YandexBot
+User-agent: baiduspider
+User-agent: Applebot
+Allow: /
+
+User-agent: *
+Disallow: /e25dx/docs/add-menu-items/
+Disallow: /e25dx/docs/add-our-first-blog-posts/
+Disallow: /e25dx/docs/add-our-first-documentation/
+Disallow: /e25dx/docs/add-separate-site-pages/
+Disallow: /e25dx/docs/create-a-new-project/
+Disallow: /e25dx/docs/
+Disallow: /e25dx/docs/foundation/
+Disallow: /e25dx/homew/
+Disallow: /e25dx/docs/markdown/
+Disallow: /e25dx/docs/overview/
+Disallow: /e25dx/docs/short-codes/
+Disallow: /e25dx/
+Disallow: /e25dx/docs/update-home-page/
