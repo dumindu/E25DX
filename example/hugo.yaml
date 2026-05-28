@@ -66,12 +66,24 @@ menus:
     - identifier: home
       name: Home
       pageRef: /
-      weight: 10
+      weight: 1
       params:
         icon: home
     - identifier: docs
       name: Documentation
       pageRef: /docs
-      weight: 20
+      weight: 2
       params:
         icon: menu_book
+    - identifier: blog
+      name: Blog
+      pageRef: /blog
+      weight: 3
+      params:
+        icon: news
+    - identifier: about
+      name: About Me
+      pageRef: /page/about
+      weight: 4
+      params:
+        icon: account_circle

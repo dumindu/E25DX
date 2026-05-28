@@ -5,6 +5,10 @@ User-agent: Applebot
 Allow: /
 
 User-agent: *
+Disallow: /E25DX/blog/
+Disallow: /E25DX/blog/sample-post/
+Disallow: /E25DX/
+Disallow: /E25DX/about-me/
 Disallow: /E25DX/docs/add-menu-items/
 Disallow: /E25DX/docs/add-our-first-blog-posts/
 Disallow: /E25DX/docs/add-our-first-documentation/
@@ -15,6 +19,6 @@ Disallow: /E25DX/docs/foundation/
 Disallow: /E25DX/home/
 Disallow: /E25DX/docs/markdown/
 Disallow: /E25DX/docs/overview/
+Disallow: /E25DX/page/
 Disallow: /E25DX/docs/short-codes/
-Disallow: /E25DX/
 Disallow: /E25DX/docs/update-home-page/
