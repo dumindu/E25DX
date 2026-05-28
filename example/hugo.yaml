@@ -1,5 +1,5 @@
 publishDir: ../docs
-baseURL: https://dumindu.github.io/e25dx
+baseURL: https://dumindu.github.io/E25DX
 
 themesDir: "../.."
 theme: E25DX
@@ -46,7 +46,7 @@ params:
     startYear: 2024
     presentYear: 2026
     repo:
-      main: https://github.com/dumindu/e25dx
+      main: https://github.com/dumindu/
     themeColor:
       light: '#ffffff'
       dark: '#101010'

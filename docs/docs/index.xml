@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docs on Site Name</title><link>https://dumindu.github.io/e25dx/docs/</link><description>Recent content in Docs on Site Name</description><generator>Hugo</generator><language>en-US</language><atom:link href="https://dumindu.github.io/e25dx/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Add Menu Items</title><link>https://dumindu.github.io/e25dx/docs/add-menu-items/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/add-menu-items/</guid><description>&lt;div class="code-window highlight"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docs on Site Name</title><link>https://dumindu.github.io/E25DX/docs/</link><description>Recent content in Docs on Site Name</description><generator>Hugo</generator><language>en-US</language><atom:link href="https://dumindu.github.io/E25DX/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Add Menu Items</title><link>https://dumindu.github.io/E25DX/docs/add-menu-items/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/add-menu-items/</guid><description>&lt;div class="code-window highlight"&gt;
  
 	&lt;div class="code-header"&gt;
 		&lt;div class="traffic-lights"&gt;
@@ -54,7 +54,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;params&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;icon&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;account_circle&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ol&gt;</description></item><item><title>Add Our First Blog Posts</title><link>https://dumindu.github.io/e25dx/docs/add-our-first-blog-posts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/add-our-first-blog-posts/</guid><description>&lt;div class="code-window highlight"&gt;
+&lt;/ol&gt;</description></item><item><title>Add Our First Blog Posts</title><link>https://dumindu.github.io/E25DX/docs/add-our-first-blog-posts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/add-our-first-blog-posts/</guid><description>&lt;div class="code-window highlight"&gt;
  
 	&lt;div class="code-header"&gt;
 		&lt;div class="traffic-lights"&gt;
@@ -107,7 +107,7 @@
 		&lt;/span&gt;
 	&lt;/div&gt;
 	&lt;div class="alert-body"&gt;
-		&lt;p&gt;This helps to change the labels of back navigation; &amp;ldquo;All Blog Posts&amp;rdquo;&lt;/p&gt;</description></item><item><title>Add Our First Documentation</title><link>https://dumindu.github.io/e25dx/docs/add-our-first-documentation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/add-our-first-documentation/</guid><description>&lt;div class="code-window highlight"&gt;
+		&lt;p&gt;This helps to change the labels of back navigation; &amp;ldquo;All Blog Posts&amp;rdquo;&lt;/p&gt;</description></item><item><title>Add Our First Documentation</title><link>https://dumindu.github.io/E25DX/docs/add-our-first-documentation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/add-our-first-documentation/</guid><description>&lt;div class="code-window highlight"&gt;
  
 	&lt;div class="code-header"&gt;
 		&lt;div class="traffic-lights"&gt;
@@ -155,7 +155,7 @@
 	&lt;/div&gt;
 	&lt;div class="alert-body"&gt;
 		&lt;p&gt;Here, we are going to create the documentation&amp;rsquo;s overview and two more pages belongs to two sections in the sidebar.
-For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::Hello World&amp;rdquo; and &amp;ldquo;Beyond The Basics::Modules&amp;rdquo;&lt;/p&gt;</description></item><item><title>Add Separate Site Pages</title><link>https://dumindu.github.io/e25dx/docs/add-separate-site-pages/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/add-separate-site-pages/</guid><description>&lt;div class="code-window highlight"&gt;
+For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::Hello World&amp;rdquo; and &amp;ldquo;Beyond The Basics::Modules&amp;rdquo;&lt;/p&gt;</description></item><item><title>Add Separate Site Pages</title><link>https://dumindu.github.io/E25DX/docs/add-separate-site-pages/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/add-separate-site-pages/</guid><description>&lt;div class="code-window highlight"&gt;
  
 	&lt;div class="code-header"&gt;
 		&lt;div class="traffic-lights"&gt;
@@ -197,7 +197,7 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 &lt;li&gt;
 &lt;p&gt;Add any image of png (or jpg) for &lt;code&gt;content/en/page/about/cover.png&lt;/code&gt; for about page cover image&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</description></item><item><title>Create a New Project</title><link>https://dumindu.github.io/e25dx/docs/create-a-new-project/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/create-a-new-project/</guid><description>&lt;div class="code-window highlight"&gt;
+&lt;/ol&gt;</description></item><item><title>Create a New Project</title><link>https://dumindu.github.io/E25DX/docs/create-a-new-project/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/create-a-new-project/</guid><description>&lt;div class="code-window highlight"&gt;
  
 	&lt;div class="code-header"&gt;
 		&lt;div class="traffic-lights"&gt;
@@ -249,7 +249,7 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 		&lt;/span&gt;
 	&lt;/div&gt;
 	&lt;div class="alert-body"&gt;
-		&lt;p&gt;We don&amp;rsquo;t need generated &lt;code&gt;archetypes&lt;/code&gt;, &lt;code&gt;assets&lt;/code&gt;, &lt;code&gt;i18n&lt;/code&gt;, &lt;code&gt;layouts&lt;/code&gt; folders in the &lt;code&gt;newsite&lt;/code&gt; folder&lt;/p&gt;</description></item><item><title>Foundation</title><link>https://dumindu.github.io/e25dx/docs/foundation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/foundation/</guid><description>&lt;h2 id="install-hugo"&gt;Install Hugo&lt;/h2&gt;
+		&lt;p&gt;We don&amp;rsquo;t need generated &lt;code&gt;archetypes&lt;/code&gt;, &lt;code&gt;assets&lt;/code&gt;, &lt;code&gt;i18n&lt;/code&gt;, &lt;code&gt;layouts&lt;/code&gt; folders in the &lt;code&gt;newsite&lt;/code&gt; folder&lt;/p&gt;</description></item><item><title>Foundation</title><link>https://dumindu.github.io/E25DX/docs/foundation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/foundation/</guid><description>&lt;h2 id="install-hugo"&gt;Install Hugo&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Use prebuilt binaries via &lt;a href="https://github.com/gohugoio/hugo/releases/latest" target="_blank" &gt;https://github.com/gohugoio/hugo/releases/latest&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Verify the installation via &lt;code&gt;hugo version&lt;/code&gt;&lt;/li&gt;
@@ -295,7 +295,7 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 		&lt;/span&gt;
 	&lt;/div&gt;
 	&lt;div class="alert-body"&gt;
-		&lt;p&gt;Refer &lt;a href="https://pagefind.app/docs/installation" target="_blank" &gt;https://pagefind.app/docs/installation&lt;/a&gt; for troubleshooting.&lt;/p&gt;</description></item><item><title>Markdown</title><link>https://dumindu.github.io/e25dx/docs/markdown/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/markdown/</guid><description>&lt;div class="alert alert-tip"&gt;
+		&lt;p&gt;Refer &lt;a href="https://pagefind.app/docs/installation" target="_blank" &gt;https://pagefind.app/docs/installation&lt;/a&gt; for troubleshooting.&lt;/p&gt;</description></item><item><title>Markdown</title><link>https://dumindu.github.io/E25DX/docs/markdown/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/markdown/</guid><description>&lt;div class="alert alert-tip"&gt;
 	&lt;div class="alert-header"&gt;
 		
 		
@@ -347,7 +347,7 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id="quoting-text"&gt;Quoting Text&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Syntax&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Overview</title><link>https://dumindu.github.io/e25dx/docs/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/overview/</guid><description>&lt;h2 id="inspiration"&gt;Inspiration&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Syntax&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Overview</title><link>https://dumindu.github.io/E25DX/docs/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/overview/</guid><description>&lt;h2 id="inspiration"&gt;Inspiration&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Build a simple and modular technical documentation and blog.&lt;/li&gt;
 &lt;li&gt;Build the website without using node/npm or any external frameworks(CSS, JS, icon, font).&lt;/li&gt;
@@ -385,7 +385,7 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 &lt;li&gt;&lt;input checked="" disabled="" type="checkbox"&gt; Customizable sidebars using Hugo data templates.&lt;/li&gt;
 &lt;li&gt;&lt;input checked="" disabled="" type="checkbox"&gt; Plug-and-play/ repeatable home page blocks using separate partials/ css/ data templates.&lt;/li&gt;
 &lt;li&gt;&lt;input checked="" disabled="" type="checkbox"&gt; Integrate a search via Pagefind.&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Short Codes</title><link>https://dumindu.github.io/e25dx/docs/short-codes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/short-codes/</guid><description>&lt;h2 id="embeds"&gt;Embeds&lt;/h2&gt;
+&lt;/ul&gt;</description></item><item><title>Short Codes</title><link>https://dumindu.github.io/E25DX/docs/short-codes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/short-codes/</guid><description>&lt;h2 id="embeds"&gt;Embeds&lt;/h2&gt;
 &lt;h3 id="youtube"&gt;YouTube&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Syntax&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;{{&amp;lt; youtube WPl10ZrhCtk &amp;gt;}}&lt;/code&gt;&lt;/p&gt;
@@ -403,7 +403,7 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 
 
 &lt;h3 id="instagram"&gt;Instagram&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Syntax&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Update Home Page</title><link>https://dumindu.github.io/e25dx/docs/update-home-page/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/e25dx/docs/update-home-page/</guid><description>&lt;div class="code-window highlight"&gt;
+&lt;p&gt;&lt;strong&gt;Syntax&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Update Home Page</title><link>https://dumindu.github.io/E25DX/docs/update-home-page/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/update-home-page/</guid><description>&lt;div class="code-window highlight"&gt;
  
 	&lt;div class="code-header"&gt;
 		&lt;div class="traffic-lights"&gt;
