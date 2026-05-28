@@ -4,9 +4,8 @@
   padding: var(--padding_d2) var(--padding);
   gap: var(--padding_d2);
 
-  font-size: .6rem;
-  font-weight: 800;
-  letter-spacing: .16em;
+  font-size: .7rem;
+  font-weight: 600;
   color: var(--color);
 
   background: var(--background-subtle);

@@ -52,6 +52,7 @@
 
 .hero-section .badge {
   text-transform: uppercase;
+  letter-spacing: .16em;
   margin-bottom: var(--padding_x2);
 }
 
