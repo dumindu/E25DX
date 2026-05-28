@@ -347,7 +347,29 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id="quoting-text"&gt;Quoting Text&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Syntax&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Overview</title><link>https://dumindu.github.io/E25DX/docs/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/overview/</guid><description>&lt;h2 id="inspiration"&gt;Inspiration&lt;/h2&gt;
+
+
+
+
+&lt;div class="code-window highlight"&gt;
+ 
+	&lt;div class="code-header"&gt;
+		&lt;div class="traffic-lights"&gt;
+			&lt;div class="light light-red"&gt;&lt;/div&gt;
+			&lt;div class="light light-yellow"&gt;&lt;/div&gt;
+			&lt;div class="light light-green"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;span class="code-title"&gt;Markdown&lt;/span&gt;
+		&lt;div&gt;
+			
+		&lt;/div&gt;
+	&lt;/div&gt;
+ 
+	&lt;div class="code-body"&gt;
+		&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown" &gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;gt; Text that is a quote&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Overview</title><link>https://dumindu.github.io/E25DX/docs/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/overview/</guid><description>&lt;h2 id="inspiration"&gt;Inspiration&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Build a simple and modular technical documentation and blog.&lt;/li&gt;
 &lt;li&gt;Build the website without using node/npm or any external frameworks(CSS, JS, icon, font).&lt;/li&gt;
@@ -387,23 +409,58 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 &lt;li&gt;&lt;input checked="" disabled="" type="checkbox"&gt; Integrate a search via Pagefind.&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Short Codes</title><link>https://dumindu.github.io/E25DX/docs/short-codes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/short-codes/</guid><description>&lt;h2 id="embeds"&gt;Embeds&lt;/h2&gt;
 &lt;h3 id="youtube"&gt;YouTube&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Syntax&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;{{&amp;lt; youtube WPl10ZrhCtk &amp;gt;}}&lt;/code&gt;&lt;/p&gt;
+
+
+
+
+&lt;div class="code-window highlight"&gt;
+ 
+	&lt;div class="code-header"&gt;
+		&lt;div class="traffic-lights"&gt;
+			&lt;div class="light light-red"&gt;&lt;/div&gt;
+			&lt;div class="light light-yellow"&gt;&lt;/div&gt;
+			&lt;div class="light light-green"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;span class="code-title"&gt;Markdown&lt;/span&gt;
+		&lt;div&gt;
+			
+		&lt;/div&gt;
+	&lt;/div&gt;
+ 
+	&lt;div class="code-body"&gt;
+		&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown" &gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;{{&amp;lt; youtube WPl10ZrhCtk &amp;gt;}}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/p&gt;
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/WPl10ZrhCtk?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 
 &lt;h3 id="x"&gt;X&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Syntax&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;{{&amp;lt; x user=&amp;quot;timberners_lee&amp;quot; id=&amp;quot;290140454211698689&amp;quot; &amp;gt;}}&lt;/code&gt;&lt;/p&gt;
+
+
+
+
+&lt;div class="code-window highlight"&gt;
+ 
+	&lt;div class="code-header"&gt;
+		&lt;div class="traffic-lights"&gt;
+			&lt;div class="light light-red"&gt;&lt;/div&gt;
+			&lt;div class="light light-yellow"&gt;&lt;/div&gt;
+			&lt;div class="light light-green"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;span class="code-title"&gt;Markdown&lt;/span&gt;
+		&lt;div&gt;
+			
+		&lt;/div&gt;
+	&lt;/div&gt;
+ 
+	&lt;div class="code-body"&gt;
+		&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown" &gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;{{&amp;lt; x user=&amp;#34;timberners_lee&amp;#34; id=&amp;#34;290140454211698689&amp;#34; &amp;gt;}}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Aaron dead.&lt;br&gt;World wanderers, we have lost a wise elder.&lt;br&gt;Hackers for right, we are one down.&lt;br&gt;Parents all, we have lost a child. Let us weep.&lt;/p&gt;&amp;mdash; Tim Berners-Lee (@timberners_lee) &lt;a href="https://twitter.com/timberners_lee/status/290140454211698689?ref_src=twsrc%5Etfw"&gt;January 12, 2013&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-
-
-&lt;h3 id="instagram"&gt;Instagram&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Syntax&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Update Home Page</title><link>https://dumindu.github.io/E25DX/docs/update-home-page/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/update-home-page/</guid><description>&lt;div class="code-window highlight"&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Aaron dead.&lt;br&gt;World wanderers, we have lost a wise elder.&lt;br&gt;Hackers for right, we are one down.&lt;br&gt;Parents all, we have lost a child. Let us weep.&lt;/p&gt;</description></item><item><title>Update Home Page</title><link>https://dumindu.github.io/E25DX/docs/update-home-page/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/update-home-page/</guid><description>&lt;div class="code-window highlight"&gt;
  
 	&lt;div class="code-header"&gt;
 		&lt;div class="traffic-lights"&gt;

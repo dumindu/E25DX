@@ -12,7 +12,6 @@ Disallow: /E25DX/docs/add-separate-site-pages/
 Disallow: /E25DX/docs/create-a-new-project/
 Disallow: /E25DX/docs/
 Disallow: /E25DX/docs/foundation/
-Disallow: /E25DX/homew/
 Disallow: /E25DX/docs/markdown/
 Disallow: /E25DX/docs/overview/
 Disallow: /E25DX/docs/short-codes/
