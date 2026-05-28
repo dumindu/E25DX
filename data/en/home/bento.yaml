@@ -8,8 +8,8 @@ items:
   - col: col-7
     icon: bento/extension
     title: Extensible Architecture
-    description: Enjoy a modular, themeable layout and partials designed specifically for technical wizards and creators. Manage your composable CSS and partials with a YAML data-driven approach, side-by-side using pure Markdown files.
-    badges: [ Static Pages, Multiple Documentations, Blog, Search ]
+    description: Enjoy a modular, themeable layout and partials designed specifically for technical wizards and creators. Manage your composable CSS and HTML partials with a YAML data-driven approach, side-by-side using pure Markdown files.
+    badges: [ Multiple Documentation Sets, Blog, Search, Other Pages ]
 
   - col: col-7
     icon: bento/shield
@@ -20,5 +20,5 @@ items:
   - col: col-5
     icon: bento/palette
     title: Fully Themeable
-    description: Take total control of your design system. Effortlessly customize layouts, components, partials and color modes using isolated CSS, JavaScript, and data-driven template configurations. Take full advantage of native Hugo pipes for asset minification, custom markdown render hooks for styled blocks.
-    badges: [ ]
+    description: Take total control of your design system. Effortlessly customize layouts, components, HTML partials and color modes using isolated CSS, JavaScript, and data-driven template configurations. Take full advantage of native Hugo pipes for asset minification, custom markdown render hooks for styled blocks.
+    badges: [ Hero, Bento, Showcase, Action Cards ]

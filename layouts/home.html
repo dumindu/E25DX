@@ -29,12 +29,12 @@
 		(resources.Get "css/sections/card-grid.css")
 	}}
 
-	{{ if site.GetPage "/home/features" }}
+	{{ if site.GetPage "/home/showcase" }}
 		{{ $cssFiles = $cssFiles | append
-			(resources.Get "css/components/accordion-vertical-tabs.css")
-			(resources.Get "css/components/code-window.css")
 			(resources.Get "css/components/chroma.css")
-			(resources.Get "css/sections/features.css")
+			(resources.Get "css/components/code-window.css")
+			(resources.Get "css/components/accordion-vertical-tabs.css")
+			(resources.Get "css/sections/showcase.css")
 		}}
 	{{ end }}
 
@@ -58,11 +58,7 @@
 		<main>
 			{{ partial "sections/hero.html" (index site.Data site.Language.Lang "home" "hero") }}
 			{{ partial "sections/bento.html" (index site.Data site.Language.Lang "home" "bento") }}
-
-			{{ with site.GetPage "/home/features" }}
-				{{ partial "sections/features.html" . }}
-			{{ end }}
-
+			{{ with site.GetPage "/home/showcase" }}{{ partial "sections/showcase.html" . }}{{ end }}
 			{{ partial "sections/card-grid.html" (index site.Data site.Language.Lang "home" "card-grid") }}
 		</main>
 

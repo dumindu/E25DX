@@ -1,11 +1,11 @@
-.features-section {
+.showcase-section {
   background: var(--background-subtle);
   padding-top: var(--padding_x2);
   padding-bottom: var(--padding_x2);
   width: 100%;
 }
 
-.features-header {
+.showcase-header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,74 +13,78 @@
   gap: var(--padding);
 }
 
-.features-body {
+.showcase-body {
   margin: var(--padding);
   gap: var(--padding);
   overflow-x: auto;
 }
 
 @media (min-width: 1024px) {
-  .features-body {
+  .showcase-body {
     max-width: 80svw;
     margin: var(--padding) auto;
   }
 }
 
 @media (min-width: 1280px) {
-  .features-body {
+  .showcase-body {
     max-width: 60svw;
   }
 }
 
 /* Typography */
-.features-body {
+.showcase-body {
   font-size: .95rem;
 }
-.features-body p,
-.features-body pre:not(.chroma),
-.features-body .highlight {
+.showcase-body p,
+.showcase-body pre:not(.chroma),
+.showcase-body .highlight {
   line-height: 1.8em;
   letter-spacing: -.1px;
 }
 
-.features-body strong, .features-body b, .features-body table th {
+.showcase-body strong, .showcase-body b, .showcase-body table th {
   font-weight: 600
 }
 
-.features-body em {
+.showcase-body em {
   font-style: italic
 }
 
 /* Links */
-.features-body a {
+.showcase-body a {
   color: var(--primary);
   text-decoration: none
 }
 
-.features-body a:hover {
+.showcase-body a:hover {
   text-decoration: underline;
   background: var(--background-hover);
 }
 
 /* Spacing */
-.features-body p,
-.features-body .highlight {
+.showcase-body p,
+.showcase-body .highlight {
   margin-top: 1rem;
 }
 
 /* Code/ Highlight/ Chroma */
-.features-body code, .features-body pre {
+.showcase-body code, .showcase-body pre {
   font-family: var(--font-mono);
   font-size: .875rem;
 }
 
-.features-body pre, .features-body pre code {
+.showcase-body pre, .showcase-body pre code {
   display: inline-grid;
 }
 
-.features-body .chroma code {
+.showcase-body .chroma code {
   padding: unset;
   background: unset;
   border-radius: unset;
   border: unset;
+}
+
+.showcase-body :not(.code-window).highlight .chroma {
+  border: 1px solid var(--border);
 }
