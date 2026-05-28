@@ -8,7 +8,7 @@ description: For Modern & Modular Technical Documentation & Blog Setup
 
 btn_primary:
   label: Get Started
-  url: /e25dx/docs
+  url: /docs
 
 btn_secondary:
   label: Contribute
