@@ -46,7 +46,7 @@ params:
     startYear: 2024
     presentYear: 2026
     repo:
-      main: https://github.com/dumindu/
+      main: https://github.com/dumindu/E25DX
     themeColor:
       light: '#ffffff'
       dark: '#101010'

@@ -88,7 +88,7 @@ Maintain isolated pages outside the documentation and blog.
 {{< /tab >}}
 {{< tab label="Customize" >}}
 
-Maintain isolated pages outside the documentation and blog.
+Customize layout partials and styles if necessary.
 
 ```shell {title="Project Structure"}
 ├── assets
