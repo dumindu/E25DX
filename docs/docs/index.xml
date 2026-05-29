@@ -407,6 +407,16 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 &lt;li&gt;&lt;input checked="" disabled="" type="checkbox"&gt; Customizable sidebars using Hugo data templates.&lt;/li&gt;
 &lt;li&gt;&lt;input checked="" disabled="" type="checkbox"&gt; Plug-and-play/ repeatable home page blocks using separate partials/ css/ data templates.&lt;/li&gt;
 &lt;li&gt;&lt;input checked="" disabled="" type="checkbox"&gt; Integrate a search via Pagefind.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="good-to-have"&gt;Good To Have&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Image module
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; More utilities to add, crop, and decorate images.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Attach more than one image inline to page.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Attach more than one album inline to page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Short Codes</title><link>https://dumindu.github.io/E25DX/docs/short-codes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/short-codes/</guid><description>&lt;h2 id="embeds"&gt;Embeds&lt;/h2&gt;
 &lt;h3 id="youtube"&gt;YouTube&lt;/h3&gt;
 
