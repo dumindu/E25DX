@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Site Name</title><link>https://dumindu.github.io/E25DX/</link><description>Recent content on Site Name</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Fri, 29 May 2026 18:21:58 +0800</lastBuildDate><atom:link href="https://dumindu.github.io/E25DX/index.xml" rel="self" type="application/rss+xml"/><item><title>Sample Post</title><link>https://dumindu.github.io/E25DX/blog/sample-post/</link><pubDate>Mon, 28 Aug 2023 00:00:00 +0800</pubDate><guid>https://dumindu.github.io/E25DX/blog/sample-post/</guid><description>Discover how Gege Akutami’s &lt;em&gt;Jujutsu Kaisen&lt;/em&gt; broke the shonen mold. From its intricate, tactical combat system to its unapologetically high stakes, explore how this dark fantasy masterpiece redefined modern anime and manga.</description></item><item><title>👋 Hi, I’m Nuwan...</title><link>https://dumindu.github.io/E25DX/about-me/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/about-me/</guid><description>&lt;h2 id="about-me"&gt;About me&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Site Name</title><link>https://dumindu.github.io/E25DX/</link><description>Recent content on Site Name</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sat, 30 May 2026 17:11:46 +0800</lastBuildDate><atom:link href="https://dumindu.github.io/E25DX/index.xml" rel="self" type="application/rss+xml"/><item><title>Sample Post</title><link>https://dumindu.github.io/E25DX/blog/sample-post/</link><pubDate>Mon, 28 Aug 2023 00:00:00 +0800</pubDate><guid>https://dumindu.github.io/E25DX/blog/sample-post/</guid><description>Discover how Gege Akutami’s &lt;em&gt;Jujutsu Kaisen&lt;/em&gt; broke the shonen mold. From its intricate, tactical combat system to its unapologetically high stakes, explore how this dark fantasy masterpiece redefined modern anime and manga.</description></item><item><title>👋 Hi, I’m Nuwan...</title><link>https://dumindu.github.io/E25DX/about-me/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/about-me/</guid><description>&lt;h2 id="about-me"&gt;About me&lt;/h2&gt;
 &lt;p&gt;Experienced platform engineer with a passion for scalable systems, cloud-native technologies, and developer leadership.
 Proven track record in Go, Rust, Kubernetes, and AWS for high-impact products across Southeast Asia.&lt;/p&gt;
 &lt;h2 id="publications"&gt;Publications&lt;/h2&gt;
@@ -446,14 +446,8 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 &lt;/ul&gt;
 &lt;h2 id="good-to-have"&gt;Good To Have&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Image module
-&lt;ul&gt;
-&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; More utilities to add, crop, and decorate images.&lt;/li&gt;
-&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Attach more than one image inline to page.&lt;/li&gt;
-&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Attach more than one album inline to page.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Short Codes</title><link>https://dumindu.github.io/E25DX/docs/short-codes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/short-codes/</guid><description>&lt;h2 id="embeds"&gt;Embeds&lt;/h2&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled="" type="checkbox"&gt; Image module&lt;/p&gt;</description></item><item><title>Short Codes</title><link>https://dumindu.github.io/E25DX/docs/short-codes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/short-codes/</guid><description>&lt;h2 id="embeds"&gt;Embeds&lt;/h2&gt;
 &lt;h3 id="youtube"&gt;YouTube&lt;/h3&gt;
 
 
@@ -530,11 +524,12 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── content
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── en
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── home
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── features
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── showcase
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── index.md&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="hero-block"&gt;Hero Block&lt;/h2&gt;
+&lt;h3 id="update-hero-block"&gt;Update Hero Block&lt;/h3&gt;
 &lt;p&gt;Copy &lt;code&gt;theme/E25DX/data/en/home/hero.yaml&lt;/code&gt; to &lt;code&gt;data/en/home/hero.yaml&lt;/code&gt; and update accordingly.&lt;/p&gt;
 
 
@@ -545,7 +540,7 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;No&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;need Hundreds of NPM Packages &amp;lt;br/&amp;gt; &amp;amp; Thousands of CSS Classes&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;For Modern &amp;amp; Modular Technical Documentation &amp;amp; Blog Setup&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;For A Modern And Modular Technical Documentation &amp;amp; Blog Setup&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;btn_primary&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;label&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Get Started&lt;/span&gt;&lt;span class="w"&gt;
@@ -554,4 +549,32 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;btn_secondary&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;label&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Contribute&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;https://github.com/dumindu/e25dx&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="bento-block"&gt;Bento Block&lt;/h2&gt;
-&lt;p&gt;Copy &lt;code&gt;theme/E25DX/data/en/home/bento.yaml&lt;/code&gt; to &lt;code&gt;data/en/home/bento.yaml&lt;/code&gt; and update accordingly.&lt;/p&gt;</description></item></channel></rss>
+&lt;h3 id="remove-bento-block"&gt;Remove Bento Block&lt;/h3&gt;
+
+
+
+
+&lt;div class="code-window highlight"&gt;
+ 
+	&lt;div class="code-header"&gt;
+		&lt;div class="traffic-lights"&gt;
+			&lt;div class="light light-red"&gt;&lt;/div&gt;
+			&lt;div class="light light-yellow"&gt;&lt;/div&gt;
+			&lt;div class="light light-green"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;span class="code-title"&gt;Folder Structure&lt;/span&gt;
+		&lt;div&gt;
+			
+		&lt;/div&gt;
+	&lt;/div&gt;
+ 
+	&lt;div class="code-body"&gt;
+		&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell" &gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── themes
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── E25DX
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── layouts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── home.html
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── layouts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── home.html&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Copy &lt;code&gt;themes/E25DX/layouts/home.html&lt;/code&gt; to &lt;code&gt;layouts/home.html&lt;/code&gt; and remove following lines.&lt;/p&gt;</description></item></channel></rss>

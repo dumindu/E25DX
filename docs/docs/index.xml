@@ -410,14 +410,8 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 &lt;/ul&gt;
 &lt;h2 id="good-to-have"&gt;Good To Have&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Image module
-&lt;ul&gt;
-&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; More utilities to add, crop, and decorate images.&lt;/li&gt;
-&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Attach more than one image inline to page.&lt;/li&gt;
-&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Attach more than one album inline to page.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Short Codes</title><link>https://dumindu.github.io/E25DX/docs/short-codes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/short-codes/</guid><description>&lt;h2 id="embeds"&gt;Embeds&lt;/h2&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled="" type="checkbox"&gt; Image module&lt;/p&gt;</description></item><item><title>Short Codes</title><link>https://dumindu.github.io/E25DX/docs/short-codes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/short-codes/</guid><description>&lt;h2 id="embeds"&gt;Embeds&lt;/h2&gt;
 &lt;h3 id="youtube"&gt;YouTube&lt;/h3&gt;
 
 
@@ -494,11 +488,12 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── content
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── en
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── home
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── features
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── showcase
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── index.md&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="hero-block"&gt;Hero Block&lt;/h2&gt;
+&lt;h3 id="update-hero-block"&gt;Update Hero Block&lt;/h3&gt;
 &lt;p&gt;Copy &lt;code&gt;theme/E25DX/data/en/home/hero.yaml&lt;/code&gt; to &lt;code&gt;data/en/home/hero.yaml&lt;/code&gt; and update accordingly.&lt;/p&gt;
 
 
@@ -509,7 +504,7 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;No&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;need Hundreds of NPM Packages &amp;lt;br/&amp;gt; &amp;amp; Thousands of CSS Classes&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;For Modern &amp;amp; Modular Technical Documentation &amp;amp; Blog Setup&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;For A Modern And Modular Technical Documentation &amp;amp; Blog Setup&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;btn_primary&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;label&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Get Started&lt;/span&gt;&lt;span class="w"&gt;
@@ -518,4 +513,32 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;btn_secondary&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;label&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Contribute&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;https://github.com/dumindu/e25dx&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="bento-block"&gt;Bento Block&lt;/h2&gt;
-&lt;p&gt;Copy &lt;code&gt;theme/E25DX/data/en/home/bento.yaml&lt;/code&gt; to &lt;code&gt;data/en/home/bento.yaml&lt;/code&gt; and update accordingly.&lt;/p&gt;</description></item></channel></rss>
+&lt;h3 id="remove-bento-block"&gt;Remove Bento Block&lt;/h3&gt;
+
+
+
+
+&lt;div class="code-window highlight"&gt;
+ 
+	&lt;div class="code-header"&gt;
+		&lt;div class="traffic-lights"&gt;
+			&lt;div class="light light-red"&gt;&lt;/div&gt;
+			&lt;div class="light light-yellow"&gt;&lt;/div&gt;
+			&lt;div class="light light-green"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;span class="code-title"&gt;Folder Structure&lt;/span&gt;
+		&lt;div&gt;
+			
+		&lt;/div&gt;
+	&lt;/div&gt;
+ 
+	&lt;div class="code-body"&gt;
+		&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell" &gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── themes
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── E25DX
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── layouts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── home.html
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── layouts
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── home.html&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Copy &lt;code&gt;themes/E25DX/layouts/home.html&lt;/code&gt; to &lt;code&gt;layouts/home.html&lt;/code&gt; and remove following lines.&lt;/p&gt;</description></item></channel></rss>
