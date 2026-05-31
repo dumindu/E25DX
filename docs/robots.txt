@@ -10,6 +10,8 @@ Disallow: /E25DX/
 Disallow: /E25DX/blog/
 Disallow: /E25DX/about-me/
 Disallow: /E25DX/docs/add-menu-items/
+Disallow: /E25DX/docs/add-or-edit-css/
+Disallow: /E25DX/docs/add-or-edit-layouts/
 Disallow: /E25DX/docs/add-our-first-blog-posts/
 Disallow: /E25DX/docs/add-our-first-documentation/
 Disallow: /E25DX/docs/add-separate-site-pages/

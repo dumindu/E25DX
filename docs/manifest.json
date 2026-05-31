@@ -1,7 +1,7 @@
 {
-  "name": "todo",
-  "short_name": "todo",
-  "description": "todo",
+  "name": "e25DX",
+  "short_name": "e25DX Hugo Docs, Blog, and Search",
+  "description": "Multiple Documentation Sets, Blog and Search Setup",
   "start_url": "/?source=pwa",
   "display": "standalone",
   "icons": [
@@ -16,6 +16,6 @@
       "type": "image/png"
     }
   ],
-  "background_color": "#866ee7",
-  "theme_color": "#866ee7"
+  "background_color": "#F5D41FCC",
+  "theme_color": "#F5D41FCC"
 }

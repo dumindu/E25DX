@@ -10,10 +10,16 @@ const staticAssets = [
     './favicon/favicon.ico',
     './favicon/favicon-16x16.png',
     './favicon/favicon-32x32.png',
-    './css/home.min.*.css',
+    './css/blog.min.*.css',
+    './css/blog-list.min.*.css',
     './css/docs.min.*.css',
-    './js/home.min.*.js',
+    './css/home.min.*.css',
+    './css/page.min.*.css',
+    './js/blog.min.*.js',
+    './js/blog-list.min.*.js',
     './js/docs.min.*.js',
+    './js/home.min.*.js',
+    './js/page.min.*.js',
 ];
 
 self.addEventListener('install', async e => {

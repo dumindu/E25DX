@@ -13,10 +13,7 @@
 	&lt;/div&gt;
  
 	&lt;div class="code-body"&gt;
-		&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell" &gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── static
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── manifest.json
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── sw.js
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hugo.yaml
+		&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell" &gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hugo.yaml
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── themes
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── E25DX&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 	&lt;/div&gt;
@@ -24,7 +21,7 @@
 &lt;h2 id="add-main-menu-items"&gt;Add Main Menu Items&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Add new &lt;code&gt;menus&lt;/code&gt; block to &lt;code&gt;hugo.yaml&lt;/code&gt; to add menu items&lt;/p&gt;
+&lt;p&gt;Add new &lt;code&gt;menus&lt;/code&gt; block to &lt;code&gt;hugo.yaml&lt;/code&gt; to add menu items.&lt;/p&gt;
 
 
 
@@ -54,7 +51,38 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;params&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;icon&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;account_circle&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ol&gt;</description></item><item><title>Add Our First Blog Posts</title><link>https://dumindu.github.io/E25DX/docs/add-our-first-blog-posts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/add-our-first-blog-posts/</guid><description>&lt;div class="code-window highlight"&gt;
+&lt;li&gt;
+&lt;p&gt;Update/ add new icons.&lt;/p&gt;</description></item><item><title>Add or Edit CSS</title><link>https://dumindu.github.io/E25DX/docs/add-or-edit-css/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/add-or-edit-css/</guid><description>&lt;div class="alert alert-tip"&gt;
+	&lt;div class="alert-header"&gt;
+		
+		
+
+	&lt;svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"&gt;&lt;path d="M407.74-240Q378-240 357-261.15 336-282.3 336-312v-67q-57-37.3-88.5-95.65Q216-533 216-600q0-110.31 76.78-187.16 76.78-76.84 187-76.84T667-787.16q77 76.85 77 187.16 0 66.82-31.5 125.41T624-379v67q0 29.7-21.18 50.85Q581.65-240 551.91-240H407.74Zm.26-72h144v-86q0-9.29 4-17.64 4-8.36 12-12.92l17-10.93q41-25.51 64-68.69 23-43.18 23-91.82 0-79.68-56.23-135.84-56.22-56.16-136-56.16Q400-792 344-735.84 288-679.68 288-600q0 48.64 23 91.82 23 43.18 64 68.69l17 10.93q8 4.56 12 12.92 4 8.35 4 17.64v86ZM396-96q-15.3 0-25.65-10.29Q360-116.58 360-131.79t10.35-25.71Q380.7-168 396-168h168q15.3 0 25.65 10.29Q600-147.42 600-132.21t-10.35 25.71Q579.3-96 564-96H396Zm84-504Z"/&gt;&lt;/svg&gt;
+
+
+		&lt;span&gt;
+		
+			Tip
+		
+		&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class="alert-body"&gt;
+		&lt;p&gt;Any files inside your theme folder are automatically overridden by identical files placed in your main project folder.&lt;/p&gt;</description></item><item><title>Add or Edit Layouts</title><link>https://dumindu.github.io/E25DX/docs/add-or-edit-layouts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/add-or-edit-layouts/</guid><description>&lt;div class="alert alert-tip"&gt;
+	&lt;div class="alert-header"&gt;
+		
+		
+
+	&lt;svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"&gt;&lt;path d="M407.74-240Q378-240 357-261.15 336-282.3 336-312v-67q-57-37.3-88.5-95.65Q216-533 216-600q0-110.31 76.78-187.16 76.78-76.84 187-76.84T667-787.16q77 76.85 77 187.16 0 66.82-31.5 125.41T624-379v67q0 29.7-21.18 50.85Q581.65-240 551.91-240H407.74Zm.26-72h144v-86q0-9.29 4-17.64 4-8.36 12-12.92l17-10.93q41-25.51 64-68.69 23-43.18 23-91.82 0-79.68-56.23-135.84-56.22-56.16-136-56.16Q400-792 344-735.84 288-679.68 288-600q0 48.64 23 91.82 23 43.18 64 68.69l17 10.93q8 4.56 12 12.92 4 8.35 4 17.64v86ZM396-96q-15.3 0-25.65-10.29Q360-116.58 360-131.79t10.35-25.71Q380.7-168 396-168h168q15.3 0 25.65 10.29Q600-147.42 600-132.21t-10.35 25.71Q579.3-96 564-96H396Zm84-504Z"/&gt;&lt;/svg&gt;
+
+
+		&lt;span&gt;
+		
+			Tip
+		
+		&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class="alert-body"&gt;
+		&lt;p&gt;Any files inside your theme folder are automatically overridden by identical files placed in your main project folder.&lt;/p&gt;</description></item><item><title>Add Our First Blog Posts</title><link>https://dumindu.github.io/E25DX/docs/add-our-first-blog-posts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/add-our-first-blog-posts/</guid><description>&lt;div class="code-window highlight"&gt;
  
 	&lt;div class="code-header"&gt;
 		&lt;div class="traffic-lights"&gt;
@@ -72,9 +100,6 @@
 		&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell" &gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── content
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── en
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── blog
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── static
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── manifest.json
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── sw.js
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hugo.yaml
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── themes
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── E25DX&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -83,7 +108,7 @@
 &lt;h2 id="initialize-the-blog"&gt;Initialize the Blog&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Add &lt;code&gt;content/en/blog/_index.md&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Add &lt;code&gt;content/en/blog/_index.md&lt;/code&gt;.&lt;/p&gt;
 
 
 
@@ -128,15 +153,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── data
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── en
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── docs
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── static
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── manifest.json
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── sw.js
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hugo.yaml
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── themes
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── E25DX&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
-&lt;h2 id="initialize-our-first-documentation"&gt;Initialize Our First Documentation&lt;/h2&gt;
+&lt;h2 id="initialize-our-first-documentation"&gt;Initialize our First Documentation&lt;/h2&gt;
 
 
 &lt;div class="alert alert-recap"&gt;
@@ -173,9 +196,6 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 		&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell" &gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── content
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── en
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── page
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── static
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── manifest.json
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── sw.js
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── hugo.yaml
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── themes
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── E25DX&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -184,7 +204,7 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 &lt;h2 id="create-separate-site-pages"&gt;Create Separate Site Pages&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Add &lt;code&gt;content/en/page/about/index.md&lt;/code&gt; for about page&lt;/p&gt;
+&lt;p&gt;Add &lt;code&gt;content/en/page/about/index.md&lt;/code&gt; for about page.&lt;/p&gt;
 
 
 
@@ -195,7 +215,7 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;About/ Any Markdown&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Add any image of png (or jpg) for &lt;code&gt;content/en/page/about/cover.png&lt;/code&gt; for about page cover image&lt;/p&gt;
+&lt;p&gt;Add any image of png (or jpg) for &lt;code&gt;content/en/page/about/cover.png&lt;/code&gt; for about page cover image.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;</description></item><item><title>Create a New Project</title><link>https://dumindu.github.io/E25DX/docs/create-a-new-project/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/create-a-new-project/</guid><description>&lt;div class="code-window highlight"&gt;
  
@@ -486,10 +506,13 @@ For example, &amp;ldquo;Documentation::Overview&amp;rdquo;, &amp;ldquo;Basics::H
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├── card-grid.yaml
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── hero.yaml
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── content
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── en
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── home
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── showcase
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── index.md&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── en
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── home
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── showcase
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └── index.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│── hugo.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── themes
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── E25DX&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="hero-block"&gt;Hero Block&lt;/h2&gt;
