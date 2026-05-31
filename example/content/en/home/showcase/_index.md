@@ -5,7 +5,7 @@ title: See it in action
 description: Let's explore the folder structure of your project.
 ---
 
-{{< accordion-vertical-tabs count="5" tabHeight="3.75rem" label="Select feature" >}}
+{{< accordion-vertical-tabs count="6" tabHeight="3.75rem" label="Select feature" >}}
 {{< tab label="Home" >}}
 
 Customize each widget via a YAML data file or an index.md that serves this section.
@@ -86,52 +86,41 @@ Maintain isolated pages outside the documentation and blog.
 ```
 
 {{< /tab >}}
-{{< tab label="Customize" >}}
+{{< tab label="Override CSS" >}}
 
-Customize layout partials and styles if necessary.
+Override any CSS.
 
-```shell {title="Project Structure"}
-├── assets
-│   ├── css
-│   │   ├── components
-│   │   │   ├── accordion-vertical-tabs.css
-│   │   │   ├── alert.css
-│   │   │   ├── badge.css
-│   │   │   ├── button.css
-│   │   │   ├── checkbox.css
-│   │   │   ├── chroma.css
-│   │   │   ├── code-window.css
-│   │   │   ├── dropdown.css
-│   │   │   └── tabs.css
-│   │   ├── sections
-│   │   │   ├── bento.css
-│   │   │   ├── card-grid.css
-│   │   │   ├── hero.css
-│   │   │   └── showcase.css
-│   │   └── theme.css
-│   └── icons
-│       ├── bento
-│       │   ├── extension.svg
-│       │   ├── palette.svg
-│       │   ├── rocket_launch.svg
-│       │   └── shield.svg
-│       ├── card-grid
-│       │   ├── gohugo.svg
-│       │   ├── pagefind.svg
-│       │   ├── terminal.svg
-│       │   └── web.svg
-│       └── icon-name.svg # 20 x 20 any SVG
-└── layouts
-    ├── _markup
-    │   ├── render-blockquote-alert.html
-    │   ├── render-codeblock.html
-    │   └── render-link.html
-    └── _partials
+```shell {title="Folder Structure"}
+├── themes
+│   └── E25DX
+│       └── assets
+│           └── css
+│               └── sections
+│                   └── bento.css
+└── assets
+    └── css
         └── sections
-            ├── bento.html
-            ├── card-grid.html
-            ├── hero.html
-            └── showcase.html
+            └── bento.css
 ```
+
 {{< /tab >}}
+{{< tab label="Override Layouts" >}}
+
+Override any HTML layout, partial, markup or shortcode.
+
+```shell {title="Folder Structure"}
+├── themes
+│   └── E25DX
+│       └── layouts
+│           └── _partials
+│               └── site
+│                   └── footer.html
+└── layouts
+    └── _partials
+        └── site
+            └── footer.html
+```
+
+{{< /tab >}}
+
 {{< /accordion-vertical-tabs >}}

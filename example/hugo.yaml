@@ -17,9 +17,9 @@ languages:
     languageName: English
     languageCode: en-US
     contentDir: content/en
-    title: Site Name
+    title: e25DX
     params:
-      description: Site Description
+      description: DOCUMENTATION · BLOG · SEARCH
 
 # To omit the Google Analytics script, put a ~ in place of the G-XXXXXXXXXX below.
 services:

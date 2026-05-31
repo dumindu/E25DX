@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docs on Site Name</title><link>https://dumindu.github.io/E25DX/docs/</link><description>Recent content in Docs on Site Name</description><generator>Hugo</generator><language>en-US</language><atom:link href="https://dumindu.github.io/E25DX/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Add Menu Items</title><link>https://dumindu.github.io/E25DX/docs/add-menu-items/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/add-menu-items/</guid><description>&lt;div class="code-window highlight"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docs on e25DX</title><link>https://dumindu.github.io/E25DX/docs/</link><description>Recent content in Docs on e25DX</description><generator>Hugo</generator><language>en-US</language><atom:link href="https://dumindu.github.io/E25DX/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Add Menu Items</title><link>https://dumindu.github.io/E25DX/docs/add-menu-items/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/add-menu-items/</guid><description>&lt;div class="code-window highlight"&gt;
  
 	&lt;div class="code-header"&gt;
 		&lt;div class="traffic-lights"&gt;
@@ -82,7 +82,7 @@
 		&lt;/span&gt;
 	&lt;/div&gt;
 	&lt;div class="alert-body"&gt;
-		&lt;p&gt;Any files inside your theme folder are automatically overridden by identical files placed in your main project folder.&lt;/p&gt;</description></item><item><title>Add Our First Blog Posts</title><link>https://dumindu.github.io/E25DX/docs/add-our-first-blog-posts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/add-our-first-blog-posts/</guid><description>&lt;div class="code-window highlight"&gt;
+		&lt;p&gt;Any files inside your theme folder are automatically overridden by identical files placed in your main project folder.&lt;/p&gt;</description></item><item><title>Add Our First Blog Post</title><link>https://dumindu.github.io/E25DX/docs/add-our-first-blog-post/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dumindu.github.io/E25DX/docs/add-our-first-blog-post/</guid><description>&lt;div class="code-window highlight"&gt;
  
 	&lt;div class="code-header"&gt;
 		&lt;div class="traffic-lights"&gt;
