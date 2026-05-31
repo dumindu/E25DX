@@ -1,4 +1,4 @@
-const cacheName = 'todo-{{ now.Format "2006-01-02" }}';
+const cacheName = 'e25dx-{{ now.Format "2006-01-02" }}';
 const staticAssets = [
     './',
     './index.html',
