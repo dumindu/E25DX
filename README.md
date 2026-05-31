@@ -7,7 +7,7 @@
 - Build a simple and modular technical documentation and blog.
 - Build the website without using node/npm or any external frameworks(CSS, JS, icon, font).
 
-> [!recap]
+> [!IMPORTANT]
 > - As a maintainer of a technical documentation, I started with [navy theme](https://github.com/hexojs/site/tree/master/themes/navy) of [Hexo](https://hexo.io) docs in 2018.
 > - Then I created [Docura](https://docura.github.io/) to add light and dark modes and copied `yaml` based sidebars inspired by the Navy theme.
 > - e25DX is the next iteration, with a modern UI, fully local search, and a blog theme.
