@@ -1,13 +1,13 @@
 name = 'E25DX'
 license = 'MIT'
 licenselink = 'https://github.com/dumindu/E25DX/blob/main/LICENSE'
-description = 'Your next documentation theme'
+description = 'Documentation, blog, pages, search - No Node or NPM dependencies'
 
 # The home page of the theme, where the source can be found
 homepage = 'https://github.com/dumindu/E25DX'
 
 # If you have a running demo of the theme
-demosite = 'https://learning-rust.github.io/docs/overview/'
+demosite = 'https://dumindu.github.io/E25DX'
 
 # Taxonomy terms
 tags = ['documentation', 'blog', 'light', 'dark', 'minimal']
