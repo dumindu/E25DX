@@ -11,7 +11,7 @@
 
 #site-header-logo {
   grid-area: logo;
-  padding: var(--padding_d2);
+  padding: 0;
 }
 
 #site-header-actions {
