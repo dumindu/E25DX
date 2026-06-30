@@ -161,6 +161,6 @@
 
   #left-sidebar > a {
     display: flex;
-    padding: var(--padding_d2);
+    padding: 2px 0;
   }
 }
