@@ -55,15 +55,15 @@
   --chroma-base0F: #a3685a;
 
   /* alert backgrounds */
-  --alert-note: rgb(from var(--chroma-base0D) r g b / .04);
-  --alert-tip: rgb(from var(--chroma-base0B) r g b / .04);
-  --alert-important: rgb(from var(--chroma-base0E) r g b / .04);
-  --alert-warning: rgb(from var(--chroma-base09) r g b / .04);
-  --alert-caution: rgb(from var(--chroma-base08) r g b / .04);
-  --alert-search: rgb(from var(--chroma-base0E) r g b / .04);
-  --alert-assignment: rgb(from var(--chroma-base0A) r g b / .04);
-  --alert-lab: rgb(from var(--chroma-base0B) r g b / .04);
-  --alert-recap: rgb(from var(--chroma-base0D) r g b / .04);
+  --alert-note: rgb(from var(--chroma-base0D) r g b / .06);
+  --alert-tip: rgb(from var(--chroma-base0B) r g b / .06);
+  --alert-important: rgb(from var(--chroma-base0E) r g b / .06);
+  --alert-warning: rgb(from var(--chroma-base09) r g b / .06);
+  --alert-caution: rgb(from var(--chroma-base08) r g b / .06);
+  --alert-search: rgb(from var(--chroma-base0E) r g b / .06);
+  --alert-assignment: rgb(from var(--chroma-base0A) r g b / .06);
+  --alert-lab: rgb(from var(--chroma-base0B) r g b / .06);
+  --alert-recap: rgb(from var(--chroma-base0D) r g b / .06);
 
   /* cover */
   --cover-img-height: 32svh;
