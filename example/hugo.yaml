@@ -21,7 +21,6 @@ languages:
     params:
       description: DOCUMENTATION · BLOG · SEARCH
 
-# To omit the Google Analytics script, put a ~ in place of the G-XXXXXXXXXX below.
 services:
   googleAnalytics:
     ID: ~
@@ -42,7 +41,6 @@ markup:
 
 params:
   project:
-    # To omit the startYear, put a ~ in its place.
     startYear: 2024
     presentYear: 2026
     repo:
@@ -60,6 +58,9 @@ params:
 
   enableOGXSEO: false # No automated OG image generation
   enablePageFind: true # Run pagefind --site dir after build
+
+  services:
+    umami: ~
 
 menus:
   main:
