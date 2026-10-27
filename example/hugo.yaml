@@ -1,0 +1,90 @@
+publishDir: ../docs
+baseURL: https://dumindu.github.io/E25DX
+
+themesDir: "../.."
+theme: E25DX
+
+enableGitInfo: true
+enableRobotsTXT: true
+
+disableKinds: [taxonomy, term]
+
+defaultContentLanguage: en
+
+languages:
+  en:
+    weight: 1
+    languageName: English
+    languageCode: en-US
+    contentDir: content/en
+    title: e25DX
+    params:
+      description: DOCUMENTATION · BLOG · SEARCH
+
+services:
+  googleAnalytics:
+    ID: ~
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+    parser:
+      attribute:
+        block: true
+        title: true
+  tableOfContents:
+    pre: <nav id="TableOfContents" aria-label="Table of Contents">
+    post: </nav>
+
+params:
+  project:
+    startYear: 2024
+    presentYear: 2026
+    repo:
+      main: https://github.com/dumindu/E25DX
+    themeColor:
+      light: '#ffffff'
+      dark: '#101010'
+
+  author:
+    name: Dumindu Madunuwan
+    url: https://github.com/dumindu
+
+  pagination:
+    size: 6
+
+  enableOGXSEO: false # No automated OG image generation
+  enablePageFind: true # Run pagefind --site dir after build
+
+  services:
+    umami: ~
+
+menus:
+  main:
+    - identifier: home
+      name: Home
+      pageRef: /
+      weight: 1
+      params:
+        icon: home
+    - identifier: docs
+      name: Documentation
+      pageRef: /docs
+      weight: 2
+      params:
+        icon: menu_book
+    - identifier: blog
+      name: Blog
+      pageRef: /blog
+      weight: 3
+      params:
+        icon: news
+    - identifier: about
+      name: About Me
+      pageRef: /page/about
+      weight: 4
+      params:
+        icon: account_circle

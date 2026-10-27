@@ -1,0 +1,15 @@
+badge: Documentation · Blog · Search
+
+svg: hero.svg
+
+title: No need Hundreds of NPM Packages <br/> & Thousands of CSS Classes
+
+description: For A Modern And Modular Technical Documentation & Blog Setup
+
+btn_primary:
+  label: Get Started
+  url: /docs
+
+btn_secondary:
+  label: Contribute
+  url: https://github.com/dumindu/e25dx

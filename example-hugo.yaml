@@ -3,7 +3,7 @@ theme: E25DX
 enableGitInfo: true
 enableRobotsTXT: true
 
-disableKinds: [taxonomy, term]
+disableKinds: [ taxonomy, term ]
 
 defaultContentLanguage: en
 
@@ -17,10 +17,9 @@ languages:
     params:
       description: Site Description
 
-# To omit the Google Analytics script, put a ~ in place of the G-XXXXXXXXXX below.
 services:
   googleAnalytics:
-    ID: G-XXXXXXXXXX
+    ID: G-XXXXXXXXXX # To omit, put a ~ here
 
 markup:
   highlight:
@@ -38,8 +37,7 @@ markup:
 
 params:
   project:
-    # To omit the startYear, put a ~ in its place.
-    startYear: 2024
+    startYear: 2024 # To omit, put a ~ here
     presentYear: 2026
     repo:
       main: username/repo
@@ -56,3 +54,8 @@ params:
 
   enableOGXSEO: false # No automated OG image generation
   enablePageFind: false # Run pagefind --site dir after build
+
+  services:
+    umami: # To omit, put a ~ here & remove id, scriptPath lines
+      id: xxx
+      scriptPath: https://cloud.umami.is/script.js
