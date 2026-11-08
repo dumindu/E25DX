@@ -1,4 +1,4 @@
 ---
 cascade:
-isBlog: true
+  isBlog: true
 ---
