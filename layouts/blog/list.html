@@ -28,10 +28,7 @@
 	| resources.Concat "assets/css/blog-list.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.integrity }}">
 
-	{{ with site.Params.enablePageFind }}
-	<link href="{{ "pagefind/pagefind-component-ui.css" | absURL }}" rel="stylesheet">
-	{{ end }}
-
+  {{ partial "pagefind-head.html" . }}
   {{ partial "favicons.html" . }}
   {{ partial "analytics.html" . }}
   {{ partial "og-x-seo.html" . }}
@@ -57,8 +54,6 @@
 	| resources.Concat "assets/js/blog-list.js" | minify | fingerprint }}
 	<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.integrity }}"></script>
 
-	{{ with site.Params.enablePageFind }}
-	<script src="{{ "pagefind/pagefind-component-ui.js" | absURL }}" type="module"></script>
-	{{ end }}
+  {{ partial "pagefind-body.html" . }}
 </body>
 </html>
