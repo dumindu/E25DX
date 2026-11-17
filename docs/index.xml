@@ -285,7 +285,7 @@ Proven track record in Go, Rust, Kubernetes, and AWS for high-impact products ac
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git init
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git submodule add https://github.com/dumindu/E25DX.git themes/E25DX
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rm hugo.toml &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; cp themes/E25DX/hugo.yaml .
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rm hugo.toml &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; cp themes/E25DX/example-hugo.yaml ./hugo.yaml
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cp themes/E25DX/static/sw.js ./static/
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cp themes/E25DX/static/manifest.json ./static/&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
