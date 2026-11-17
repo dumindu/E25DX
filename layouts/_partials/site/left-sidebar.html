@@ -4,7 +4,9 @@
 	</div>
 
 	<a href="{{ site.Home.Permalink }}" class="site-logo">
-		<img height="52px" src="{{ "logo.svg" | absURL }}" alt="Site Logo">
+		{{ with resources.Get "logo.svg" }}
+		    {{ .Content | safeHTML }}
+		{{ end }}
 	</a>
 
 	{{ $sectionMenu := index (where site.Menus.main "Identifier" page.Section) 0 }}
