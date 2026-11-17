@@ -72,6 +72,10 @@
   --site-header-height: 60px;
 }
 
+.site-logo, .hero-svg {
+  fill: var(--color-nav);
+}
+
 :root[data-color="dark"] {
   --primary: rgb(245 212 31/ .8);
 
