@@ -5,7 +5,7 @@
 
 	<a href="{{ site.Home.Permalink }}" class="site-logo">
 		{{ with resources.Get "logo.svg" }}
-		    {{ .Content | safeHTML }}
+		    {{ .Content | replaceRE "linear-gradient-id" "linear-gradient-id-x" | safeHTML }}
 		{{ end }}
 	</a>
 
